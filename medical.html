@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>医療・福祉の転職タイプ診断｜あなたの職種にぴったりの転職サービスは？</title>
-<meta name="description" content="3つの質問に答えるだけ。薬剤師・医師・歯科衛生士・保育士など、あなたの職種に特化した転職サービスを無料で診断・提案します。">
+<title>医療・福祉の転職 強み診断｜あなたの職種にぴったりの転職サービス</title>
+<meta name="description" content="3つの質問に答えるだけ。薬剤師・医師・歯科衛生士・保育士など、あなたの資格を活かす転職のアドバイスと、職種専門の転職サービスを無料で診断します。">
 <style>
   :root{--accent:#0891b2;--accent-dark:#0e7490;--accent-soft:#ecfbff;--ink:#1c2a2e;--muted:#62787e;--line:#e0f0f3;--bg:#f8fdff;--card:#fff;--radius:18px;--shadow:0 10px 30px rgba(8,145,178,.13)}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
   .wrap{max-width:680px;margin:0 auto;padding:0 18px}
   .pr-bar{background:#e8f4f6;color:#6e8389;font-size:12px;text-align:center;padding:6px 10px}
   .hero{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;padding:40px 0 46px;text-align:center;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% -10%,rgba(255,255,255,.18),transparent 45%)}
   .hero .wrap{position:relative;z-index:1}
   .hero .emoji{font-size:48px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
-  .hero h1{font-size:25px;font-weight:800;margin:10px 0 8px}
-  .hero h1 .big{display:block;font-size:31px;margin-top:2px}
-  .hero p{font-size:14.5px;opacity:.95;max-width:480px;margin:0 auto}
+  .hero h1{font-size:24px;font-weight:800;margin:10px 0 8px}
+  .hero h1 .big{display:block;font-size:30px;margin-top:2px}
+  .hero p{font-size:14.5px;opacity:.95;max-width:500px;margin:0 auto}
   .badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;margin-top:14px}
   main{padding:30px 0 50px}
   .progress{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:22px}
@@ -28,7 +28,7 @@
   .q-step{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.1em}
   .q-text{font-size:20px;font-weight:800;margin:6px 0 20px;line-height:1.5}
   .opts{display:grid;gap:12px}
-  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit}
+  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit;line-height:1.5}
   .opt:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
   .opt .ic{font-size:24px;flex-shrink:0}
   .back{display:block;margin:18px auto 0;background:none;border:none;color:var(--muted);font-size:13.5px;cursor:pointer;text-decoration:underline;font-family:inherit}
@@ -36,18 +36,27 @@
   .loading{text-align:center;padding:50px 0;display:none}.loading.show{display:block}
   .spinner{width:46px;height:46px;border:5px solid var(--line);border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow);margin-bottom:8px}
+  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
   .type-box .lead{font-size:13px;font-weight:700;opacity:.9;letter-spacing:.08em}
-  .type-box .type-name{font-size:25px;font-weight:800;margin:8px 0 10px}
-  .type-box .type-desc{font-size:14.5px;opacity:.97}
-  .reco-label{text-align:center;font-weight:800;color:var(--accent);margin:30px 0 14px;font-size:15px}
-  .reco-label span{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.08em;margin-top:2px}
+  .type-box .type-name{font-size:24px;font-weight:800;margin:8px 0 10px;line-height:1.4}
+  .type-box .type-desc{font-size:14.5px;opacity:.97;text-align:left}
+  .block-label{font-weight:800;font-size:16px;margin:28px 0 13px;display:flex;align-items:center;gap:8px}
+  .block-label .ln{flex:1;height:2px;background:var(--line);border-radius:2px}
+  .strength{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:18px 20px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .strength p{font-size:14.5px}
+  .strength .tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px;margin-bottom:9px}
+  .advice{display:grid;gap:12px}
+  .advice-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .advice-item .ic{font-size:23px;flex-shrink:0;margin-top:2px}
+  .advice-item b{display:block;font-size:15px;margin-bottom:2px}
+  .advice-item span{font-size:13.5px;color:var(--muted)}
+  .funnel-lead{text-align:center;font-size:14.5px;font-weight:700;margin:30px 0 6px}
+  .funnel-sub{text-align:center;font-size:13px;color:var(--muted);margin-bottom:16px}
   .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
   .card-top{background:var(--accent-soft);padding:18px 20px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
   .card-logo{width:50px;height:50px;border-radius:13px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0;box-shadow:0 4px 10px rgba(8,145,178,.25)}
   .card-tt b{font-size:17px;display:block}.card-tt span{font-size:12.5px;color:var(--muted)}
   .card-body{padding:18px 20px}
-  .why{background:var(--accent-soft);border-radius:12px;padding:12px 15px;font-size:13.5px;margin-bottom:16px}.why b{color:var(--accent-dark)}
   .feat{list-style:none;display:grid;gap:10px;margin-bottom:16px}
   .feat li{position:relative;padding-left:27px;font-size:14px}
   .feat li::before{content:"✓";position:absolute;left:0;top:2px;color:#fff;background:var(--accent);width:18px;height:18px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
@@ -57,7 +66,7 @@
   .restart{display:block;margin:24px auto 0;background:none;border:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:9px 20px;border-radius:999px;cursor:pointer;font-family:inherit}
   footer{background:#1c2a2e;color:#bcd0d5;padding:28px 0;text-align:center;font-size:12.5px;line-height:1.9;margin-top:10px}
   footer .disc{max-width:600px;margin:0 auto 12px;opacity:.8}
-  @media(max-width:480px){.hero h1{font-size:21px}.hero h1 .big{font-size:26px}.q-text{font-size:18px}}
+  @media(max-width:480px){.hero h1{font-size:21px}.hero h1 .big{font-size:25px}.q-text{font-size:18px}}
 </style>
 </head>
 <body>
@@ -65,31 +74,35 @@
 <header class="hero"><div class="wrap">
   <div class="emoji">🩺</div>
   <span class="badge">かんたん3問・無料診断</span>
-  <h1>医療・福祉の<span class="big">転職タイプ診断</span></h1>
-  <p>3つの質問に答えるだけ。あなたの職種・資格に特化した転職サービスを無料で診断します。</p>
+  <h1>医療・福祉の<span class="big">転職 強み診断</span></h1>
+  <p>3つの質問に答えるだけ。あなたの資格を活かす転職のアドバイスと、職種に特化した転職サービスを無料で診断します。</p>
 </div></header>
 <main class="wrap">
   <div class="progress" id="progress"></div>
   <div id="quiz"></div>
-  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたにぴったりの転職サービスを診断中…</p></div>
+  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたにぴったりの転職プランを診断中…</p></div>
   <div class="result" id="result"></div>
 </main>
 <footer><div class="wrap">
   <p class="disc">※本ページはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
-  <p>© 医療・福祉の転職タイプ診断</p>
+  <p>© 医療・福祉の転職 強み診断</p>
 </div></footer>
 <script>
 const SERVICES={
- pharma:{logo:'💊',name:'ファルマスタッフ',tag:'薬剤師の転職・求人専門サービス',
+ pharma:{job:'薬剤師',logo:'💊',name:'ファルマスタッフ',tag:'薬剤師の転職・求人専門サービス',
+   strength:'薬剤師資格は一生モノの強力な武器。薬局・病院・企業・ドラッグストアと活躍の場が広く、働き方も自由に選べるのが魅力です。',
    feat:['薬剤師に特化した求人を全国規模で保有','薬局・病院・ドラッグストア・企業まで幅広く対応','派遣・正社員・パートなど働き方を選べる','高時給の派遣求人やブランク復職支援も充実'],
    url:'https://px.a8.net/svt/ejp?a8mat=3Z56RD+C8KUQY+276A+5ZEMQ',cta:'無料で薬剤師求人を相談する →'},
- doctor:{logo:'🩺',name:'医師転職ドットコム',tag:'医師向けの転職・求人サービス',
+ doctor:{job:'医師',logo:'🩺',name:'医師転職ドットコム',tag:'医師向けの転職・求人サービス',
+   strength:'医師は常に高い需要があり、条件交渉の余地が大きい職種。表に出ない好条件の非公開求人を押さえられるかが、満足度を分けます。',
    feat:['好条件の匿名・非公開求人が豊富','高年収・条件の良い常勤/非常勤求人多数','専任コンサルタントが年収・勤務条件を交渉','スポット勤務など柔軟な働き方にも対応'],
    url:'https://px.a8.net/svt/ejp?a8mat=3Z4RS9+276QJU+24CC+60OXD',cta:'無料で医師求人を相談する →'},
- dental:{logo:'🦷',name:'歯科転職ナビ',tag:'歯科衛生士の求人・転職サービス',
+ dental:{job:'歯科衛生士',logo:'🦷',name:'歯科転職ナビ',tag:'歯科衛生士の求人・転職サービス',
+   strength:'歯科衛生士は専門性が高く、ブランクがあっても復帰しやすい職種。だからこそ「どの歯科医院を選ぶか」で働きやすさが大きく変わります。',
    feat:['歯科衛生士に特化した求人を多数掲載','好条件・働きやすい歯科医院の求人が見つかる','ブランクあり・復職希望の方もサポート','非公開求人を含め希望に合った職場を提案'],
    url:'https://px.a8.net/svt/ejp?a8mat=3Z4RSA+K8TNU+55RS+5YJRM',cta:'無料で歯科衛生士求人を見る →'},
- nursery:{logo:'👶',name:'ほいく畑',tag:'保育士求人専門サイト',
+ nursery:{job:'保育士',logo:'👶',name:'ほいく畑',tag:'保育士求人専門サイト',
+   strength:'保育士資格は全国どこでも通用する強み。正社員・派遣・パートと働き方を選べるので、ライフスタイルに合わせた職場が必ず見つかります。',
    feat:['保育士・幼稚園教諭に特化した求人サイト','無資格・未経験OKの求人も用意','派遣・パートなど自由な働き方が選べる','専任コーディネーターが一人ひとりをサポート'],
    url:'https://px.a8.net/svt/ejp?a8mat=3ZK4YV+1THPBM+1W34+HXD0Z',cta:'無料で保育士求人を相談する →'}
 };
@@ -99,7 +112,7 @@ const QUESTIONS=[
    {ic:'🩺',label:'医師',v:'doctor'},
    {ic:'🦷',label:'歯科衛生士',v:'dental'},
    {ic:'👶',label:'保育士・幼稚園教諭',v:'nursery'}]},
- {step:'Q2',text:'転職で最も重視するのは？',opts:[
+ {step:'Q2',text:'転職で、いちばん大切にしたいのは？',opts:[
    {ic:'💰',label:'年収・給与アップ',v:'pay'},
    {ic:'⏰',label:'働き方・休みの改善',v:'time'},
    {ic:'🤝',label:'人間関係の良い職場',v:'human'},
@@ -109,25 +122,37 @@ const QUESTIONS=[
    {ic:'🏃',label:'できるだけ早く転職したい',v:'soon'},
    {ic:'🤔',label:'まだ迷っている／相談したい',v:'undecided'}]}
 ];
-function whyText(a){
- const focus={pay:'年収アップを重視するあなたには、好条件・高待遇の非公開求人を多く持つ',time:'働き方の改善を求めるあなたには、勤務形態を柔軟に選べる',human:'人間関係を重視するあなたには、職場の内情まで把握した',skill:'スキルアップを目指すあなたには、キャリアに合った求人を提案できる'}[a[1]]||'あなたの希望に寄り添う';
- const st=a[2]==='soon'?'スピーディーに動きたい今こそ、専任サポートが力になります。':a[2]==='info'?'在職中でも、登録して情報を集めておくだけで選択肢が広がります。':'迷っている段階でも、プロに相談することで進む道が見えてきます。';
- return focus+'このサービスが最適です。'+st;
-}
+const ADV_FOCUS={
+ pay:{ic:'💰',t:'年収アップは「相場」を知ってから動く',s:'同じ資格でも、職場によって給与は大きく違います。専門サービスで相場を把握し、好条件の非公開求人を狙いましょう。'},
+ time:{ic:'⏰',t:'働き方は「譲れない条件」を先に決める',s:'夜勤の有無・残業・休日など、ゆずれない条件を最初にハッキリさせると、入ってから後悔しない転職ができます。'},
+ human:{ic:'🤝',t:'人間関係は「中の声」を事前に確認',s:'職場の雰囲気は入ってみないと分からない…を防ぐには、内部事情に詳しいアドバイザー経由が安心です。'},
+ skill:{ic:'🚀',t:'スキルアップは「環境」で選ぶ',s:'学べる症例・研修制度・キャリアパスなど、成長できる環境かどうかで職場を選ぶと長く活躍できます。'}
+};
+const ADV_STATE={
+ info:{ic:'📥',t:'在職中の「情報収集」が安全策',s:'今すぐ動かなくても、登録して求人情報を集めておくだけで、いざという時の選択肢が広がります。'},
+ soon:{ic:'⚡',t:'急ぐなら「プロと並走」で時短',s:'専任アドバイザーが日程調整や条件交渉を代行してくれるので、働きながらでもスムーズに進められます。'},
+ undecided:{ic:'🗺️',t:'迷うなら「相談しながら」決める',s:'方向性が固まっていなくても大丈夫。プロに今の状況を話す中で、進むべき道が見えてきます。'}
+};
 let current=0;const answers=[];
 const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
 function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
 function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);window.scrollTo({top:0,behavior:'smooth'});}
-function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1400);}
-function showResult(){document.getElementById('loading').classList.remove('show');const s=SERVICES[answers[0]]||SERVICES.pharma;const jobName={pharma:'薬剤師',doctor:'医師',dental:'歯科衛生士',nursery:'保育士'}[answers[0]]||'医療職';const res=document.getElementById('result');
- res.innerHTML='<div class="type-box"><div class="lead">あなたにおすすめなのは</div><div class="type-name">'+jobName+'専門の転職サポート</div><div class="type-desc">'+jobName+'は専門資格職だからこそ、職種に特化したサービスを使うのが成功の近道。一般的な転職サイトより、専門求人・好条件求人に出会える可能性が高まります。</div></div>'+
- '<div class="reco-label">あなたにおすすめの転職サービス<span>FOR YOU</span></div>'+
- '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div>'+
- '<div class="card-body"><div class="why"><b>なぜあなたに？</b> '+whyText(answers)+'</div>'+
- '<ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul>'+
- '<a href="'+s.url+'" class="cta" target="_blank" rel="noopener">'+s.cta+'</a>'+
- '<p class="note">登録・相談・求人紹介はすべて無料です</p></div></div>'+
- '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
+function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1500);}
+function adviceHTML(a){const items=[ADV_FOCUS[a[1]],ADV_STATE[a[2]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
+function showResult(){document.getElementById('loading').classList.remove('show');const s=SERVICES[answers[0]]||SERVICES.pharma;const res=document.getElementById('result');
+ res.innerHTML=
+  '<div class="type-box"><div class="lead">あなたにおすすめなのは</div><div class="type-name">'+s.job+'専門の転職サポート</div><div class="type-desc">'+s.job+'は専門資格職。だからこそ、職種に特化したサービスを使うのが成功の近道です。一般的な転職サイトより、専門求人や好条件の非公開求人に出会えます。</div></div>'+
+  '<div class="block-label">💪 あなたの“強み”はこれ<span class="ln"></span></div>'+
+  '<div class="strength"><span class="tag">'+s.job+'という専門性</span><p>'+s.strength+'</p></div>'+
+  '<div class="block-label">🧭 あなたへのアドバイス<span class="ln"></span></div>'+
+  '<div class="advice">'+adviceHTML(answers)+'</div>'+
+  '<div class="funnel-lead">この“次の一手”を、一人で進めなくて大丈夫です。</div>'+
+  '<div class="funnel-sub">'+s.job+'専門のアドバイザーが、あなたの希望に合った職場探しを無料でサポートします。</div>'+
+  '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div>'+
+  '<div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul>'+
+  '<a href="'+s.url+'" class="cta" target="_blank" rel="noopener">'+s.cta+'</a>'+
+  '<p class="note">登録・相談・求人紹介はすべて無料です</p></div></div>'+
+  '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
  res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});}
 function restart(){current=0;answers.length=0;document.getElementById('result').classList.remove('show');renderQuestion();}
 renderQuestion();

@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>不動産業界の転職タイプ診断｜あなたに合うキャリアは？</title>
-<meta name="description" content="3つの質問に答えるだけ。不動産業界・宅建士としての転職の方向性と、おすすめの転職エージェントを無料で診断します。">
+<title>不動産業界の転職 強み診断｜あなたに合うキャリアがわかる</title>
+<meta name="description" content="3つの質問に答えるだけ。不動産業界・宅建士としての転職のアドバイスと、おすすめの転職エージェントを無料で診断します。">
 <style>
   :root{--accent:#15803d;--accent-dark:#166534;--accent-soft:#edfaf0;--ink:#1c2a20;--muted:#5f7466;--line:#dcefe1;--bg:#f8fdf9;--card:#fff;--radius:18px;--shadow:0 10px 30px rgba(21,128,61,.13)}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
   .wrap{max-width:680px;margin:0 auto;padding:0 18px}
   .pr-bar{background:#e7f3ea;color:#6c8174;font-size:12px;text-align:center;padding:6px 10px}
   .hero{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;padding:40px 0 46px;text-align:center;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% -10%,rgba(255,255,255,.18),transparent 45%)}
   .hero .wrap{position:relative;z-index:1}
   .hero .emoji{font-size:48px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
-  .hero h1{font-size:25px;font-weight:800;margin:10px 0 8px}
-  .hero h1 .big{display:block;font-size:31px;margin-top:2px}
-  .hero p{font-size:14.5px;opacity:.95;max-width:480px;margin:0 auto}
+  .hero h1{font-size:24px;font-weight:800;margin:10px 0 8px}
+  .hero h1 .big{display:block;font-size:30px;margin-top:2px}
+  .hero p{font-size:14.5px;opacity:.95;max-width:500px;margin:0 auto}
   .badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;margin-top:14px}
   main{padding:30px 0 50px}
   .progress{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:22px}
@@ -28,7 +28,7 @@
   .q-step{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.1em}
   .q-text{font-size:20px;font-weight:800;margin:6px 0 20px;line-height:1.5}
   .opts{display:grid;gap:12px}
-  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit}
+  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit;line-height:1.5}
   .opt:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
   .opt .ic{font-size:24px;flex-shrink:0}
   .back{display:block;margin:18px auto 0;background:none;border:none;color:var(--muted);font-size:13.5px;cursor:pointer;text-decoration:underline;font-family:inherit}
@@ -36,18 +36,27 @@
   .loading{text-align:center;padding:50px 0;display:none}.loading.show{display:block}
   .spinner{width:46px;height:46px;border:5px solid var(--line);border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow);margin-bottom:8px}
+  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
   .type-box .lead{font-size:13px;font-weight:700;opacity:.9;letter-spacing:.08em}
-  .type-box .type-name{font-size:24px;font-weight:800;margin:8px 0 10px}
-  .type-box .type-desc{font-size:14.5px;opacity:.97}
-  .reco-label{text-align:center;font-weight:800;color:var(--accent);margin:30px 0 14px;font-size:15px}
-  .reco-label span{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.08em;margin-top:2px}
+  .type-box .type-name{font-size:23px;font-weight:800;margin:8px 0 10px;line-height:1.4}
+  .type-box .type-desc{font-size:14.5px;opacity:.97;text-align:left}
+  .block-label{font-weight:800;font-size:16px;margin:28px 0 13px;display:flex;align-items:center;gap:8px}
+  .block-label .ln{flex:1;height:2px;background:var(--line);border-radius:2px}
+  .strength{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:18px 20px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .strength p{font-size:14.5px}
+  .strength .tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px;margin-bottom:9px}
+  .advice{display:grid;gap:12px}
+  .advice-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .advice-item .ic{font-size:23px;flex-shrink:0;margin-top:2px}
+  .advice-item b{display:block;font-size:15px;margin-bottom:2px}
+  .advice-item span{font-size:13.5px;color:var(--muted)}
+  .funnel-lead{text-align:center;font-size:14.5px;font-weight:700;margin:30px 0 6px}
+  .funnel-sub{text-align:center;font-size:13px;color:var(--muted);margin-bottom:16px}
   .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
   .card-top{background:var(--accent-soft);padding:18px 20px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
   .card-logo{width:50px;height:50px;border-radius:13px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0;box-shadow:0 4px 10px rgba(21,128,61,.25)}
   .card-tt b{font-size:17px;display:block}.card-tt span{font-size:12.5px;color:var(--muted)}
   .card-body{padding:18px 20px}
-  .why{background:var(--accent-soft);border-radius:12px;padding:12px 15px;font-size:13.5px;margin-bottom:16px}.why b{color:var(--accent-dark)}
   .feat{list-style:none;display:grid;gap:10px;margin-bottom:16px}
   .feat li{position:relative;padding-left:27px;font-size:14px}
   .feat li::before{content:"✓";position:absolute;left:0;top:2px;color:#fff;background:var(--accent);width:18px;height:18px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
@@ -57,7 +66,7 @@
   .restart{display:block;margin:24px auto 0;background:none;border:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:9px 20px;border-radius:999px;cursor:pointer;font-family:inherit}
   footer{background:#1c2a20;color:#bfd2c5;padding:28px 0;text-align:center;font-size:12.5px;line-height:1.9;margin-top:10px}
   footer .disc{max-width:600px;margin:0 auto 12px;opacity:.8}
-  @media(max-width:480px){.hero h1{font-size:21px}.hero h1 .big{font-size:26px}.q-text{font-size:18px}}
+  @media(max-width:480px){.hero h1{font-size:21px}.hero h1 .big{font-size:25px}.q-text{font-size:18px}}
 </style>
 </head>
 <body>
@@ -65,18 +74,18 @@
 <header class="hero"><div class="wrap">
   <div class="emoji">🏠</div>
   <span class="badge">かんたん3問・無料診断</span>
-  <h1>不動産業界の<span class="big">転職タイプ診断</span></h1>
-  <p>3つの質問に答えるだけ。あなたに合った不動産業界でのキャリアと、ぴったりの転職サービスを無料で診断します。</p>
+  <h1>不動産業界の<span class="big">転職 強み診断</span></h1>
+  <p>3つの質問に答えるだけ。あなたに合った不動産キャリアのアドバイスと、ぴったりの転職サービスを無料で診断します。</p>
 </div></header>
 <main class="wrap">
   <div class="progress" id="progress"></div>
   <div id="quiz"></div>
-  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたにぴったりの転職プランを診断中…</p></div>
+  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたの強みと“次の一手”を診断中…</p></div>
   <div class="result" id="result"></div>
 </main>
 <footer><div class="wrap">
   <p class="disc">※本ページはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
-  <p>© 不動産業界の転職タイプ診断</p>
+  <p>© 不動産業界の転職 強み診断</p>
 </div></footer>
 <script>
 const QUESTIONS=[
@@ -85,7 +94,7 @@ const QUESTIONS=[
    {ic:'📜',label:'宅建の資格を活かしたい',v:'license'},
    {ic:'⏰',label:'働き方・休みを改善したい',v:'time'},
    {ic:'🌱',label:'未経験から不動産業界に挑戦したい',v:'new'}]},
- {step:'Q2',text:'希望する職種は？',opts:[
+ {step:'Q2',text:'あなたが力を発揮できる（したい）職種は？',opts:[
    {ic:'🏘️',label:'売買・賃貸の営業',v:'sales'},
    {ic:'🏢',label:'管理・事務・バックオフィス',v:'admin'},
    {ic:'📐',label:'仲介・コンサル・専門職',v:'pro'},
@@ -95,32 +104,43 @@ const QUESTIONS=[
    {ic:'💪',label:'1〜5年',v:'mid'},
    {ic:'👑',label:'5年以上・管理職経験あり',v:'sr'}]}
 ];
-function diagnose(a){
- const m={pay:{n:'年収アップ志向タイプ',d:'不動産業界はインセンティブで収入を大きく伸ばせる業界。実力を正当に評価する会社を選ぶことが収入アップのカギです。'},
-  license:{n:'宅建を活かすタイプ',d:'宅建資格は不動産業界で強力な武器。資格手当や好待遇で迎えてくれる企業を選びましょう。'},
-  time:{n:'働き方改善タイプ',d:'労働環境を見直したい段階。完全週休2日・残業少なめのホワイトな不動産企業も増えています。'},
-  new:{n:'未経験チャレンジタイプ',d:'これから不動産業界を目指す段階。未経験歓迎・研修充実の求人も多く、挑戦しやすい業界です。'}};
- const r=m[a[0]]||m.pay;
- return{typeName:r.n,typeDesc:r.d+' 不動産・宅建士に特化したエージェントなら、あなたに最適な企業を効率よく紹介してくれます。'};
-}
-function whyText(a){
- const e=a[2]==='sr'?'管理職経験は、好条件・キャリアアップ求人で高く評価されます。':a[2]==='mid'?'実務経験者は即戦力として歓迎されます。':'未経験歓迎の求人も多く、研修やサポートで安心して挑戦できます。';
- return '不動産・宅建士に特化した宅建Jobエージェントなら、あなたの希望に合った企業を厳選して提案できます。'+e;
-}
+const STRENGTH={
+ sales:{tag:'営業力',type:'成果で稼ぐ「不動産営業」タイプ',text:'売買・賃貸の営業は、成果がインセンティブに直結する花形職。対人力と提案力があれば、年収を大きく伸ばせる夢のある仕事です。'},
+ admin:{tag:'管理・事務力',type:'組織を支える「管理・バックオフィス」タイプ',text:'管理・事務・バックオフィスは、正確さと調整力が活きる安定職。不動産の知識があれば、即戦力として重宝されます。'},
+ pro:{tag:'専門・コンサル力',type:'知識で信頼される「専門職」タイプ',text:'仲介・コンサル・専門職は、知識と信頼が最大の武器。宅建などの資格を活かして、専門性で長く勝負できる道です。'},
+ any:{tag:'オールラウンド',type:'選択肢が広い「オールラウンド」タイプ',text:'職種にこだわらないあなたは、選べる求人の幅が広いのが強み。希望条件から、いちばん合う職場を選べます。'}
+};
+const ADV_MOTIVE={
+ pay:{ic:'💰',t:'年収は「インセンティブ制度」を確認',s:'不動産は会社によって歩合の仕組みが大きく違います。評価制度の良い会社を選ぶことが、収入アップの近道です。'},
+ license:{ic:'📜',t:'宅建は「資格手当・好待遇」を狙う',s:'宅建は不動産業界で強力な武器。資格手当や優遇のある会社を選べば、待遇アップに直結します。'},
+ time:{ic:'⏰',t:'働き方は「完全週休2日」を軸に',s:'不動産にもホワイトな会社は増えています。休日・残業の条件を最初に決めて探しましょう。'},
+ new:{ic:'🌱',t:'未経験は「研修・サポート」で選ぶ',s:'未経験歓迎・研修充実の会社を選べば、安心して業界に入れます。資格取得を支援する会社もあります。'}
+};
+const ADV_EXP={
+ sr:{ic:'👑',t:'管理職経験は好条件で評価される',s:'5年以上・管理職の経験は、キャリアアップ求人で高く評価されます。マネジメント実績を具体的に語りましょう。'},
+ mid:{ic:'💪',t:'経験者は即戦力として歓迎される',s:'1〜5年の実務経験があれば、多くの会社で歓迎されます。より良い条件への転職を狙いやすい時期です。'},
+ jr:{ic:'🌱',t:'未経験歓迎の求人も豊富',s:'不動産は未経験歓迎・研修ありの求人が多い業界。やる気とポテンシャルが評価されます。'}
+};
 let current=0;const answers=[];
 const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
 function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
 function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);window.scrollTo({top:0,behavior:'smooth'});}
-function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1400);}
-function showResult(){document.getElementById('loading').classList.remove('show');const d=diagnose(answers);const res=document.getElementById('result');
- res.innerHTML='<div class="type-box"><div class="lead">あなたの転職タイプは</div><div class="type-name">'+d.typeName+'</div><div class="type-desc">'+d.typeDesc+'</div></div>'+
- '<div class="reco-label">あなたにおすすめの転職サービス<span>FOR YOU</span></div>'+
- '<div class="card"><div class="card-top"><div class="card-logo">🏠</div><div class="card-tt"><b>宅建Jobエージェント</b><span>不動産・宅建士専門の転職エージェント</span></div></div>'+
- '<div class="card-body"><div class="why"><b>なぜあなたに？</b> '+whyText(answers)+'</div>'+
- '<ul class="feat"><li>不動産業界・宅建士に特化した転職エージェント</li><li>非公開求人を含む3,000件以上の求人を保有</li><li>選考通過率・面接通過率の高い手厚いサポート</li><li>書類添削・面接対策・年収交渉まで代行</li></ul>'+
- '<a href="https://px.a8.net/svt/ejp?a8mat=3Z56RG+ZQ3E2+4I3U+BYDTT" class="cta" target="_blank" rel="noopener">無料で不動産求人を相談する →</a>'+
- '<p class="note">登録・相談・サポートはすべて無料です</p></div></div>'+
- '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
+function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1500);}
+function adviceHTML(a){const items=[ADV_MOTIVE[a[0]],ADV_EXP[a[2]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
+function showResult(){document.getElementById('loading').classList.remove('show');const st=STRENGTH[answers[1]]||STRENGTH.any;const res=document.getElementById('result');
+ res.innerHTML=
+  '<div class="type-box"><div class="lead">あなたの強みタイプは</div><div class="type-name">'+st.type+'</div><div class="type-desc">不動産業界は、会社選びで年収も働き方も大きく変わります。あなたの強みを活かせる職場を選ぶことが、成功のカギです。</div></div>'+
+  '<div class="block-label">💪 あなたの“武器”はこれ<span class="ln"></span></div>'+
+  '<div class="strength"><span class="tag">'+st.tag+'</span><p>'+st.text+'</p></div>'+
+  '<div class="block-label">🧭 あなたへのアドバイス<span class="ln"></span></div>'+
+  '<div class="advice">'+adviceHTML(answers)+'</div>'+
+  '<div class="funnel-lead">この“次の一手”を、一人で進めなくて大丈夫です。</div>'+
+  '<div class="funnel-sub">不動産・宅建士に特化したプロが、あなたに合った会社探しを無料でサポートします。</div>'+
+  '<div class="card"><div class="card-top"><div class="card-logo">🏠</div><div class="card-tt"><b>宅建Jobエージェント</b><span>不動産・宅建士専門の転職エージェント</span></div></div>'+
+  '<div class="card-body"><ul class="feat"><li>不動産業界・宅建士に特化した転職エージェント</li><li>非公開求人を含む3,000件以上の求人を保有</li><li>選考通過率・面接通過率の高い手厚いサポート</li><li>書類添削・面接対策・年収交渉まで代行</li></ul>'+
+  '<a href="https://px.a8.net/svt/ejp?a8mat=3Z56RG+ZQ3E2+4I3U+BYDTT" class="cta" target="_blank" rel="noopener">無料で不動産求人を相談する →</a>'+
+  '<p class="note">登録・相談・サポートはすべて無料です</p></div></div>'+
+  '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
  res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});}
 function restart(){current=0;answers.length=0;document.getElementById('result').classList.remove('show');renderQuestion();}
 renderQuestion();

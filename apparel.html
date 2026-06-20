@@ -3,21 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>アパレル・ファッション業界の転職タイプ診断｜あなたに合うサービスは？</title>
-<meta name="description" content="3つの質問に答えるだけ。アパレル・ファッション業界での転職の方向性と、あなたに合った転職サービスを無料で診断します。">
+<title>アパレル・ファッション業界の転職 強み診断｜あなたに合うサービス</title>
+<meta name="description" content="3つの質問に答えるだけ。アパレル・ファッション業界での転職のアドバイスと、あなたに合った転職サービスを無料で診断します。">
 <style>
   :root{--accent:#db2777;--accent-dark:#9d174d;--accent-soft:#fff0f7;--ink:#2e1f27;--muted:#7e6671;--line:#f4e3ec;--bg:#fffafc;--card:#fff;--radius:18px;--shadow:0 10px 30px rgba(219,39,119,.13)}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
   .wrap{max-width:680px;margin:0 auto;padding:0 18px}
   .pr-bar{background:#f6e9f0;color:#8a7480;font-size:12px;text-align:center;padding:6px 10px}
   .hero{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;padding:40px 0 46px;text-align:center;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% -10%,rgba(255,255,255,.18),transparent 45%)}
   .hero .wrap{position:relative;z-index:1}
   .hero .emoji{font-size:48px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
-  .hero h1{font-size:24px;font-weight:800;margin:10px 0 8px}
-  .hero h1 .big{display:block;font-size:30px;margin-top:2px}
-  .hero p{font-size:14.5px;opacity:.95;max-width:480px;margin:0 auto}
+  .hero h1{font-size:23px;font-weight:800;margin:10px 0 8px}
+  .hero h1 .big{display:block;font-size:29px;margin-top:2px}
+  .hero p{font-size:14.5px;opacity:.95;max-width:500px;margin:0 auto}
   .badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;margin-top:14px}
   main{padding:30px 0 50px}
   .progress{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:22px}
@@ -28,7 +28,7 @@
   .q-step{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.1em}
   .q-text{font-size:20px;font-weight:800;margin:6px 0 20px;line-height:1.5}
   .opts{display:grid;gap:12px}
-  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit}
+  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit;line-height:1.5}
   .opt:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
   .opt .ic{font-size:24px;flex-shrink:0}
   .back{display:block;margin:18px auto 0;background:none;border:none;color:var(--muted);font-size:13.5px;cursor:pointer;text-decoration:underline;font-family:inherit}
@@ -36,18 +36,27 @@
   .loading{text-align:center;padding:50px 0;display:none}.loading.show{display:block}
   .spinner{width:46px;height:46px;border:5px solid var(--line);border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow);margin-bottom:8px}
+  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
   .type-box .lead{font-size:13px;font-weight:700;opacity:.9;letter-spacing:.08em}
-  .type-box .type-name{font-size:24px;font-weight:800;margin:8px 0 10px}
-  .type-box .type-desc{font-size:14.5px;opacity:.97}
-  .reco-label{text-align:center;font-weight:800;color:var(--accent);margin:30px 0 14px;font-size:15px}
-  .reco-label span{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.08em;margin-top:2px}
+  .type-box .type-name{font-size:23px;font-weight:800;margin:8px 0 10px;line-height:1.4}
+  .type-box .type-desc{font-size:14.5px;opacity:.97;text-align:left}
+  .block-label{font-weight:800;font-size:16px;margin:28px 0 13px;display:flex;align-items:center;gap:8px}
+  .block-label .ln{flex:1;height:2px;background:var(--line);border-radius:2px}
+  .strength{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:18px 20px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .strength p{font-size:14.5px}
+  .strength .tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px;margin-bottom:9px}
+  .advice{display:grid;gap:12px}
+  .advice-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .advice-item .ic{font-size:23px;flex-shrink:0;margin-top:2px}
+  .advice-item b{display:block;font-size:15px;margin-bottom:2px}
+  .advice-item span{font-size:13.5px;color:var(--muted)}
+  .funnel-lead{text-align:center;font-size:14.5px;font-weight:700;margin:30px 0 6px}
+  .funnel-sub{text-align:center;font-size:13px;color:var(--muted);margin-bottom:16px}
   .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line);margin-bottom:16px}
   .card-top{background:var(--accent-soft);padding:18px 20px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
   .card-logo{width:50px;height:50px;border-radius:13px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0;box-shadow:0 4px 10px rgba(219,39,119,.25)}
   .card-tt b{font-size:17px;display:block}.card-tt span{font-size:12.5px;color:var(--muted)}
   .card-body{padding:18px 20px}
-  .why{background:var(--accent-soft);border-radius:12px;padding:12px 15px;font-size:13.5px;margin-bottom:16px}.why b{color:var(--accent-dark)}
   .feat{list-style:none;display:grid;gap:10px;margin-bottom:16px}
   .feat li{position:relative;padding-left:27px;font-size:14px}
   .feat li::before{content:"✓";position:absolute;left:0;top:2px;color:#fff;background:var(--accent);width:18px;height:18px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
@@ -66,18 +75,18 @@
 <header class="hero"><div class="wrap">
   <div class="emoji">👗</div>
   <span class="badge">かんたん3問・無料診断</span>
-  <h1>アパレル・ファッション業界の<span class="big">転職タイプ診断</span></h1>
-  <p>3つの質問に答えるだけ。あなたに合った転職の方向性と、ぴったりの転職サービスを無料で診断します。</p>
+  <h1>アパレル・ファッション業界の<span class="big">転職 強み診断</span></h1>
+  <p>3つの質問に答えるだけ。あなたに合った転職の方向性とアドバイス、ぴったりのサービスを無料で診断します。</p>
 </div></header>
 <main class="wrap">
   <div class="progress" id="progress"></div>
   <div id="quiz"></div>
-  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたにぴったりの転職サービスを診断中…</p></div>
+  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたにぴったりの転職プランを診断中…</p></div>
   <div class="result" id="result"></div>
 </main>
 <footer><div class="wrap">
   <p class="disc">※本ページはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
-  <p>© アパレル・ファッション業界の転職タイプ診断</p>
+  <p>© アパレル・ファッション業界の転職 強み診断</p>
 </div></footer>
 <script>
 const SERVICES={
@@ -93,34 +102,55 @@ const QUESTIONS=[
    {ic:'💎',label:'ラグジュアリー・ハイブランドや専門職（デザイナー・MD・プレス）',v:'fashion'},
    {ic:'🛍️',label:'販売・EC・本社系など幅広くアパレルで探したい',v:'credence'},
    {ic:'🤔',label:'まだ決めていない／両方見てみたい',v:'both'}]},
- {step:'Q2',text:'転職で最も重視するのは？',opts:[
-   {ic:'💰',label:'年収・待遇アップ',v:'pay'},
-   {ic:'🎨',label:'好きなブランド・商材で働く',v:'brand'},
-   {ic:'📈',label:'キャリアアップ・専門性',v:'skill'},
-   {ic:'⏰',label:'働き方・休みの改善',v:'time'}]},
+ {step:'Q2',text:'あなたが現場でいちばん力を発揮できるのは？',opts:[
+   {ic:'🤝',label:'接客・コーディネート提案でお客様を魅了する',v:'sell'},
+   {ic:'🎨',label:'商品やブランドの世界観を作る',v:'create'},
+   {ic:'📊',label:'数字・在庫・VMDを管理する',v:'manage'},
+   {ic:'💻',label:'EC・SNS・販促で売上を伸ばす',v:'digital'}]},
  {step:'Q3',text:'アパレルでの経験は？',opts:[
    {ic:'🌱',label:'未経験・他業種から',v:'jr'},
    {ic:'💪',label:'販売・店長など1〜5年',v:'mid'},
    {ic:'👑',label:'5年以上・本社/専門職経験あり',v:'sr'}]}
 ];
-function whyText(a,key){
- const e=a[2]==='sr'?'本社・専門職の経験は、ハイクラス求人で高く評価されます。':a[2]==='mid'?'販売・店長経験は、本社系や他ブランドへのステップに活かせます。':'未経験歓迎の求人も多く、好きな業界へ飛び込む好機です。';
- return 'あなたの志向に最も合うのが'+SERVICES[key].name+'です。'+e;
-}
+const STRENGTH={
+ sell:{tag:'接客・提案力',text:'お客様の心をつかむ接客・コーディネート提案力は、ブランドの売上を直接動かす力。販売のプロから、本社の販促・PR職まで道が広がります。'},
+ create:{tag:'クリエイティブ',text:'商品やブランドの世界観を作るセンスは、ファッション業界の核。デザイナー・MD・VMD・プレスなど専門職で輝けます。'},
+ manage:{tag:'数値・管理力',text:'売上・在庫・VMDを数字で管理してきた経験は、本社系・MD・店舗運営で高く評価される、意外と希少なスキルです。'},
+ digital:{tag:'EC・デジタル力',text:'EC運営やSNS販促で売上を伸ばした経験は、今いちばん需要のある力。EC・デジタルマーケ・本社系で引っ張りだこです。'}
+};
+const ADV_FOCUS={
+ sell:{ic:'🗣️',t:'「数字で語れる接客実績」を用意',s:'個人売上・予算達成率・指名数など、接客の成果を数字にすると一気に評価されます。'},
+ create:{ic:'🖼️',t:'「ポートフォリオ・実績」を整理',s:'手がけた商品・ディスプレイ・企画を見せられる形にしておくと、専門職への転職で強い武器になります。'},
+ manage:{ic:'📐',t:'「管理した規模」を具体的に',s:'担当した店舗数・予算規模・在庫改善の成果など、マネジメント実績を数字で示しましょう。'},
+ digital:{ic:'📈',t:'「伸ばした数字」を実績化',s:'EC売上・フォロワー・CVRなど、デジタルで動かした数字は強力な実績。整理して伝えましょう。'}
+};
+const ADV_EXP={
+ sr:{ic:'👑',t:'本社・専門職経験はハイクラスで評価',s:'5年以上・本社/専門職の経験は、好条件のハイクラス求人で歓迎されます。自信を持って前面に。'},
+ mid:{ic:'💪',t:'販売・店長経験はステップの土台',s:'1〜5年の経験は、本社系や他ブランドへのステップアップに活かせる貴重な実績です。'},
+ jr:{ic:'🌱',t:'未経験歓迎の入口も豊富',s:'好きな業界に飛び込むなら今が好機。未経験歓迎の求人も多く、熱意が評価されます。'}
+};
 let current=0;const answers=[];
 const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
 function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
 function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);window.scrollTo({top:0,behavior:'smooth'});}
-function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1400);}
-function cardHTML(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><div class="why"><b>なぜあなたに？</b> '+whyText(answers,key)+'</div><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_blank" rel="noopener">'+s.cta+'</a><p class="note">登録・相談・サポートはすべて無料です</p></div></div>';}
-function showResult(){document.getElementById('loading').classList.remove('show');const res=document.getElementById('result');const sel=answers[0];
- let typeName,body;
- if(sel==='fashion'){typeName='ハイブランド・専門職タイプ';body=cardHTML('fashion')+'<div class="sub-label">▼ 幅広く比較したい方はこちらも</div>'+cardHTML('credence');}
- else if(sel==='credence'){typeName='幅広くアパレル探求タイプ';body=cardHTML('credence')+'<div class="sub-label">▼ ハイブランド・専門職ならこちらも</div>'+cardHTML('fashion');}
- else{typeName='まずは両方を比較タイプ';body=cardHTML('credence')+'<div class="sub-label">▼ ラグジュアリー・専門職志向ならこちら</div>'+cardHTML('fashion');}
- res.innerHTML='<div class="type-box"><div class="lead">あなたの転職タイプは</div><div class="type-name">'+typeName+'</div><div class="type-desc">アパレル・ファッション業界は専門特化のエージェントを使うことで、表に出ないブランド求人や好条件の職場に出会いやすくなります。</div></div>'+
- '<div class="reco-label">あなたにおすすめの転職サービス<span>FOR YOU</span></div>'+body+
- '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
+function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1500);}
+function adviceHTML(a){const items=[ADV_FOCUS[a[1]],ADV_EXP[a[2]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
+function cardHTML(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_blank" rel="noopener">'+s.cta+'</a><p class="note">登録・相談・サポートはすべて無料です</p></div></div>';}
+function showResult(){document.getElementById('loading').classList.remove('show');const st=STRENGTH[answers[1]]||STRENGTH.sell;const sel=answers[0];const res=document.getElementById('result');
+ let typeName,cards;
+ if(sel==='fashion'){typeName='ハイブランド・専門職タイプ';cards=cardHTML('fashion')+'<div class="sub-label">▼ 幅広く比較したい方はこちらも</div>'+cardHTML('credence');}
+ else if(sel==='credence'){typeName='幅広くアパレル探求タイプ';cards=cardHTML('credence')+'<div class="sub-label">▼ ハイブランド・専門職ならこちらも</div>'+cardHTML('fashion');}
+ else{typeName='まずは両方を比較タイプ';cards=cardHTML('credence')+'<div class="sub-label">▼ ラグジュアリー・専門職志向ならこちら</div>'+cardHTML('fashion');}
+ res.innerHTML=
+  '<div class="type-box"><div class="lead">あなたの転職タイプは</div><div class="type-name">'+typeName+'</div><div class="type-desc">アパレル・ファッション業界は、専門特化のエージェントを使うことで、表に出ないブランド求人や好条件の職場に出会いやすくなります。</div></div>'+
+  '<div class="block-label">💪 あなたの“武器”はこれ<span class="ln"></span></div>'+
+  '<div class="strength"><span class="tag">'+st.tag+'</span><p>'+st.text+'</p></div>'+
+  '<div class="block-label">🧭 あなたへのアドバイス<span class="ln"></span></div>'+
+  '<div class="advice">'+adviceHTML(answers)+'</div>'+
+  '<div class="funnel-lead">この“次の一手”を、一人で進めなくて大丈夫です。</div>'+
+  '<div class="funnel-sub">アパレル・ファッション業界に強いプロが、あなたに合った職場探しを無料でサポートします。</div>'+
+  cards+
+  '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
  res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});}
 function restart(){current=0;answers.length=0;document.getElementById('result').classList.remove('show');renderQuestion();}
 renderQuestion();

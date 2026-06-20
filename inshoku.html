@@ -3,70 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>飲食業界からの転職タイプ診断｜あなたに合う転職の方向性は？</title>
-<meta name="description" content="3つの質問に答えるだけ。飲食・外食業界で働くあなたに合った転職の方向性と、おすすめの転職エージェントを無料で診断します。">
+<title>飲食業界からの転職 強み診断｜あなたの“武器”と次の一手がわかる</title>
+<meta name="description" content="4つの質問に答えるだけ。飲食・外食で働くあなたの強みを言語化し、転職を成功させるための具体的なアドバイスと、ぴったりの転職サービスを無料で診断します。">
 <style>
   :root{
-    --accent:#e8590c; --accent-dark:#c2410c; --accent-soft:#fff4ed;
-    --ink:#2b2320; --muted:#7a6f68; --line:#f0e6df; --bg:#fffaf6; --card:#fff;
-    --radius:18px; --shadow:0 10px 30px rgba(200,90,20,.12);
+    --accent:#e8590c;--accent-dark:#c2410c;--accent-soft:#fff4ed;
+    --ink:#2b2320;--muted:#7a6f68;--line:#f0e6df;--bg:#fffaf6;--card:#fff;
+    --radius:18px;--shadow:0 10px 30px rgba(200,90,20,.12);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
   .wrap{max-width:680px;margin:0 auto;padding:0 18px}
   .pr-bar{background:#f4ede7;color:#8a7d73;font-size:12px;text-align:center;padding:6px 10px}
-
   .hero{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;padding:40px 0 46px;text-align:center;position:relative;overflow:hidden}
   .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% -10%,rgba(255,255,255,.18),transparent 45%)}
   .hero .wrap{position:relative;z-index:1}
   .hero .emoji{font-size:48px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
-  .hero h1{font-size:26px;font-weight:800;margin:10px 0 8px}
-  .hero h1 .big{display:block;font-size:32px;margin-top:2px}
-  .hero p{font-size:14.5px;opacity:.95;max-width:480px;margin:0 auto}
-  .badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px}
-
+  .hero h1{font-size:25px;font-weight:800;margin:10px 0 8px}
+  .hero h1 .big{display:block;font-size:31px;margin-top:2px}
+  .hero p{font-size:14.5px;opacity:.95;max-width:500px;margin:0 auto}
+  .badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;margin-top:14px}
   main{padding:30px 0 50px}
-
-  /* 進捗 */
   .progress{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:22px}
   .dot{width:10px;height:10px;border-radius:50%;background:var(--line);transition:.3s}
-  .dot.active{background:var(--accent);transform:scale(1.25)}
-  .dot.done{background:var(--accent-dark)}
-
+  .dot.active{background:var(--accent);transform:scale(1.25)}.dot.done{background:var(--accent-dark)}
   .q-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 22px;animation:fade .35s}
   @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   .q-step{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.1em}
   .q-text{font-size:20px;font-weight:800;margin:6px 0 20px;line-height:1.5}
   .opts{display:grid;gap:12px}
-  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit}
+  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit;line-height:1.5}
   .opt:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
   .opt .ic{font-size:24px;flex-shrink:0}
   .back{display:block;margin:18px auto 0;background:none;border:none;color:var(--muted);font-size:13.5px;cursor:pointer;text-decoration:underline;font-family:inherit}
-
-  /* 結果 */
-  .result{display:none;animation:fade .4s}
-  .result.show{display:block}
-  .loading{text-align:center;padding:50px 0;display:none}
-  .loading.show{display:block}
+  .result{display:none;animation:fade .4s}.result.show{display:block}
+  .loading{text-align:center;padding:50px 0;display:none}.loading.show{display:block}
   .spinner{width:46px;height:46px;border:5px solid var(--line);border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-
-  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow);margin-bottom:8px}
+  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
   .type-box .lead{font-size:13px;font-weight:700;opacity:.9;letter-spacing:.08em}
-  .type-box .type-name{font-size:26px;font-weight:800;margin:8px 0 10px}
-  .type-box .type-desc{font-size:14.5px;opacity:.97}
-
-  .reco-label{text-align:center;font-weight:800;color:var(--accent);margin:30px 0 14px;font-size:15px}
-  .reco-label span{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.08em;margin-top:2px}
-
+  .type-box .type-name{font-size:25px;font-weight:800;margin:8px 0 10px;line-height:1.4}
+  .type-box .type-desc{font-size:14.5px;opacity:.97;text-align:left}
+  .block-label{font-weight:800;font-size:16px;margin:28px 0 13px;display:flex;align-items:center;gap:8px}
+  .block-label .ln{flex:1;height:2px;background:var(--line);border-radius:2px}
+  .strength{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:18px 20px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .strength p{font-size:14.5px}
+  .strength .tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px;margin-bottom:9px}
+  .advice{display:grid;gap:12px}
+  .advice-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .advice-item .ic{font-size:23px;flex-shrink:0;margin-top:2px}
+  .advice-item b{display:block;font-size:15px;margin-bottom:2px}
+  .advice-item span{font-size:13.5px;color:var(--muted)}
+  .funnel-lead{text-align:center;font-size:14.5px;font-weight:700;margin:30px 0 6px}
+  .funnel-sub{text-align:center;font-size:13px;color:var(--muted);margin-bottom:16px}
   .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
   .card-top{background:var(--accent-soft);padding:18px 20px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
   .card-logo{width:50px;height:50px;border-radius:13px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0;box-shadow:0 4px 10px rgba(200,90,20,.25)}
-  .card-tt b{font-size:17px;display:block}
-  .card-tt span{font-size:12.5px;color:var(--muted)}
+  .card-tt b{font-size:17px;display:block}.card-tt span{font-size:12.5px;color:var(--muted)}
   .card-body{padding:18px 20px}
-  .why{background:var(--accent-soft);border-radius:12px;padding:12px 15px;font-size:13.5px;margin-bottom:16px}
-  .why b{color:var(--accent-dark)}
   .feat{list-style:none;display:grid;gap:10px;margin-bottom:16px}
   .feat li{position:relative;padding-left:27px;font-size:14px}
   .feat li::before{content:"✓";position:absolute;left:0;top:2px;color:#fff;background:var(--accent);width:18px;height:18px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
@@ -76,165 +70,115 @@
   .cta-sub:hover{text-decoration:underline}
   .note{text-align:center;font-size:12px;color:var(--muted);margin-top:11px}
   .restart{display:block;margin:24px auto 0;background:none;border:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:9px 20px;border-radius:999px;cursor:pointer;font-family:inherit}
-
   footer{background:#2b2320;color:#cdbfb6;padding:28px 0;text-align:center;font-size:12.5px;line-height:1.9;margin-top:10px}
   footer .disc{max-width:600px;margin:0 auto 12px;opacity:.8}
-  @media(max-width:480px){.hero h1{font-size:22px}.hero h1 .big{font-size:27px}.q-text{font-size:18px}}
+  @media(max-width:480px){.hero h1{font-size:21px}.hero h1 .big{font-size:26px}.q-text{font-size:18px}}
 </style>
 </head>
 <body>
-
 <div class="pr-bar">本ページはプロモーション（アフィリエイト広告）を含みます</div>
-
-<header class="hero">
-  <div class="wrap">
-    <div class="emoji">🍴</div>
-    <span class="badge" id="hero-badge" style="margin-top:14px">かんたん3問・無料診断</span>
-    <h1>飲食業界からの<span class="big">転職タイプ診断</span></h1>
-    <p>3つの質問に答えるだけ。あなたに合った転職の方向性と、ぴったりの転職サービスを無料で診断します。</p>
-  </div>
-</header>
-
+<header class="hero"><div class="wrap">
+  <div class="emoji">🍴</div>
+  <span class="badge">かんたん4問・無料診断</span>
+  <h1>飲食で培ったあなたの<span class="big">“強み”診断</span></h1>
+  <p>4つの質問に答えるだけ。あなたが飲食で身につけた武器を言語化し、転職を成功させる具体的なアドバイスまでお届けします。</p>
+</div></header>
 <main class="wrap">
   <div class="progress" id="progress"></div>
-
-  <!-- 質問 -->
   <div id="quiz"></div>
-
-  <!-- ローディング -->
-  <div class="loading" id="loading">
-    <div class="spinner"></div>
-    <p style="font-weight:700">あなたにぴったりの転職プランを診断中…</p>
-  </div>
-
-  <!-- 結果 -->
+  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたの強みと“次の一手”を診断中…</p></div>
   <div class="result" id="result"></div>
 </main>
-
-<footer>
-  <div class="wrap">
-    <p class="disc">※本ページはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
-    <p>© 飲食業界の転職タイプ診断</p>
-  </div>
-</footer>
-
+<footer><div class="wrap">
+  <p class="disc">※本ページはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
+  <p>© 飲食業界の転職 強み診断</p>
+</div></footer>
 <script>
-const QUESTIONS = [
-  { step:'Q1', text:'今、いちばん変えたいことは？',
-    opts:[
-      {ic:'💸',label:'給料・収入を上げたい',v:'pay'},
-      {ic:'⏰',label:'休みや労働時間を改善したい',v:'time'},
-      {ic:'📉',label:'将来性・キャリアが不安',v:'future'},
-      {ic:'😣',label:'人間関係・職場環境を変えたい',v:'human'},
-    ]},
-  { step:'Q2', text:'転職の方向性は、どちらに近いですか？',
-    opts:[
-      {ic:'🍽️',label:'飲食業界の中で、もっと良い職場へ',v:'in'},
-      {ic:'🚀',label:'飲食以外の異業種にチャレンジしたい',v:'out'},
-      {ic:'🤔',label:'まだ決めていない／相談しながら決めたい',v:'undecided'},
-    ]},
-  { step:'Q3', text:'飲食での経験年数は？',
-    opts:[
-      {ic:'🌱',label:'3年未満',v:'jr'},
-      {ic:'💪',label:'3〜7年',v:'mid'},
-      {ic:'👑',label:'7年以上・店長/マネージャー経験あり',v:'sr'},
-    ]},
+const QUESTIONS=[
+ {step:'Q1',text:'今、いちばん変えたいことは？',opts:[
+   {ic:'💸',label:'給料・収入を上げたい',v:'pay'},
+   {ic:'⏰',label:'休みや労働時間を改善したい',v:'time'},
+   {ic:'🧭',label:'将来が不安。長く働ける道に進みたい',v:'future'},
+   {ic:'😣',label:'人間関係・職場の雰囲気を変えたい',v:'human'}]},
+ {step:'Q2',text:'あなたが現場でいちばん力を発揮できるのは？',opts:[
+   {ic:'🤝',label:'お客様と接する・場を和ませる',v:'people'},
+   {ic:'📋',label:'仕込みや管理を正確に・丁寧にこなす',v:'process'},
+   {ic:'👑',label:'スタッフをまとめ、現場を回す',v:'lead'},
+   {ic:'💡',label:'メニューや販促を工夫する',v:'create'}]},
+ {step:'Q3',text:'転職の方向性は、どちらに近い？',opts:[
+   {ic:'🍽️',label:'飲食の中で、もっと良い職場へ',v:'in'},
+   {ic:'🚀',label:'飲食以外の異業種に挑戦したい',v:'out'},
+   {ic:'🤔',label:'まだ決めていない／相談して決めたい',v:'undecided'}]},
+ {step:'Q4',text:'飲食での経験年数は？',opts:[
+   {ic:'🌱',label:'3年未満',v:'jr'},
+   {ic:'💪',label:'3〜7年',v:'mid'},
+   {ic:'👑',label:'7年以上・店長/マネージャー経験あり',v:'sr'}]}
 ];
 
-// 診断タイプ（Q1×Q2の組み合わせで方向性メッセージを出し分け）
-function diagnose(a){
-  const reasonMap = {
-    pay:   {n:'収入アップ志向タイプ',  d:'今の頑張りが給料に反映されていない状態。飲食経験は「成果を出せる人材」として評価されます。年収を上げられる職場・職種への転職が有効です。'},
-    time:  {n:'ワークライフ重視タイプ',d:'働き方そのものを見直したい段階。土日休み・時間が読める職場へ移ることで、生活の質が大きく変わります。'},
-    future:{n:'キャリア再設計タイプ',  d:'この先も続けられるか不安を感じている状態。早めに市場価値を確かめ、長く働ける道を設計するのが正解です。'},
-    human: {n:'環境リセットタイプ',    d:'人間関係や職場の雰囲気で消耗している状態。職場を変えるだけで驚くほど楽になることも。まず選択肢を知ることが第一歩です。'},
-  };
-  const dirMap = {
-    in:        '飲食業界内でのより良い職場探しは、業界の内情を知る専門エージェントが最も力を発揮します。',
-    out:       '異業種への転身は、接客・売上管理・スタッフ教育の経験を“どう言い換えるか”がカギ。飲食出身者の転職を熟知したプロが力になります。',
-    undecided: '方向性が固まっていなくても大丈夫。飲食専門のアドバイザーに相談しながら、自分に合う道を一緒に見つけるのが近道です。',
-  };
-  const r = reasonMap[a[0]] || reasonMap.future;
-  return { typeName:r.n, typeDesc:r.d + ' ' + (dirMap[a[1]]||dirMap.undecided) };
-}
+const STRENGTH={
+ people:{type:'人柄で信頼を勝ち取る「接客力」タイプ',tag:'対人折衝力',
+   text:'笑顔での接客やとっさのクレーム対応で磨いた「対人折衝力」は、あなたが思っている以上に強い武器です。営業・販売・カスタマーサクセス・受付など、人と関わる仕事ならどこでも即戦力として評価されます。'},
+ process:{type:'現場を支える「段取り・正確さ」タイプ',tag:'オペレーション力',
+   text:'仕込み・在庫・衛生の管理で身につけた「正確さと段取り力」は、地味に見えてとても希少なスキルです。事務・管理・品質管理・物流など、ミスが許されない仕事であなたの丁寧さが活きます。'},
+ lead:{type:'人とお金を動かす「現場マネジメント」タイプ',tag:'マネジメント実績',
+   text:'シフト管理・スタッフ教育・売上づくりの経験は、立派な「マネジメント実績」です。とくに店長経験は、業界を問わず管理職候補として高く評価される、転職市場での切り札になります。'},
+ create:{type:'工夫で売上を作る「企画・改善」タイプ',tag:'企画・改善力',
+   text:'メニュー考案や販促の工夫で発揮してきた「企画・改善力」は、これからの時代に求められる力です。商品企画・マーケティング・店舗開発など、アイデアを形にする仕事で輝けます。'}
+};
 
-let current=0; const answers=[];
-const progress=document.getElementById('progress');
-const quiz=document.getElementById('quiz');
+// アドバイス（回答ごとに出し分け）
+const ADV_MOTIVE={
+ pay:{ic:'💰',t:'年収を上げたいなら「数字」で語る',s:'「売上を前年比◯％アップ」「客単価を◯円改善」など、成果を数字で書くだけで評価が一段上がります。今のうちにメモしておきましょう。'},
+ time:{ic:'⏰',t:'働き方は「譲れない条件」を先に決める',s:'土日休み・残業◯時間以内など、ゆずれない条件を最初にハッキリさせると、入ってから後悔しない転職ができます。'},
+ future:{ic:'🧭',t:'まずは自分の「市場価値」を知る',s:'あなたの経験がどんな職種で求められているかを知るだけでも、進む道がぐっと見えてきます。早めの情報収集が安心につながります。'},
+ human:{ic:'🤝',t:'職場の「中の雰囲気」を事前に確かめる',s:'「入ってみたら違った」を防ぐには、内部事情に詳しいプロ経由で職場の実態を聞いておくのが安全です。'}
+};
+const ADV_DIR={
+ in:{ic:'🍽️',t:'飲食内なら「非公開の好条件求人」を狙う',s:'同じ飲食でも、待遇や休みは店によって大違い。表に出ない好条件の求人を紹介してもらうのが、いちばんの近道です。'},
+ out:{ic:'🚀',t:'異業種なら「経験の翻訳」がカギ',s:'飲食での経験を、応募先が使う言葉に「翻訳」できれば未経験でも通ります。ここはプロと一緒に整理すると一気に進みます。'},
+ undecided:{ic:'🗺️',t:'迷っているなら「相談しながら」決める',s:'方向性は一人で悩むより、たくさんの事例を知るプロと話す中で見えてきます。まずは気軽に話してみるのがおすすめです。'}
+};
+const ADV_EXP={
+ sr:{ic:'👑',t:'店長・マネジメント経験は最大の武器',s:'7年以上・管理職の経験は、どの業界でも「人とお金を動かせる人」として高く評価されます。自信を持って前面に出しましょう。'},
+ mid:{ic:'💪',t:'今が動きやすいベストタイミング',s:'3〜7年は即戦力ゾーン。第二新卒より経験があり、ベテランより柔軟、と両方の良さを持てる貴重な時期です。'},
+ jr:{ic:'🌱',t:'若さとポテンシャルは立派な強み',s:'経験が浅くても、未経験歓迎の求人はたくさんあります。早く動くほど選べる道が広がります。'}
+};
 
-function renderProgress(){
-  progress.innerHTML='';
-  QUESTIONS.forEach((_,i)=>{
-    const d=document.createElement('div');
-    d.className='dot'+(i<current?' done':i===current?' active':'');
-    progress.appendChild(d);
-  });
-}
-function renderQuestion(){
-  renderProgress();
-  const q=QUESTIONS[current];
-  quiz.innerHTML='';
-  const card=document.createElement('div');
-  card.className='q-card';
-  card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';
-  const opts=document.createElement('div'); opts.className='opts';
-  q.opts.forEach(o=>{
-    const b=document.createElement('button');
-    b.className='opt';
-    b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';
-    b.onclick=()=>{answers[current]=o.v; current++; (current<QUESTIONS.length)?renderQuestion():finish();};
-    opts.appendChild(b);
-  });
-  card.appendChild(opts);
-  if(current>0){
-    const back=document.createElement('button');
-    back.className='back'; back.textContent='← 前の質問に戻る';
-    back.onclick=()=>{current--;renderQuestion();};
-    card.appendChild(back);
-  }
-  quiz.appendChild(card);
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-function finish(){
-  renderProgress();
-  quiz.innerHTML='';
-  document.getElementById('loading').classList.add('show');
-  setTimeout(showResult,1400);
-}
-function showResult(){
-  document.getElementById('loading').classList.remove('show');
-  const d=diagnose(answers);
-  const res=document.getElementById('result');
-  res.innerHTML=
-    '<div class="type-box"><div class="lead">あなたの転職タイプは</div><div class="type-name">'+d.typeName+'</div><div class="type-desc">'+d.typeDesc+'</div></div>'+
-    '<div class="reco-label">あなたにおすすめの転職サービス<span>FOR YOU</span></div>'+
-    '<div class="card">'+
-      '<div class="card-top"><div class="card-logo">🍴</div><div class="card-tt"><b>フーズラボ・エージェント</b><span>飲食・外食業界専門の転職エージェント</span></div></div>'+
-      '<div class="card-body">'+
-        '<div class="why"><b>なぜあなたに？</b> '+whyText(answers)+'</div>'+
-        '<ul class="feat">'+
-          '<li>飲食業界に特化したアドバイザーが現場を理解した上でサポート</li>'+
-          '<li>表に出ない非公開求人を多数保有。好条件の職場と出会える</li>'+
-          '<li>飲食内でのキャリアアップも、異業種への転身も相談できる</li>'+
-          '<li>面接対策・条件交渉まで代行してくれるので安心</li>'+
-        '</ul>'+
-        '<a href="http://www.rentracks.jp/adx/r.html?idx=0.57954.382823.3623.5462&dna=77604" class="cta" target="_blank" rel="noopener">無料でキャリア相談する →</a>'+
-        '<a href="https://px.a8.net/svt/ejp?a8mat=3TDA1J+2DQFW2+3TJY+BXB8Z" class="cta-sub" target="_blank" rel="noopener">▶ かんたん60秒・無料登録はこちら</a>'+
-        '<p class="note">登録・相談・サポートはすべて無料です</p>'+
-      '</div>'+
-    '</div>'+
-    '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
-  res.classList.add('show');
-  window.scrollTo({top:0,behavior:'smooth'});
-}
-function whyText(a){
-  const exp = a[2]==='sr' ? '店長・マネジメント経験は、どの業界でも高く評価される強みです。' :
-              a[2]==='mid' ? '3〜7年の実務経験は、即戦力として歓迎されるゾーンです。' :
-              '若さとポテンシャルを活かせる今が、動くのに最適なタイミングです。';
-  return 'あなたの回答から、'+exp+'飲食業界を知り尽くしたフーズラボなら、あなたの経験を正しく評価してくれる職場を提案できます。';
-}
+let current=0;const answers=[];
+const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
+function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
+function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);window.scrollTo({top:0,behavior:'smooth'});}
+function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1500);}
+const SERVICES={
+ foods:{logo:'🍴',name:'フーズラボ・エージェント',tag:'飲食・外食業界専門の転職エージェント',
+   feat:['飲食出身の転職を熟知。あなたの強みを正しく言葉にしてくれる','表に出ない非公開求人から、好条件の飲食の職場を提案','店長・キャリアアップ志向の求人もしっかり後押し','面接対策・条件交渉まで代行してくれるので安心'],
+   url:'http://www.rentracks.jp/adx/r.html?idx=0.57954.382823.3623.5462&dna=77604',
+   sub:'https://px.a8.net/svt/ejp?a8mat=3TDA1J+2DQFW2+3TJY+BXB8Z',subLabel:'まずは60秒・無料登録だけしておく',
+   cta:'無料でキャリア相談してみる →'},
+ miidas:{logo:'🔎',name:'ミイダス',tag:'適職・市場価値がわかる転職サービス',
+   feat:['あなたの市場価値・適正年収を無料で診断できる','コンピテンシー診断で「向いている仕事」が見つかる','飲食の経験を評価した“異業種”からのオファーが届く','書類選考なしの面接確約オファーのチャンスも'],
+   url:'https://px.a8.net/svt/ejp?a8mat=3T26WS+D5X2B6+3AW0+61RIA',
+   cta:'無料で適職・市場価値を診断する →'}
+};
+function adviceHTML(a){const items=[ADV_MOTIVE[a[0]],ADV_DIR[a[2]],ADV_EXP[a[3]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
+function cardHTML(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_blank" rel="noopener">'+s.cta+'</a>'+(s.sub?'<a href="'+s.sub+'" class="cta-sub" target="_blank" rel="noopener">▶ '+s.subLabel+'</a>':'')+'<p class="note">登録・相談・利用はすべて無料です</p></div></div>';}
+function showResult(){document.getElementById('loading').classList.remove('show');const st=STRENGTH[answers[1]]||STRENGTH.people;const dir=answers[2];const res=document.getElementById('result');
+ let lead,sub,cards;
+ if(dir==='in'){lead='この“次の一手”を、一人で進めなくて大丈夫です。';sub='飲食を知り尽くしたプロが、あなたの強みを活かせる職場探しを無料でサポートします。';cards=cardHTML('foods');}
+ else if(dir==='out'){lead='異業種への第一歩は「自分がどの業界で求められるか」を知ることから。';sub='無料の適職診断で、飲食で培った力が活きる“意外な道”が見えてきます。';cards=cardHTML('miidas');}
+ else{lead='残る道も、出る道も。両方を見比べてから決めましょう。';sub='飲食でのキャリアアップと、異業種への適職診断。どちらも無料で試せます。';cards=cardHTML('foods')+'<div class="funnel-sub" style="margin:24px 0 12px;font-weight:700">▼ 異業種も視野に入れるなら</div>'+cardHTML('miidas');}
+ res.innerHTML=
+  '<div class="type-box"><div class="lead">あなたの強みタイプは</div><div class="type-name">'+st.type+'</div><div class="type-desc">飲食でのあなたの経験は、決して「飲食でしか通用しないもの」ではありません。下のあなたの強みと、次の一手のアドバイスを読んでみてください。</div></div>'+
+  '<div class="block-label">💪 あなたの“武器”はこれ<span class="ln"></span></div>'+
+  '<div class="strength"><span class="tag">'+st.tag+'</span><p>'+st.text+'</p></div>'+
+  '<div class="block-label">🧭 あなたへのアドバイス<span class="ln"></span></div>'+
+  '<div class="advice">'+adviceHTML(answers)+'</div>'+
+  '<div class="funnel-lead">'+lead+'</div>'+
+  '<div class="funnel-sub">'+sub+'</div>'+
+  cards+
+  '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
+ res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});}
 function restart(){current=0;answers.length=0;document.getElementById('result').classList.remove('show');renderQuestion();}
-
 renderQuestion();
 </script>
 </body>
