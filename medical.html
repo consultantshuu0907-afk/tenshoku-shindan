@@ -150,7 +150,7 @@ function showResult(){document.getElementById('loading').classList.remove('show'
   '<div class="funnel-sub">'+s.job+'専門のアドバイザーが、あなたの希望に合った職場探しを無料でサポートします。</div>'+
   '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div>'+
   '<div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul>'+
-  '<a href="'+s.url+'" class="cta" target="_blank" rel="noopener">'+s.cta+'</a>'+
+  '<a href="'+s.url+'" class="cta">'+s.cta+'</a>'+
   '<p class="note">登録・相談・求人紹介はすべて無料です</p></div></div>'+
   '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
  res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});}

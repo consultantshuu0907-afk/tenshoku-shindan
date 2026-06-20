@@ -161,7 +161,7 @@ const SERVICES={
    cta:'無料で適職・市場価値を診断する →'}
 };
 function adviceHTML(a){const items=[ADV_MOTIVE[a[0]],ADV_DIR[a[2]],ADV_EXP[a[3]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
-function cardHTML(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_blank" rel="noopener">'+s.cta+'</a>'+(s.sub?'<a href="'+s.sub+'" class="cta-sub" target="_blank" rel="noopener">▶ '+s.subLabel+'</a>':'')+'<p class="note">登録・相談・利用はすべて無料です</p></div></div>';}
+function cardHTML(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta">'+s.cta+'</a>'+(s.sub?'<a href="'+s.sub+'" class="cta-sub">▶ '+s.subLabel+'</a>':'')+'<p class="note">登録・相談・利用はすべて無料です</p></div></div>';}
 function showResult(){document.getElementById('loading').classList.remove('show');const st=STRENGTH[answers[1]]||STRENGTH.people;const dir=answers[2];const res=document.getElementById('result');
  let lead,sub,cards;
  if(dir==='in'){lead='この“次の一手”を、一人で進めなくて大丈夫です。';sub='飲食を知り尽くしたプロが、あなたの強みを活かせる職場探しを無料でサポートします。';cards=cardHTML('foods');}
