@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ゲーム業界への転職タイプ診断｜あなたに合うキャリアは？</title>
+<meta name="description" content="3つの質問に答えるだけ。ゲーム業界で働く・目指すあなたに合った転職の方向性と、おすすめの転職エージェントを無料で診断します。">
+<style>
+  :root{--accent:#7c3aed;--accent-dark:#5b21b6;--accent-soft:#f5f0ff;--ink:#241f2e;--muted:#6f6880;--line:#ece6f5;--bg:#fdfbff;--card:#fff;--radius:18px;--shadow:0 10px 30px rgba(110,60,210,.13)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.8;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 18px}
+  .pr-bar{background:#efeaf6;color:#857a96;font-size:12px;text-align:center;padding:6px 10px}
+  .hero{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;padding:40px 0 46px;text-align:center;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% -10%,rgba(255,255,255,.18),transparent 45%)}
+  .hero .wrap{position:relative;z-index:1}
+  .hero .emoji{font-size:48px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
+  .hero h1{font-size:26px;font-weight:800;margin:10px 0 8px}
+  .hero h1 .big{display:block;font-size:32px;margin-top:2px}
+  .hero p{font-size:14.5px;opacity:.95;max-width:480px;margin:0 auto}
+  .badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;margin-top:14px}
+  main{padding:30px 0 50px}
+  .progress{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:22px}
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--line);transition:.3s}
+  .dot.active{background:var(--accent);transform:scale(1.25)}.dot.done{background:var(--accent-dark)}
+  .q-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 22px;animation:fade .35s}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .q-step{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.1em}
+  .q-text{font-size:20px;font-weight:800;margin:6px 0 20px;line-height:1.5}
+  .opts{display:grid;gap:12px}
+  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15.5px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit}
+  .opt:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
+  .opt .ic{font-size:24px;flex-shrink:0}
+  .back{display:block;margin:18px auto 0;background:none;border:none;color:var(--muted);font-size:13.5px;cursor:pointer;text-decoration:underline;font-family:inherit}
+  .result{display:none;animation:fade .4s}.result.show{display:block}
+  .loading{text-align:center;padding:50px 0;display:none}.loading.show{display:block}
+  .spinner{width:46px;height:46px;border:5px solid var(--line);border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow);margin-bottom:8px}
+  .type-box .lead{font-size:13px;font-weight:700;opacity:.9;letter-spacing:.08em}
+  .type-box .type-name{font-size:26px;font-weight:800;margin:8px 0 10px}
+  .type-box .type-desc{font-size:14.5px;opacity:.97}
+  .reco-label{text-align:center;font-weight:800;color:var(--accent);margin:30px 0 14px;font-size:15px}
+  .reco-label span{display:block;font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.08em;margin-top:2px}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+  .card-top{background:var(--accent-soft);padding:18px 20px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
+  .card-logo{width:50px;height:50px;border-radius:13px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0;box-shadow:0 4px 10px rgba(110,60,210,.25)}
+  .card-tt b{font-size:17px;display:block}.card-tt span{font-size:12.5px;color:var(--muted)}
+  .card-body{padding:18px 20px}
+  .why{background:var(--accent-soft);border-radius:12px;padding:12px 15px;font-size:13.5px;margin-bottom:16px}.why b{color:var(--accent-dark)}
+  .feat{list-style:none;display:grid;gap:10px;margin-bottom:16px}
+  .feat li{position:relative;padding-left:27px;font-size:14px}
+  .feat li::before{content:"✓";position:absolute;left:0;top:2px;color:#fff;background:var(--accent);width:18px;height:18px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .cta{display:block;text-align:center;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-weight:800;font-size:16px;padding:16px;border-radius:12px;text-decoration:none;box-shadow:0 8px 18px rgba(110,60,210,.28);transition:transform .15s}
+  .cta:active{transform:scale(.98)}
+  .note{text-align:center;font-size:12px;color:var(--muted);margin-top:11px}
+  .restart{display:block;margin:24px auto 0;background:none;border:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:9px 20px;border-radius:999px;cursor:pointer;font-family:inherit}
+  footer{background:#241f2e;color:#c9c0d8;padding:28px 0;text-align:center;font-size:12.5px;line-height:1.9;margin-top:10px}
+  footer .disc{max-width:600px;margin:0 auto 12px;opacity:.8}
+  @media(max-width:480px){.hero h1{font-size:22px}.hero h1 .big{font-size:27px}.q-text{font-size:18px}}
+</style>
+</head>
+<body>
+<div class="pr-bar">本ページはプロモーション（アフィリエイト広告）を含みます</div>
+<header class="hero"><div class="wrap">
+  <div class="emoji">🎮</div>
+  <span class="badge">かんたん3問・無料診断</span>
+  <h1>ゲーム業界への<span class="big">転職タイプ診断</span></h1>
+  <p>3つの質問に答えるだけ。あなたに合ったゲーム業界でのキャリアと、ぴったりの転職サービスを無料で診断します。</p>
+</div></header>
+<main class="wrap">
+  <div class="progress" id="progress"></div>
+  <div id="quiz"></div>
+  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたにぴったりの転職プランを診断中…</p></div>
+  <div class="result" id="result"></div>
+</main>
+<footer><div class="wrap">
+  <p class="disc">※本ページはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
+  <p>© ゲーム業界の転職タイプ診断</p>
+</div></footer>
+<script>
+const QUESTIONS=[
+ {step:'Q1',text:'転職で、いちばん叶えたいことは？',opts:[
+   {ic:'💰',label:'年収・待遇をアップさせたい',v:'pay'},
+   {ic:'🎯',label:'もっと面白い・規模の大きいタイトルに関わりたい',v:'title'},
+   {ic:'📈',label:'スキルを伸ばしてキャリアアップしたい',v:'skill'},
+   {ic:'⏰',label:'働き方・労働環境を改善したい',v:'env'}]},
+ {step:'Q2',text:'あなたの職種（希望含む）は？',opts:[
+   {ic:'🧩',label:'プランナー・ディレクター・企画',v:'plan'},
+   {ic:'💻',label:'プログラマー・エンジニア',v:'eng'},
+   {ic:'🎨',label:'デザイナー・グラフィック・サウンド',v:'design'},
+   {ic:'🌱',label:'未経験からゲーム業界を目指したい',v:'new'}]},
+ {step:'Q3',text:'ゲーム業界での経験は？',opts:[
+   {ic:'🌱',label:'未経験・他業種から',v:'jr'},
+   {ic:'💪',label:'1〜5年',v:'mid'},
+   {ic:'👑',label:'5年以上・リードクラス',v:'sr'}]}
+];
+function diagnose(a){
+ const m={pay:{n:'年収アップ志向タイプ',d:'スキルに見合った年収を求める段階。ゲーム業界は専門性が評価されやすく、適切なエージェント経由なら年収アップの可能性が高まります。'},
+  title:{n:'やりがい重視タイプ',d:'より大きく面白いタイトルに挑戦したい段階。非公開の有名タイトル案件に出会えるかがカギです。'},
+  skill:{n:'キャリアアップタイプ',d:'技術や役割の幅を広げたい段階。次に伸ばすべきスキルが活きる環境への転職が有効です。'},
+  env:{n:'働き方改善タイプ',d:'労働環境を整えたい段階。リモートや裁量労働など、働きやすいスタジオは確実に存在します。'}};
+ const r=m[a[0]]||m.skill;
+ return{typeName:r.n,typeDesc:r.d+' ゲーム業界に精通したエージェントなら、あなたの職種・経験に合った最適な1社を提案してくれます。'};
+}
+function whyText(a){
+ const j=a[1]==='plan'?'企画・ディレクション経験':a[1]==='eng'?'エンジニアとしての技術力':a[1]==='design'?'クリエイティブの専門性':'ゲームへの熱意とポテンシャル';
+ const e=a[2]==='sr'?'リードクラスの経験は希少価値が高く、好条件で迎えられます。':a[2]==='mid'?'実務経験者は即戦力として歓迎されるゾーンです。':'未経験歓迎の求人も多く、今が挑戦のチャンスです。';
+ return 'あなたの'+j+'は、ゲーム業界で大きな武器になります。'+e+'業界特化のG-JOBエージェントなら、その強みを正しく評価する職場を紹介できます。';
+}
+let current=0;const answers=[];
+const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
+function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
+function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);window.scrollTo({top:0,behavior:'smooth'});}
+function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1400);}
+function showResult(){document.getElementById('loading').classList.remove('show');const d=diagnose(answers);const res=document.getElementById('result');
+ res.innerHTML='<div class="type-box"><div class="lead">あなたの転職タイプは</div><div class="type-name">'+d.typeName+'</div><div class="type-desc">'+d.typeDesc+'</div></div>'+
+ '<div class="reco-label">あなたにおすすめの転職サービス<span>FOR YOU</span></div>'+
+ '<div class="card"><div class="card-top"><div class="card-logo">🎮</div><div class="card-tt"><b>G-JOBエージェント</b><span>ゲーム業界専門の転職エージェント</span></div></div>'+
+ '<div class="card-body"><div class="why"><b>なぜあなたに？</b> '+whyText(answers)+'</div>'+
+ '<ul class="feat"><li>ゲーム業界に完全特化した専門エージェント</li><li>プランナー・エンジニア・デザイナーなど幅広い職種に対応</li><li>有名タイトルを含む非公開求人を多数保有</li><li>業界出身のアドバイザーが制作現場を理解してサポート</li></ul>'+
+ '<a href="http://www.rentracks.jp/adx/r.html?idx=0.57954.382823.8929.12674&dna=148584" class="cta" target="_blank" rel="noopener">無料でゲーム業界の求人を見る →</a>'+
+ '<p class="note">登録・相談・サポートはすべて無料です</p></div></div>'+
+ '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
+ res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});}
+function restart(){current=0;answers.length=0;document.getElementById('result').classList.remove('show');renderQuestion();}
+renderQuestion();
+</script>
+</body>
+</html>
