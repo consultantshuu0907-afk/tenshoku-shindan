@@ -76,6 +76,24 @@
   footer{background:#20222e;color:#c4c4d6;padding:28px 0;text-align:center;font-size:12.5px;line-height:1.9;margin-top:10px}
   footer .disc{max-width:600px;margin:0 auto 12px;opacity:.8}
   @media(max-width:480px){.hero h1{font-size:21px}.hero h1 .big{font-size:25px}.q-text{font-size:18px}}
+  /* biz-upgrade: 信頼感ビジネスデザイン統一 */
+  .hero{box-shadow:0 8px 24px rgba(16,24,40,.09)}
+  .hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.25);z-index:1}
+  .hero .emoji{width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:36px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);border-radius:20px}
+  .q-card{box-shadow:0 1px 2px rgba(16,24,40,.04),0 14px 30px rgba(16,24,40,.06)}
+  .card{position:relative;box-shadow:0 1px 2px rgba(16,24,40,.04),0 14px 30px rgba(16,24,40,.07)}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));z-index:3}
+  .block-label{border-bottom:2px solid var(--accent-soft);padding-bottom:9px}
+  .block-label .ln{display:none}
+  .strength{box-shadow:0 1px 2px rgba(16,24,40,.04),0 10px 24px rgba(16,24,40,.05)}
+  .advice-item{transition:transform .16s,box-shadow .16s}
+  .advice-item:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(16,24,40,.08)}
+  .cta{transition:transform .16s,box-shadow .2s;letter-spacing:.02em}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(16,24,40,.20)}
+  .type-box{position:relative;overflow:hidden}
+  .type-box::after{content:"";position:absolute;right:-44px;top:-48px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .funnel-lead{margin-top:34px;padding-top:26px;border-top:1px dashed var(--line)}
+  footer{background:linear-gradient(180deg,var(--ink),#0b1220)}
 </style>
 </head>
 <body>
