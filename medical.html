@@ -120,6 +120,90 @@
   .strength .tag{letter-spacing:.04em}
   .advice-item{border-radius:14px;border:1px solid rgba(16,24,40,.06)}
   .block-label{letter-spacing:.02em}
+
+/* kyujin-cool: 求人ビジネス感×かっこよさ ------------------------------------
+   Signature Noir（統合確定版）: biz-upgrade / pro-polish の上に重ねる最上位レイヤー
+   ・ダーク中性色 #0e1116 を全ページ共通の「クールの錨」に
+   ・業界 --accent はパレット不変のまま、線(罫)・点(ドット)・CTA地色にのみ限定投入
+   ・HTML非編集。既存の実在クラスと ::before/::after のみで成立
+   ・診断ページ9枚の </style> 直前にそのまま貼る
+-------------------------------------------------------------------------- */
+:root{
+  --nk:#0e1116;                                              /* near-black anchor（全業界共通） */
+  --nk2:#161b25;                                             /* panel */
+  --acc-lift:color-mix(in srgb,var(--accent) 78%,#fff);      /* 低明度accentをヒーロー等で持ち上げ */
+  --hair:color-mix(in srgb,var(--accent) 34%,var(--line));   /* accentヘアライン */
+  --glow:color-mix(in srgb,var(--accent) 55%,transparent);
+}
+
+/* 上端：採用ブランドのダーク帯 --------------------------------------------- */
+.pr-bar{background:var(--nk);color:color-mix(in srgb,#fff 60%,transparent);letter-spacing:.04em;border-bottom:2px solid var(--accent)}
+
+/* ヒーロー：黒地に業界色がにじむ（低明度accentは--acc-liftで可視化） --------- */
+.hero{background:linear-gradient(160deg,var(--nk),color-mix(in srgb,var(--acc-lift) 30%,var(--nk)));box-shadow:0 10px 30px rgba(8,10,16,.30)}
+.hero::after{opacity:.55}                                    /* 白radialは弱める */
+.hero::before{background:var(--accent);height:4px;opacity:.95}/* 下端アクセント罫線（既存4px白帯を上書き） */
+.hero .emoji{background:rgba(255,255,255,.06);border:1px solid color-mix(in srgb,var(--acc-lift) 60%,#fff);border-radius:14px}
+.hero h1{position:relative;display:inline-block;padding-bottom:13px}
+.hero h1::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:46px;height:3px;background:var(--accent);border-radius:2px}
+/* ヒーローだけ英字キッカー。emojiより前に出るのを利用し“採用メディアの冠”に */
+.hero .wrap::before{content:"CAREER DIAGNOSIS";display:block;font-size:10.5px;font-weight:700;letter-spacing:.26em;color:var(--acc-lift);margin-bottom:14px;text-align:center}
+/* バッジ：塗り→outlineチップ＋英字感 */
+.badge{background:transparent;border:1px solid color-mix(in srgb,var(--acc-lift) 62%,#fff);color:#fff;letter-spacing:.10em;border-radius:8px}
+.badge::before{content:"▪";color:var(--accent);margin-right:7px}
+
+/* 進捗ドット：activeはaccent、doneは中性色で工程感 ------------------------- */
+.dot.done{background:color-mix(in srgb,var(--accent) 50%,var(--nk))}
+
+/* ステップ番号：英字は足さず、accent色＋広字間＋左の鋭いtickだけで魅せる ----- */
+.q-step{color:var(--accent);letter-spacing:.14em;position:relative;padding-left:15px}
+.q-step::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px -1px var(--glow)}
+
+/* 設問カード：エッジ締め --------------------------------------------------- */
+.q-card{border-radius:12px;border:1px solid color-mix(in srgb,var(--ink) 10%,var(--line));box-shadow:0 1px 2px rgba(8,10,16,.06),0 16px 34px -14px rgba(8,10,16,.20)}
+
+/* 選択肢：平ら＋左accentインジケータ（hoverで出現） ------------------------ */
+.opt{border-radius:10px;border-width:1.5px;border-left:3px solid transparent;transition:border-color .16s,box-shadow .16s,transform .16s,background .16s}
+.opt:hover{border-left-color:var(--accent);transform:translateY(-1px);box-shadow:0 8px 18px -8px var(--glow)}
+
+/* 結果タイプ帯：黒×accent（帯はダーク、名称は白、リードはaccent） ---------- */
+.type-box{background:linear-gradient(155deg,var(--nk),color-mix(in srgb,var(--acc-lift) 32%,var(--nk)));border-radius:12px;border:1px solid rgba(255,255,255,.08);box-shadow:0 22px 46px -18px rgba(8,10,16,.55)}
+.type-box .lead{color:var(--acc-lift);letter-spacing:.20em;text-transform:uppercase;opacity:1}
+.type-box .type-name{color:#fff}
+.type-box .type-desc{color:rgba(255,255,255,.94)}
+.type-box::after{background:radial-gradient(circle,var(--glow),transparent 60%);opacity:.45}
+
+/* セクションラベル：column化せず、左tick＋末尾.lnをaccentヘアライン化 ------- */
+.block-label{position:relative;border-bottom:none;padding-left:13px;letter-spacing:.02em}
+.block-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:1em;background:var(--accent);border-radius:2px}
+.block-label .ln{display:block;flex:1;height:1px;background:var(--hair);border-radius:0}   /* 非表示の.lnを復活＝紙面ヘアライン */
+
+/* 強みラベル：塗りチップ→outlineチップ ------------------------------------ */
+.strength{border-radius:12px;border-left-width:3px}
+.strength .tag{background:transparent;border:1px solid color-mix(in srgb,var(--accent) 48%,var(--line));color:var(--accent-dark);border-radius:6px;letter-spacing:.05em}
+
+/* アドバイス：フラット化 --------------------------------------------------- */
+.advice-item{border-radius:10px}
+
+/* ファネル区切り：破線→accentヘアラインの実線 ------------------------------ */
+.funnel-lead{border-top:1px solid var(--hair)}
+
+/* サービスカード：黒ヘッダーの採用カード（card-tt白上書きが必須） ---------- */
+.card{border-radius:10px;border:1px solid color-mix(in srgb,var(--ink) 12%,var(--line))}
+.card-top{background:var(--nk);border-bottom:1px solid rgba(255,255,255,.08)}
+.card-tt b{color:#fff}
+.card-tt span{color:color-mix(in srgb,#fff 60%,transparent)}
+.card-logo{border-radius:10px;background:var(--accent);box-shadow:0 6px 16px -6px var(--glow),inset 0 1px 0 rgba(255,255,255,.25)}
+.feat li::before{border-radius:4px}                          /* 丸→角丸スクエアでシャープに */
+
+/* CTA：唯一のベタaccent＝金彩の一撃（主役ボタンとして際立たせる） ---------- */
+.cta{border-radius:12px;letter-spacing:.03em;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 12px 22px -10px var(--glow)}
+.cta:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 18px 30px -10px var(--glow)}
+.cta-sub{border-radius:10px}
+
+.note{color:color-mix(in srgb,var(--muted) 90%,#000);letter-spacing:.02em}
+.restart{border-radius:8px;border-color:var(--line)}
+footer{background:var(--nk)}
 </style>
 </head>
 <body>

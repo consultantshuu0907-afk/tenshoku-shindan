@@ -66,6 +66,37 @@
   .tile b{letter-spacing:.01em}
   .tile:hover{box-shadow:0 22px 40px -14px rgba(16,24,40,.18)}
   .tile .bar{width:6px}
+
+/* kyujin-cool: index業界ポータル（Signature Noir） --------------------------
+   index.html は --accent 未定義（slate系の汎用パレット）。中性色は直値で錨を打つ。
+   .tile .bar は .c1〜.c9 が背景色で業界カラーを供給＝“各ページaccentの予告”として温存。
+   </style> 直前に貼る。
+-------------------------------------------------------------------------- */
+.pr-bar{background:#0e1116;color:color-mix(in srgb,#fff 60%,transparent);border-bottom:2px solid #334155}
+
+/* バナーを黒台紙に載せ高級感を出す */
+.site-hero{background:#0e1116;padding:20px 0 10px}
+.hero-banner{border-radius:12px;box-shadow:0 18px 40px -16px rgba(8,10,16,.6);border:1px solid rgba(255,255,255,.06)}
+
+/* リード：英字キッカー＋広字間で採用メディアの小見出しに */
+.lead{position:relative;padding-top:26px;letter-spacing:.02em}
+.lead::before{content:"SELECT YOUR INDUSTRY";display:block;font-size:10.5px;font-weight:700;letter-spacing:.24em;color:#64748b;margin-bottom:8px}
+.lead-sub{letter-spacing:.02em}
+
+/* タイル：白地カード＋ヘアライン。太バー→細い罫線でエディトリアルに */
+.grid{gap:12px}
+.tile{border-radius:10px;border:1px solid rgba(16,24,40,.10);background:#fff;box-shadow:0 1px 2px rgba(8,10,16,.06),0 12px 26px -12px rgba(8,10,16,.14);transition:transform .16s,box-shadow .16s,border-color .16s}
+.tile:hover{transform:translateY(-3px);border-color:rgba(8,10,16,.18);box-shadow:0 20px 36px -16px rgba(8,10,16,.22)}
+.tile .bar{width:4px}                                        /* 5px→4px：業界色を細い罫に */
+.tile b{letter-spacing:.01em}
+.tile span{letter-spacing:.01em}
+
+/* 総合(.tile.wide)だけ黒地で“錨”を可視化＝ポータルの締め */
+.tile.wide{background:#0e1116;border-color:rgba(255,255,255,.08)}
+.tile.wide b{color:#fff}
+.tile.wide span{color:color-mix(in srgb,#fff 60%,transparent)}
+
+footer{background:#0e1116}
 </style>
 </head>
 <body>
