@@ -204,6 +204,20 @@
 .note{color:color-mix(in srgb,var(--muted) 90%,#000);letter-spacing:.02em}
 .restart{border-radius:8px;border-color:var(--line)}
 footer{background:var(--nk)}
+
+  /* cro-cvr: コンバージョン最適化レイヤー（追従CTA/安心チップ/摩擦低減） */
+  .cta{min-height:56px;display:flex;align-items:center;justify-content:center}
+  .cta-lead{text-align:center;font-size:13px;font-weight:700;color:var(--accent-dark);margin:0 0 11px;line-height:1.65}
+  .assure{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:11px}
+  .assure span{font-size:11.5px;color:var(--muted);border:1px solid var(--hair);border-radius:999px;padding:3px 10px}
+  .hero-assure{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  .hero-assure span{font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#fff;background:rgba(255,255,255,.06);border:1px solid color-mix(in srgb,var(--acc-lift) 45%,#fff);border-radius:999px;padding:5px 11px}
+  .jump-service{display:block;margin:14px auto 2px;background:none;border:none;color:var(--accent-dark);font-weight:800;font-size:14px;cursor:pointer;font-family:inherit;text-decoration:underline;text-underline-offset:3px}
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:900;display:flex;align-items:center;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--nk);border-top:1px solid var(--accent);box-shadow:0 -8px 24px rgba(8,10,16,.35);transform:translateY(125%);transition:transform .22s ease}
+  body.show-sticky .sticky-cta{transform:translateY(0)}
+  body.show-sticky main{padding-bottom:108px}
+  .sc-tag{flex:none;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--acc-lift);border:1px solid color-mix(in srgb,var(--acc-lift) 55%,#fff);border-radius:6px;padding:5px 9px}
+  .sc-btn{flex:1;min-height:52px;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:800;font-size:15px;color:#fff;text-decoration:none;background:linear-gradient(180deg,var(--accent),var(--accent-dark));border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 18px -8px var(--glow)}
 </style>
 </head>
 <body>
@@ -274,7 +288,7 @@ const ADV_STATE={
 let current=0;const answers=[];
 const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
 function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
-function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);window.scrollTo({top:0,behavior:'smooth'});}
+function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);document.getElementById('progress').scrollIntoView({behavior:'smooth',block:'start'});}
 function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1500);}
 function adviceHTML(a){const items=[ADV_FOCUS[a[1]],ADV_STATE[a[2]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
 function fullCard(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_self">'+s.cta+'</a><p class="note">登録・相談・利用はすべて無料です</p></div></div>';}
@@ -298,6 +312,52 @@ function showResult(){document.getElementById('loading').classList.remove('show'
  res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});}
 function restart(){current=0;answers.length=0;document.getElementById('result').classList.remove('show');renderQuestion();}
 renderQuestion();
+</script>
+<script>
+/* cro-cvr */
+(function(){
+  var badge=document.querySelector('.badge');
+  if(badge&&badge.getAttribute('data-cro')!=='1'){badge.setAttribute('data-cro','1');badge.textContent=badge.textContent+'｜約1分・登録不要';}
+  var hw=document.querySelector('.hero .wrap');
+  if(hw&&!hw.querySelector('.hero-assure')){hw.insertAdjacentHTML('beforeend','<div class="hero-assure"><span>🔒 個人情報の入力なし</span><span>💴 登録も相談も無料</span><span>🕒 在職中でもOK</span></div>');}
+  var result=document.getElementById('result');
+  if(!result)return;
+  var bar=document.createElement('div');bar.className='sticky-cta';bar.setAttribute('aria-hidden','true');
+  var tag=document.createElement('span');tag.className='sc-tag';tag.textContent='無料';
+  var btn=document.createElement('a');btn.className='sc-btn';btn.setAttribute('href','#');
+  bar.appendChild(tag);bar.appendChild(btn);document.body.appendChild(bar);
+  var primaryEl=null,lastSticky=null;
+  function sticky(on){if(lastSticky===on)return;lastSticky=on;document.body.classList[on?'add':'remove']('show-sticky');bar.setAttribute('aria-hidden',on?'false':'true');}
+  function updateSticky(){
+    if(!result.classList.contains('show')||!primaryEl){sticky(false);return;}
+    var rc=primaryEl.getBoundingClientRect();
+    var inView=(rc.top<window.innerHeight-40)&&(rc.bottom>64);
+    sticky(!inView);
+  }
+  window.addEventListener('scroll',updateSticky,{passive:true});
+  window.addEventListener('resize',updateSticky,{passive:true});
+  function firstCta(card){var b=card.querySelector('.card-body');if(!b)return null;var k=b.children;for(var i=0;i<k.length;i++){if(k[i].classList&&k[i].classList.contains('cta'))return k[i];}return null;}
+  function decorate(){
+    if(!result.classList.contains('show')){primaryEl=null;sticky(false);return;}
+    var cards=result.querySelectorAll('.card');
+    for(var i=0;i<cards.length;i++){
+      var body=cards[i].querySelector('.card-body');if(!body)continue;
+      var cta=firstCta(cards[i]);if(!cta)continue;
+      if(i===0&&!body.querySelector('.cta-lead')){cta.insertAdjacentHTML('beforebegin','<p class="cta-lead">好条件の求人ほど“表に出ないまま”決まっていきます。登録しておくほど、出会える数が増えます（無料）。</p>');}
+      if(!body.querySelector('.cta-sub')){var s=document.createElement('a');s.className='cta-sub';s.setAttribute('href',cta.getAttribute('href'));s.textContent='▶ まずは無料登録だけ済ませておく';cta.insertAdjacentElement('afterend',s);}
+      var note=body.querySelector('.note');
+      if(note&&!body.querySelector('.assure')){note.insertAdjacentHTML('beforebegin','<div class="assure"><span>無料</span><span>在職中でもOK</span><span>登録は約1分</span></div>');note.textContent='掲載内容は各サービスの公式情報をもとに記載しています';}
+    }
+    var tb=result.querySelector('.type-box');
+    if(tb&&!result.querySelector('.jump-service')){var j=document.createElement('button');j.type='button';j.className='jump-service';j.textContent='▶ あなたに合うサービスを今すぐ見る';j.addEventListener('click',function(){var c=result.querySelector('.card');if(c)c.scrollIntoView({behavior:'smooth',block:'start'});});tb.insertAdjacentElement('afterend',j);}
+    var primary=null,cs=result.querySelectorAll('.card');
+    for(var p=0;p<cs.length;p++){primary=firstCta(cs[p]);if(primary)break;}
+    if(primary){btn.setAttribute('href',primary.getAttribute('href'));btn.textContent=(primary.textContent||'無料で見てみる').replace(/\s+/g,' ').trim();primaryEl=primary;lastSticky=null;updateSticky();}
+    else{primaryEl=null;sticky(false);}
+  }
+  new MutationObserver(function(){decorate();}).observe(result,{attributes:true,attributeFilter:['class']});
+  if(result.classList.contains('show'))decorate();
+})();
 </script>
 </body>
 </html>
