@@ -97,6 +97,14 @@
 .tile.wide span{color:color-mix(in srgb,#fff 60%,transparent)}
 
 footer{background:#0e1116}
+
+  /* portal-search: 職種フィルター */
+  .tile-search{display:block;width:100%;max-width:440px;margin:0 auto 22px;padding:13px 16px;border:1px solid var(--line);border-radius:12px;font-size:15px;font-family:inherit;background:#fff;color:var(--ink);box-shadow:0 1px 3px rgba(16,24,40,.05);-webkit-appearance:none}
+  .tile-search::placeholder{color:var(--muted)}
+  .tile-search:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)}
+  .grid .tile.hide{display:none}
+  .no-hit{display:none;text-align:center;color:var(--muted);font-size:13.5px;margin-top:10px}
+  .no-hit.show{display:block}
 </style>
 </head>
 <body>
@@ -107,6 +115,7 @@ footer{background:#0e1116}
 <main class="wrap">
   <div class="lead" id="start">どの業界の転職を考えていますか？</div>
   <div class="lead-sub">気になる業界をタップして診断スタート（所要1分・無料）</div>
+  <input id="tileSearch" class="tile-search" type="search" inputmode="search" autocomplete="off" placeholder="🔍 職種・業界で探す（例：看護師、営業、事務）">
   <div class="grid">
     <a class="tile" href="inshoku.html"><span class="bar c1"></span><span class="ic">🍴</span><b>飲食・外食</b><span>長時間労働・低賃金から抜け出す</span></a>
     <a class="tile" href="game.html"><span class="bar c2"></span><span class="ic">🎮</span><b>ゲーム</b><span>プランナー・エンジニア・デザイナー</span></a>
@@ -134,10 +143,26 @@ footer{background:#0e1116}
     <a class="tile" href="bridal.html"><span class="bar c29"></span><span class="ic">💐</span><b>ブライダル</b><span>土日休み・提案力を活かす</span></a>
     <a class="tile" href="keibi.html"><span class="bar c30"></span><span class="ic">🛡️</span><b>警備・交通誘導</b><span>安定・年収アップ・未経験可</span></a>    <a class="tile wide" href="general.html"><span class="bar c9"></span><span class="ic">🧭</span><div><b>その他・まだ決まっていない方</b><span style="display:block">上記以外の業種・職種／迷っている方はこちら（総合診断）</span></div></a>
   </div>
+  <p class="no-hit" id="noHit">該当する職種が見つかりません。キーワードを変えるか、「その他・総合診断」からお進みください。</p>
 </main>
 <footer><div class="wrap">
   <p class="disc">※本サイトはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
   <p>© 業界別・転職タイプ診断</p>
 </div></footer>
+<script>
+(function(){
+  var q=document.getElementById('tileSearch');if(!q)return;
+  var tiles=[].slice.call(document.querySelectorAll('.grid .tile'));
+  var noHit=document.getElementById('noHit');
+  q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase();var hits=0;
+    tiles.forEach(function(t){
+      var hit=!v||(t.textContent||'').toLowerCase().indexOf(v)>-1;
+      t.classList.toggle('hide',!hit);if(hit)hits++;
+    });
+    if(noHit)noHit.classList.toggle('show',v&&hits===0);
+  });
+})();
+</script>
 </body>
 </html>
