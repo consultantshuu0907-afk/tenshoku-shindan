@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<title>リハビリ職（PT/OT/ST）の転職 タイプ診断｜あなたに合う進め方</title>
+<meta name="description" content="3つの質問に答えるだけ。理学療法士・作業療法士・言語聴覚士のあなたに、合う進め方とおすすめ転職サービスを無料で診断します。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="リハビリ職（PT/OT/ST）の転職 タイプ診断｜あなたに合う進め方">
+<meta property="og:description" content="3つの質問に答えるだけ。理学療法士・作業療法士・言語聴覚士のあなたに、合う進め方とおすすめ転職サービスを無料で診断します。">
+<meta property="og:url" content="https://consultantshuu0907-afk.github.io/tenshoku-shindan/reha.html">
+<meta property="og:image" content="https://consultantshuu0907-afk.github.io/tenshoku-shindan/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="リハビリ職（PT/OT/ST）の転職 タイプ診断｜あなたに合う進め方">
+<meta name="twitter:description" content="3つの質問に答えるだけ。理学療法士・作業療法士・言語聴覚士のあなたに、合う進め方とおすすめ転職サービスを無料で診断します。">
+<meta name="twitter:image" content="https://consultantshuu0907-afk.github.io/tenshoku-shindan/ogp.png">
+<style>
+  :root{--accent:#7e22ce;--accent-dark:#6b21a8;--accent-soft:#faf5ff;--ink:#1e2430;--muted:#64748b;--line:#e5e9f0;--bg:#f8fafc;--card:#fff;--radius:18px;--shadow:0 10px 30px rgba(51,65,85,.13)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 18px}
+  .pr-bar{background:#eef1f5;color:#7a8496;font-size:12px;text-align:center;padding:6px 10px}
+  .hero{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;padding:40px 0 46px;text-align:center;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% -10%,rgba(255,255,255,.18),transparent 45%)}
+  .hero .wrap{position:relative;z-index:1}
+  .hero .emoji{font-size:48px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
+  .hero h1{font-size:24px;font-weight:800;margin:10px 0 8px}
+  .hero h1 .big{display:block;font-size:29px;margin-top:2px}
+  .hero p{font-size:14.5px;opacity:.95;max-width:520px;margin:0 auto}
+  .badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;margin-top:14px}
+  main{padding:30px 0 50px}
+  .progress{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:22px}
+  .dot{width:10px;height:10px;border-radius:50%;background:var(--line);transition:.3s}
+  .dot.active{background:var(--accent);transform:scale(1.25)}.dot.done{background:var(--accent-dark)}
+  .q-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 22px;animation:fade .35s}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .q-step{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.1em}
+  .q-text{font-size:20px;font-weight:800;margin:6px 0 20px;line-height:1.5}
+  .opts{display:grid;gap:12px}
+  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit;line-height:1.5}
+  .opt:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
+  .opt .ic{font-size:24px;flex-shrink:0}
+  .back{display:block;margin:18px auto 0;background:none;border:none;color:var(--muted);font-size:13.5px;cursor:pointer;text-decoration:underline;font-family:inherit}
+  .result{display:none;animation:fade .4s}.result.show{display:block}
+  .loading{text-align:center;padding:50px 0;display:none}.loading.show{display:block}
+  .spinner{width:46px;height:46px;border:5px solid var(--line);border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
+  .type-box .lead{font-size:13px;font-weight:700;opacity:.9;letter-spacing:.08em}
+  .type-box .type-name{font-size:23px;font-weight:800;margin:8px 0 10px;line-height:1.4}
+  .type-box .type-desc{font-size:14.5px;opacity:.97;text-align:left}
+  .block-label{font-weight:800;font-size:16px;margin:28px 0 13px;display:flex;align-items:center;gap:8px}
+  .block-label .ln{flex:1;height:2px;background:var(--line);border-radius:2px}
+  .strength{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:18px 20px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .strength p{font-size:14.5px}
+  .strength .tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px;margin-bottom:9px}
+  .advice{display:grid;gap:12px}
+  .advice-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .advice-item .ic{font-size:23px;flex-shrink:0;margin-top:2px}
+  .advice-item b{display:block;font-size:15px;margin-bottom:2px}
+  .advice-item span{font-size:13.5px;color:var(--muted)}
+  .funnel-lead{text-align:center;font-size:14.5px;font-weight:700;margin:30px 0 6px}
+  .funnel-sub{text-align:center;font-size:13px;color:var(--muted);margin-bottom:16px}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+  .card-top{background:var(--accent-soft);padding:18px 20px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
+  .card-logo{width:50px;height:50px;border-radius:13px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0;box-shadow:0 4px 10px rgba(51,65,85,.25)}
+  .card-tt b{font-size:17px;display:block}.card-tt span{font-size:12.5px;color:var(--muted)}
+  .card-body{padding:18px 20px}
+  .feat{list-style:none;display:grid;gap:10px;margin-bottom:16px}
+  .feat li{position:relative;padding-left:27px;font-size:14px}
+  .feat li::before{content:"✓";position:absolute;left:0;top:2px;color:#fff;background:var(--accent);width:18px;height:18px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .cta{display:block;text-align:center;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-weight:800;font-size:16px;padding:16px;border-radius:12px;text-decoration:none;box-shadow:0 8px 18px rgba(51,65,85,.28);transition:transform .15s}
+  .cta:active{transform:scale(.98)}
+  .note{text-align:center;font-size:12px;color:var(--muted);margin-top:11px}
+  .restart{display:block;margin:24px auto 0;background:none;border:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:9px 20px;border-radius:999px;cursor:pointer;font-family:inherit}
+  footer{background:#1e2430;color:#c2cbd8;padding:28px 0;text-align:center;font-size:12.5px;line-height:1.9;margin-top:10px}
+  footer .disc{max-width:600px;margin:0 auto 12px;opacity:.8}
+  @media(max-width:480px){.hero h1{font-size:21px}.hero h1 .big{font-size:25px}.q-text{font-size:18px}}
+  /* biz-upgrade: 信頼感ビジネスデザイン統一 */
+  .hero{box-shadow:0 8px 24px rgba(16,24,40,.09)}
+  .hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.25);z-index:1}
+  .hero .emoji{width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:36px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);border-radius:20px}
+  .q-card{box-shadow:0 1px 2px rgba(16,24,40,.04),0 14px 30px rgba(16,24,40,.06)}
+  .card{position:relative;box-shadow:0 1px 2px rgba(16,24,40,.04),0 14px 30px rgba(16,24,40,.07)}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));z-index:3}
+  .block-label{border-bottom:2px solid var(--accent-soft);padding-bottom:9px}
+  .block-label .ln{display:none}
+  .strength{box-shadow:0 1px 2px rgba(16,24,40,.04),0 10px 24px rgba(16,24,40,.05)}
+  .advice-item{transition:transform .16s,box-shadow .16s}
+  .advice-item:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(16,24,40,.08)}
+  .cta{transition:transform .16s,box-shadow .2s;letter-spacing:.02em}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(16,24,40,.20)}
+  .type-box{position:relative;overflow:hidden}
+  .type-box::after{content:"";position:absolute;right:-44px;top:-48px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .funnel-lead{margin-top:34px;padding-top:26px;border-top:1px dashed var(--line)}
+  footer{background:linear-gradient(180deg,var(--ink),#0b1220)}
+
+  /* pro-polish: プロ仕上げ（色は不変・質感のみ向上） */
+  body{font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;letter-spacing:.01em}
+  .hero h1{letter-spacing:.03em;font-weight:800}
+  .hero p{letter-spacing:.02em}
+  .badge{letter-spacing:.05em;font-weight:700}
+  .hero .emoji{box-shadow:0 8px 20px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.35)}
+  .q-step{letter-spacing:.16em}
+  .q-text{letter-spacing:.005em}
+  .q-card{border-radius:20px;box-shadow:0 1px 3px rgba(16,24,40,.05),0 18px 40px -12px rgba(16,24,40,.14)}
+  .opt{border-radius:14px}
+  .opt:hover{box-shadow:0 10px 20px -8px color-mix(in srgb,var(--accent) 32%,transparent)}
+  .card{border-radius:16px;border:1px solid rgba(16,24,40,.07);box-shadow:0 1px 3px rgba(16,24,40,.05),0 16px 30px -10px rgba(16,24,40,.13)}
+  .card-logo{box-shadow:0 8px 16px -4px color-mix(in srgb,var(--accent) 42%,transparent),inset 0 1px 0 rgba(255,255,255,.28)}
+  .card-tt b{letter-spacing:.01em}
+  .feat li{line-height:1.72}
+  .feat li::before{background:linear-gradient(180deg,var(--accent),var(--accent-dark));box-shadow:0 2px 6px -1px color-mix(in srgb,var(--accent) 50%,transparent)}
+  .cta{background:linear-gradient(180deg,var(--accent),var(--accent-dark));border-radius:14px;letter-spacing:.02em;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 12px 24px -8px color-mix(in srgb,var(--accent) 55%,transparent)}
+  .cta:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 18px 32px -8px color-mix(in srgb,var(--accent) 62%,transparent)}
+  .type-box{border-radius:22px;box-shadow:0 22px 48px -16px color-mix(in srgb,var(--accent) 50%,transparent)}
+  .type-box .type-name{letter-spacing:.01em}
+  .strength{border-radius:16px}
+  .strength .tag{letter-spacing:.04em}
+  .advice-item{border-radius:14px;border:1px solid rgba(16,24,40,.06)}
+  .block-label{letter-spacing:.02em}
+
+/* kyujin-cool: 求人ビジネス感×かっこよさ ------------------------------------
+   Signature Noir（統合確定版）: biz-upgrade / pro-polish の上に重ねる最上位レイヤー
+   ・ダーク中性色 #0e1116 を全ページ共通の「クールの錨」に
+   ・業界 --accent はパレット不変のまま、線(罫)・点(ドット)・CTA地色にのみ限定投入
+   ・HTML非編集。既存の実在クラスと ::before/::after のみで成立
+   ・診断ページ9枚の style終了タグ直前にそのまま貼る
+-------------------------------------------------------------------------- */
+:root{
+  --nk:#0e1116;                                              /* near-black anchor（全業界共通） */
+  --nk2:#161b25;                                             /* panel */
+  --acc-lift:color-mix(in srgb,var(--accent) 78%,#fff);      /* 低明度accentをヒーロー等で持ち上げ */
+  --hair:color-mix(in srgb,var(--accent) 34%,var(--line));   /* accentヘアライン */
+  --glow:color-mix(in srgb,var(--accent) 55%,transparent);
+}
+
+/* 上端：採用ブランドのダーク帯 --------------------------------------------- */
+.pr-bar{background:var(--nk);color:color-mix(in srgb,#fff 60%,transparent);letter-spacing:.04em;border-bottom:2px solid var(--accent)}
+
+/* ヒーロー：黒地に業界色がにじむ（低明度accentは--acc-liftで可視化） --------- */
+.hero{background:linear-gradient(160deg,var(--nk),color-mix(in srgb,var(--acc-lift) 30%,var(--nk)));box-shadow:0 10px 30px rgba(8,10,16,.30)}
+.hero::after{opacity:.55}                                    /* 白radialは弱める */
+.hero::before{background:var(--accent);height:4px;opacity:.95}/* 下端アクセント罫線（既存4px白帯を上書き） */
+.hero .emoji{background:rgba(255,255,255,.06);border:1px solid color-mix(in srgb,var(--acc-lift) 60%,#fff);border-radius:14px}
+.hero h1{position:relative;display:inline-block;padding-bottom:13px}
+.hero h1::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:46px;height:3px;background:var(--accent);border-radius:2px}
+/* ヒーローだけ英字キッカー。emojiより前に出るのを利用し“採用メディアの冠”に */
+.hero .wrap::before{content:"CAREER DIAGNOSIS";display:block;font-size:10.5px;font-weight:700;letter-spacing:.26em;color:var(--acc-lift);margin-bottom:14px;text-align:center}
+/* バッジ：塗り→outlineチップ＋英字感 */
+.badge{background:transparent;border:1px solid color-mix(in srgb,var(--acc-lift) 62%,#fff);color:#fff;letter-spacing:.10em;border-radius:8px}
+.badge::before{content:"▪";color:var(--accent);margin-right:7px}
+
+/* 進捗ドット：activeはaccent、doneは中性色で工程感 ------------------------- */
+.dot.done{background:color-mix(in srgb,var(--accent) 50%,var(--nk))}
+
+/* ステップ番号：英字は足さず、accent色＋広字間＋左の鋭いtickだけで魅せる ----- */
+.q-step{color:var(--accent);letter-spacing:.14em;position:relative;padding-left:15px}
+.q-step::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px -1px var(--glow)}
+
+/* 設問カード：エッジ締め --------------------------------------------------- */
+.q-card{border-radius:12px;border:1px solid color-mix(in srgb,var(--ink) 10%,var(--line));box-shadow:0 1px 2px rgba(8,10,16,.06),0 16px 34px -14px rgba(8,10,16,.20)}
+
+/* 選択肢：平ら＋左accentインジケータ（hoverで出現） ------------------------ */
+.opt{border-radius:10px;border-width:1.5px;border-left:3px solid transparent;transition:border-color .16s,box-shadow .16s,transform .16s,background .16s}
+.opt:hover{border-left-color:var(--accent);transform:translateY(-1px);box-shadow:0 8px 18px -8px var(--glow)}
+
+/* 結果タイプ帯：黒×accent（帯はダーク、名称は白、リードはaccent） ---------- */
+.type-box{background:linear-gradient(155deg,var(--nk),color-mix(in srgb,var(--acc-lift) 32%,var(--nk)));border-radius:12px;border:1px solid rgba(255,255,255,.08);box-shadow:0 22px 46px -18px rgba(8,10,16,.55)}
+.type-box .lead{color:var(--acc-lift);letter-spacing:.20em;text-transform:uppercase;opacity:1}
+.type-box .type-name{color:#fff}
+.type-box .type-desc{color:rgba(255,255,255,.94)}
+.type-box::after{background:radial-gradient(circle,var(--glow),transparent 60%);opacity:.45}
+
+/* セクションラベル：column化せず、左tick＋末尾.lnをaccentヘアライン化 ------- */
+.block-label{position:relative;border-bottom:none;padding-left:13px;letter-spacing:.02em}
+.block-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:1em;background:var(--accent);border-radius:2px}
+.block-label .ln{display:block;flex:1;height:1px;background:var(--hair);border-radius:0}   /* 非表示の.lnを復活＝紙面ヘアライン */
+
+/* 強みラベル：塗りチップ→outlineチップ ------------------------------------ */
+.strength{border-radius:12px;border-left-width:3px}
+.strength .tag{background:transparent;border:1px solid color-mix(in srgb,var(--accent) 48%,var(--line));color:var(--accent-dark);border-radius:6px;letter-spacing:.05em}
+
+/* アドバイス：フラット化 --------------------------------------------------- */
+.advice-item{border-radius:10px}
+
+/* ファネル区切り：破線→accentヘアラインの実線 ------------------------------ */
+.funnel-lead{border-top:1px solid var(--hair)}
+
+/* サービスカード：黒ヘッダーの採用カード（card-tt白上書きが必須） ---------- */
+.card{border-radius:10px;border:1px solid color-mix(in srgb,var(--ink) 12%,var(--line))}
+.card-top{background:var(--nk);border-bottom:1px solid rgba(255,255,255,.08)}
+.card-tt b{color:#fff}
+.card-tt span{color:color-mix(in srgb,#fff 60%,transparent)}
+.card-logo{border-radius:10px;background:var(--accent);box-shadow:0 6px 16px -6px var(--glow),inset 0 1px 0 rgba(255,255,255,.25)}
+.feat li::before{border-radius:4px}                          /* 丸→角丸スクエアでシャープに */
+
+/* CTA：唯一のベタaccent＝金彩の一撃（主役ボタンとして際立たせる） ---------- */
+.cta{border-radius:12px;letter-spacing:.03em;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 12px 22px -10px var(--glow)}
+.cta:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 18px 30px -10px var(--glow)}
+.cta-sub{border-radius:10px}
+
+.note{color:color-mix(in srgb,var(--muted) 90%,#000);letter-spacing:.02em}
+.restart{border-radius:8px;border-color:var(--line)}
+footer{background:var(--nk)}
+
+  /* cro-cvr: コンバージョン最適化レイヤー（追従CTA/安心チップ/摩擦低減） */
+  .cta{min-height:56px;display:flex;align-items:center;justify-content:center}
+  .cta-lead{text-align:center;font-size:13px;font-weight:700;color:var(--accent-dark);margin:0 0 11px;line-height:1.65}
+  .assure{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:11px}
+  .assure span{font-size:11.5px;color:var(--muted);border:1px solid var(--hair);border-radius:999px;padding:3px 10px}
+  .hero-assure{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  .hero-assure span{font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#fff;background:rgba(255,255,255,.06);border:1px solid color-mix(in srgb,var(--acc-lift) 45%,#fff);border-radius:999px;padding:5px 11px}
+  .jump-service{display:block;margin:14px auto 2px;background:none;border:none;color:var(--accent-dark);font-weight:800;font-size:14px;cursor:pointer;font-family:inherit;text-decoration:underline;text-underline-offset:3px}
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:900;display:flex;align-items:center;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--nk);border-top:1px solid var(--accent);box-shadow:0 -8px 24px rgba(8,10,16,.35);transform:translateY(125%);transition:transform .22s ease}
+  body.show-sticky .sticky-cta{transform:translateY(0)}
+  body.show-sticky main{padding-bottom:108px}
+  .sc-tag{flex:none;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--acc-lift);border:1px solid color-mix(in srgb,var(--acc-lift) 55%,#fff);border-radius:6px;padding:5px 9px}
+  .sc-btn{flex:1;min-height:52px;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:800;font-size:15px;color:#fff;text-decoration:none;background:linear-gradient(180deg,var(--accent),var(--accent-dark));border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 18px -8px var(--glow)}
+</style>
+</head>
+<body>
+<div class="pr-bar">本ページはプロモーション（アフィリエイト広告）を含みます</div>
+<header class="hero"><div class="wrap">
+  <div class="emoji">🦴</div>
+  <span class="badge">かんたん3問・無料診断</span>
+  <h1>リハビリ職のあなたに<span class="big">合う転職の進め方</span></h1>
+  <p>給与が頭打ち・もっと裁量がほしい・別のフィールドへ——PT/OT/STのあなたのモヤモヤから、合う進め方とおすすめサービスを無料で診断します。</p>
+</div></header>
+<main class="wrap">
+  <div class="progress" id="progress"></div>
+  <div id="quiz"></div>
+  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたに合う進め方を診断中…</p></div>
+  <div class="result" id="result"></div>
+</main>
+<footer><div class="wrap">
+  <p class="disc">※本ページはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
+  <p>© リハビリ職（PT/OT/ST）の転職 タイプ診断</p>
+</div></footer>
+<script>
+const SERVICES={
+ miidas:{type:'まず自分を知りたい「自己分析」タイプ',logo:'🔎',name:'ミイダス',tag:'可能性診断で適職・市場価値がわかる',line:'診断で適職・市場価値がわかる',
+   feat:['コンピテンシー診断で「向いている仕事」が分かる','市場価値・適正年収を無料で診断できる','利用企業44万社以上','書類選考なしの面接確約オファーも届く'],
+   url:'https://px.a8.net/svt/ejp?a8mat=3T26WS+D5X2B6+3AW0+61RIA',cta:'無料で可能性診断を受ける →'},
+ ragent:{type:'プロと二人三脚「じっくり相談」タイプ',logo:'🤝',name:'リクルートエージェント',tag:'非公開求人が豊富な総合エージェント',line:'非公開25万件以上。プロが伴走',
+   feat:['非公開25万件以上＋公開約75万件','専任アドバイザーが選考対策・条件交渉を代行','転職決定数の実績が豊富','はじめての転職でも安心のサポート'],
+   url:'https://t.afi-b.com/visit.php?a=968723-W528197J&p=3919027v',cta:'無料で求人を紹介してもらう →'},
+ scout:{type:'待つだけでOK「スカウト」タイプ',logo:'📩',name:'リクルートダイレクトスカウト',tag:'登録して待つスカウト型サービス',line:'登録して待つだけ。年収UPも',
+   feat:['登録すれば企業・ヘッドハンターからスカウトが届く','ハイクラス・好条件の求人が多い','今の仕事を続けながら市場価値を確認できる','匿名で使えるので気軽に始められる'],
+   url:'https://t.afi-b.com/visit.php?a=u9385W-K317675N&p=3919027v',cta:'無料で登録してスカウトを待つ →'},
+ rikunabi:{type:'自分のペースで探す「マイペース」タイプ',logo:'🗂️',name:'リクナビNEXT',tag:'求人数トップクラスの転職サイト',line:'求人数トップクラス。自分で探せる',
+   feat:['求人数トップクラスで選択肢が広い','グッドポイント診断で自分の強みが分かる','企業からのスカウト機能もある','まず登録して市場を把握するのに最適'],
+   url:'https://t.afi-b.com/visit.php?a=r6873w-6276811K&p=3919027v',cta:'無料で求人を探す →'},
+ agentnavi:{type:'まず比較したい「エージェント選び」タイプ',logo:'🧭',name:'転職AGENT Navi',tag:'自分に合うエージェントを無料で紹介',line:'10万件以上・300人超から紹介',
+   feat:['10万件以上の求人・300人超のアドバイザー','あなたに合う転職エージェントを無料で紹介','初めての転職でも相性の良い担当が見つかる','複数を比較して選べるので失敗しにくい'],
+   url:'https://t.afi-b.com/visit.php?a=X14973i-e488671W&p=3919027v',cta:'無料で合うエージェントを探す →'}
+};
+const ORDER=['miidas','ragent','scout','rikunabi','agentnavi'];
+const QUESTIONS=[
+ {step:'Q1',text:'リハビリ職のあなた、転職はどう進めたい？',opts:[
+   {ic:'🔎',label:'まず自分の適職・市場価値を知りたい',v:'miidas'},
+   {ic:'🤝',label:'プロに相談して、じっくり進めたい',v:'ragent'},
+   {ic:'📩',label:'登録して、スカウトを待ちたい',v:'scout'},
+   {ic:'🗂️',label:'自分のペースで求人を探したい',v:'rikunabi'},
+   {ic:'🧭',label:'どのエージェントが合うか比較したい',v:'agentnavi'}]},
+ {step:'Q2',text:'転職で、いちばん重視するのは？',opts:[
+   {ic:'💰',label:'年収・待遇アップ',v:'pay'},
+   {ic:'⏰',label:'働き方・休みの改善',v:'time'},
+   {ic:'🚀',label:'スキルアップ・キャリア',v:'skill'},
+   {ic:'🌱',label:'未経験の分野に挑戦したい',v:'new'}]},
+ {step:'Q3',text:'今の状況に近いのは？',opts:[
+   {ic:'🔍',label:'在職中で、まずは情報収集',v:'info'},
+   {ic:'🏃',label:'できるだけ早く転職したい',v:'soon'},
+   {ic:'🤔',label:'まだ迷っている／相談したい',v:'undecided'}]}
+];
+const ADV_FOCUS={
+ pay:{ic:'💰',t:'年収アップは「複数比較」で決める',s:'1社の提示額で決めず、複数のサービスで求人・条件を見比べるほど、適正な待遇を引き出せます。'},
+ time:{ic:'⏰',t:'働き方は「譲れない条件」を先に決める',s:'休日・残業・勤務地など、ゆずれない条件を最初にハッキリさせると、入ってから後悔しません。'},
+ skill:{ic:'🚀',t:'成長は「身につくスキル」で職場を選ぶ',s:'目先の条件だけでなく、その環境で何が身につくかを軸にすると、長期的なキャリアで差がつきます。'},
+ new:{ic:'🌱',t:'未経験は「ポテンシャル採用」を狙う',s:'若さや意欲を評価してくれる求人は確実にあります。まず自分の可能性を診断で把握しておきましょう。'}
+};
+const ADV_STATE={
+ info:{ic:'📥',t:'在職中の「情報収集」がいちばん安全',s:'今すぐ動かなくても、登録して求人・市場価値を知っておくだけで、いざという時の選択肢が広がります。'},
+ soon:{ic:'⚡',t:'急ぐなら「プロと並走」で時短',s:'専任担当が日程調整や条件交渉を代行してくれるので、働きながらでもスムーズに進められます。'},
+ undecided:{ic:'🗺️',t:'迷うなら「まず診断・相談」から',s:'方向性が固まっていなくても大丈夫。自分の市場価値を知る／プロに話す中で、進む道が見えてきます。'}
+};
+let current=0;const answers=[];
+const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
+function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
+function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);document.getElementById('progress').scrollIntoView({behavior:'smooth',block:'start'});}
+function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1500);}
+function adviceHTML(a){const items=[ADV_FOCUS[a[1]],ADV_STATE[a[2]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
+function fullCard(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_self">'+s.cta+'</a><p class="note">登録・相談・利用はすべて無料です</p></div></div>';}
+function miniCard(key){const s=SERVICES[key];const st='display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;text-decoration:none;color:var(--ink);margin-bottom:10px';return '<a href="'+s.url+'" style="'+st+'"><span style="font-size:13.8px"><b>'+s.name+'</b><br><span style="color:var(--muted);font-size:12px">'+s.line+'</span></span><span style="color:var(--accent);font-weight:800;font-size:18px">→</span></a>';}
+function showResult(){document.getElementById('loading').classList.remove('show');const sel=answers[0];const s=SERVICES[sel]||SERVICES.ragent;const others=ORDER.filter(k=>k!==sel);const res=document.getElementById('result');
+ res.innerHTML=
+  '<div class="type-box"><div class="lead">あなたに合う進め方は</div><div class="type-name">'+s.type+'</div><div class="type-desc">PT/OT/STの国家資格は、病院・訪問・介護・自費・スポーツまで活躍の場が広がっています。進め方に合ったサービスから、あなたに合うフィールドを探しましょう。</div></div>'+
+  '<div class="block-label">🧭 転職は「情報量」で決まる<span class="ln"></span></div>'+
+  '<div class="strength"><span class="tag">専門資格 × 対人リハビリ力</span><p>評価から個別プログラムまで、対象者に合わせて支援してきた経験は、急性期・回復期・生活期・予防など多様なフィールドで求められます。まずは自分に合う職場と相場を知ることから始めましょう。</p></div>'+
+  '<div class="block-label">🧭 あなたへのアドバイス<span class="ln"></span></div>'+
+  '<div class="advice">'+adviceHTML(answers)+'</div>'+
+  '<div class="funnel-lead">まずは、あなたに合うこの1社から。</div>'+
+  '<div class="funnel-sub">登録も相談もすべて無料。今の仕事を続けながら情報を集めるだけでも大丈夫です。</div>'+
+  fullCard(sel)+
+  '<div style="font-weight:800;font-size:16px;margin:30px 0 5px">🗂️ 他の総合サービスも比較できます</div>'+
+  '<div style="font-size:12.5px;color:var(--muted);margin-bottom:14px">複数に登録するほど、出会える求人と選択肢は増えます（すべて無料）。</div>'+
+  others.map(miniCard).join('')+
+  '<div style="text-align:center;font-weight:700;font-size:13.5px;color:var(--muted);margin:26px 0 12px">▼ あわせて使いたい｜応募前の企業リサーチ・選考対策に</div>'+
+  '<div class="card"><div class="card-top"><div class="card-logo">💼</div><div class="card-tt"><b>ワンキャリア転職</b><span>企業の年収・口コミ・選考対策がわかる転職サイト</span></div></div><div class="card-body"><ul class="feat"><li>気になる企業の「リアルな年収・社員クチコミ」を無料でチェックできる</li><li>実際の「選考体験談」で面接・選考の対策ができる</li><li>その企業への／からのキャリアパスがわかる</li><li>応募前の企業研究にぴったり。登録は無料</li></ul><a href="https://px.a8.net/svt/ejp?a8mat=4B650G+75SPPU+5O7E+BYT9F" class="cta">無料で企業のクチコミ・年収を見る →</a><p class="note">登録・利用はすべて無料です</p></div></div>'+
+  '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
+ res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});}
+function restart(){current=0;answers.length=0;document.getElementById('result').classList.remove('show');renderQuestion();}
+renderQuestion();
+</script>
+<script>
+/* cro-cvr */
+(function(){
+  var badge=document.querySelector('.badge');
+  if(badge&&badge.getAttribute('data-cro')!=='1'){badge.setAttribute('data-cro','1');badge.textContent=badge.textContent+'｜約1分・登録不要';}
+  var hw=document.querySelector('.hero .wrap');
+  if(hw&&!hw.querySelector('.hero-assure')){hw.insertAdjacentHTML('beforeend','<div class="hero-assure"><span>🔒 個人情報の入力なし</span><span>💴 登録も相談も無料</span><span>🕒 在職中でもOK</span></div>');}
+  var result=document.getElementById('result');
+  if(!result)return;
+  var bar=document.createElement('div');bar.className='sticky-cta';bar.setAttribute('aria-hidden','true');
+  var tag=document.createElement('span');tag.className='sc-tag';tag.textContent='無料';
+  var btn=document.createElement('a');btn.className='sc-btn';btn.setAttribute('href','#');
+  bar.appendChild(tag);bar.appendChild(btn);document.body.appendChild(bar);
+  var primaryEl=null,lastSticky=null;
+  function sticky(on){if(lastSticky===on)return;lastSticky=on;document.body.classList[on?'add':'remove']('show-sticky');bar.setAttribute('aria-hidden',on?'false':'true');}
+  function updateSticky(){
+    if(!result.classList.contains('show')||!primaryEl){sticky(false);return;}
+    var rc=primaryEl.getBoundingClientRect();
+    var inView=(rc.top<window.innerHeight-40)&&(rc.bottom>64);
+    sticky(!inView);
+  }
+  window.addEventListener('scroll',updateSticky,{passive:true});
+  window.addEventListener('resize',updateSticky,{passive:true});
+  function firstCta(card){var b=card.querySelector('.card-body');if(!b)return null;var k=b.children;for(var i=0;i<k.length;i++){if(k[i].classList&&k[i].classList.contains('cta'))return k[i];}return null;}
+  function decorate(){
+    if(!result.classList.contains('show')){primaryEl=null;sticky(false);return;}
+    var cards=result.querySelectorAll('.card');
+    for(var i=0;i<cards.length;i++){
+      var body=cards[i].querySelector('.card-body');if(!body)continue;
+      var cta=firstCta(cards[i]);if(!cta)continue;
+      if(i===0&&!body.querySelector('.cta-lead')){cta.insertAdjacentHTML('beforebegin','<p class="cta-lead">好条件の求人ほど“表に出ないまま”決まっていきます。登録しておくほど、出会える数が増えます（無料）。</p>');}
+      if(!body.querySelector('.cta-sub')){var s=document.createElement('a');s.className='cta-sub';s.setAttribute('href',cta.getAttribute('href'));s.textContent='▶ まずは無料登録だけ済ませておく';cta.insertAdjacentElement('afterend',s);}
+      var note=body.querySelector('.note');
+      if(note&&!body.querySelector('.assure')){note.insertAdjacentHTML('beforebegin','<div class="assure"><span>無料</span><span>在職中でもOK</span><span>登録は約1分</span></div>');note.textContent='掲載内容は各サービスの公式情報をもとに記載しています';}
+    }
+    var tb=result.querySelector('.type-box');
+    if(tb&&!result.querySelector('.jump-service')){var j=document.createElement('button');j.type='button';j.className='jump-service';j.textContent='▶ あなたに合うサービスを今すぐ見る';j.addEventListener('click',function(){var c=result.querySelector('.card');if(c)c.scrollIntoView({behavior:'smooth',block:'start'});});tb.insertAdjacentElement('afterend',j);}
+    var primary=null,cs=result.querySelectorAll('.card');
+    for(var p=0;p<cs.length;p++){primary=firstCta(cs[p]);if(primary)break;}
+    if(primary){btn.setAttribute('href',primary.getAttribute('href'));btn.textContent=(primary.textContent||'無料で見てみる').replace(/\s+/g,' ').trim();primaryEl=primary;lastSticky=null;updateSticky();}
+    else{primaryEl=null;sticky(false);}
+  }
+  new MutationObserver(function(){decorate();}).observe(result,{attributes:true,attributeFilter:['class']});
+  if(result.classList.contains('show'))decorate();
+})();
+</script>
+</body>
+</html>
