@@ -106,6 +106,14 @@ footer{background:#0e1116}
   .no-hit{display:none;text-align:center;color:var(--muted);font-size:13.5px;margin-top:10px}
   .no-hit.show{display:block}
 
+  /* diag-intro: どちらの診断が誰向けかを明示するラベル */
+  .diag-intro{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 12px;padding:11px 15px;background:#fff;border:1px solid var(--line);border-radius:10px}
+  .diag-tag{flex:none;font-size:11px;font-weight:800;letter-spacing:.06em;color:#475569;background:#eef2f6;border-radius:999px;padding:3px 10px}
+  .diag-tag.gold{color:#8a6d28;background:#faf5e6;border:1px solid #e3d19a}
+  .diag-intro.flagship-intro{border-color:#e3d19a;background:#fffdf7}
+  .grid.solo{margin-bottom:26px}
+  .section-gap{margin-top:2px}
+
   /* flagship: 30代診断の特別タイル（紺×金） */
   .tile.flagship{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px;background:linear-gradient(135deg,#0a1330,#0f1c40);border:1px solid #3d3315;box-shadow:0 1px 3px rgba(0,0,0,.2),0 16px 34px -10px rgba(10,19,48,.55);position:relative;overflow:hidden}
   .tile.flagship::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c9a84c,#9c7d2e)}
@@ -123,11 +131,17 @@ footer{background:#0e1116}
   <a class="hero-banner" href="#start"><img src="ogp.png" alt="業界別・転職タイプ診断｜あなたに合う転職サービスが見つかる。かんたん3問・1分・無料で、あなたの強みや価値観から最適な転職タイプとおすすめ業界がわかります。"></a>
 </div></header>
 <main class="wrap">
-  <div class="lead" id="start">どの業界の転職を考えていますか？</div>
-  <div class="lead-sub">気になる業界をタップして診断スタート（所要1分・無料）</div>
-  <input id="tileSearch" class="tile-search" type="search" inputmode="search" autocomplete="off" placeholder="🔍 職種・業界で探す（例：看護師、営業、事務）">
-  <div class="grid">
+  <div class="lead" id="start">あなたに合う転職診断を選んでください</div>
+  <div class="lead-sub">状況に合わせて、2つの診断からお選びいただけます（どちらも無料）</div>
+
+  <div class="diag-intro flagship-intro"><span class="diag-tag gold">こんな方に</span>業種を問わず、30代で「今の仕事を続けるか、転職するか」を本気で考えたい方へ。全12問でじっくり診断（3〜5分）</div>
+  <div class="grid solo">
     <a class="tile flagship" href="sanjudai.html"><span class="bar"></span><span class="ic">🎯</span><div><span class="kicker">30代フラッグシップ診断</span><b>30代の転職成功ルート診断</b><span style="display:block">緊急度・市場価値・活かせる経験・進め方まで全12問で診断</span></div></a>
+  </div>
+
+  <div class="diag-intro section-gap"><span class="diag-tag">こんな方に</span>まずは自分の業種・職種から、3〜4問でサクッと強みを知りたい方へ（所要1分）</div>
+  <input id="tileSearch" class="tile-search" type="search" inputmode="search" autocomplete="off" placeholder="🔍 職種・業界で探す（例：看護師、営業、事務）">
+  <div class="grid" id="industryGrid">
     <a class="tile" href="inshoku.html"><span class="bar c1"></span><span class="ic">🍴</span><b>飲食・外食</b><span>長時間労働・低賃金から抜け出す</span></a>
     <a class="tile" href="game.html"><span class="bar c2"></span><span class="ic">🎮</span><b>ゲーム</b><span>プランナー・エンジニア・デザイナー</span></a>
     <a class="tile" href="apparel.html"><span class="bar c3"></span><span class="ic">👗</span><b>アパレル・ファッション</b><span>販売・本社・ハイブランド専門職</span></a>
@@ -164,7 +178,7 @@ footer{background:#0e1116}
 <script>
 (function(){
   var q=document.getElementById('tileSearch');if(!q)return;
-  var tiles=[].slice.call(document.querySelectorAll('.grid .tile'));
+  var tiles=[].slice.call(document.querySelectorAll('#industryGrid .tile'));
   var noHit=document.getElementById('noHit');
   q.addEventListener('input',function(){
     var v=q.value.trim().toLowerCase();var hits=0;
