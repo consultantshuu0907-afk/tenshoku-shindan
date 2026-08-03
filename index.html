@@ -105,6 +105,16 @@ footer{background:#0e1116}
   .grid .tile.hide{display:none}
   .no-hit{display:none;text-align:center;color:var(--muted);font-size:13.5px;margin-top:10px}
   .no-hit.show{display:block}
+
+  /* flagship: 30代診断の特別タイル（紺×金） */
+  .tile.flagship{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px;background:linear-gradient(135deg,#0a1330,#0f1c40);border:1px solid #3d3315;box-shadow:0 1px 3px rgba(0,0,0,.2),0 16px 34px -10px rgba(10,19,48,.55);position:relative;overflow:hidden}
+  .tile.flagship::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c9a84c,#9c7d2e)}
+  .tile.flagship .bar{background:#c9a84c;width:6px}
+  .tile.flagship .ic{font-size:30px}
+  .tile.flagship b{color:#fff;font-size:16px}
+  .tile.flagship span{color:color-mix(in srgb,#c9a84c 75%,#fff)}
+  .tile.flagship .kicker{display:block;font-size:10px;font-weight:700;letter-spacing:.18em;color:#c9a84c;margin-bottom:3px}
+  .tile.flagship:hover{box-shadow:0 1px 3px rgba(0,0,0,.25),0 24px 44px -10px rgba(10,19,48,.65);transform:translateY(-3px)}
 </style>
 </head>
 <body>
@@ -117,6 +127,7 @@ footer{background:#0e1116}
   <div class="lead-sub">気になる業界をタップして診断スタート（所要1分・無料）</div>
   <input id="tileSearch" class="tile-search" type="search" inputmode="search" autocomplete="off" placeholder="🔍 職種・業界で探す（例：看護師、営業、事務）">
   <div class="grid">
+    <a class="tile flagship" href="sanjudai.html"><span class="bar"></span><span class="ic">🎯</span><div><span class="kicker">30代フラッグシップ診断</span><b>30代の転職成功ルート診断</b><span style="display:block">緊急度・市場価値・活かせる経験・進め方まで全12問で診断</span></div></a>
     <a class="tile" href="inshoku.html"><span class="bar c1"></span><span class="ic">🍴</span><b>飲食・外食</b><span>長時間労働・低賃金から抜け出す</span></a>
     <a class="tile" href="game.html"><span class="bar c2"></span><span class="ic">🎮</span><b>ゲーム</b><span>プランナー・エンジニア・デザイナー</span></a>
     <a class="tile" href="apparel.html"><span class="bar c3"></span><span class="ic">👗</span><b>アパレル・ファッション</b><span>販売・本社・ハイブランド専門職</span></a>

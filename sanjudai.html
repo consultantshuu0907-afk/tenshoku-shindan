@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+<title>30代の転職成功ルート診断｜市場価値・活かせる経験・進め方がすべてわかる</title>
+<meta name="description" content="12の質問に答えるだけ。今のあなたの転職の緊急度・活かせる経験・不足しがちな点・最も成功確率が高い進め方まで、無料で診断します。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="30代の転職成功ルート診断｜市場価値・活かせる経験・進め方がすべてわかる">
+<meta property="og:description" content="12の質問に答えるだけ。今のあなたの転職の緊急度・活かせる経験・不足しがちな点・最も成功確率が高い進め方まで、無料で診断します。">
+<meta property="og:url" content="https://consultantshuu0907-afk.github.io/tenshoku-shindan/sanjudai.html">
+<meta property="og:image" content="https://consultantshuu0907-afk.github.io/tenshoku-shindan/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="30代の転職成功ルート診断｜市場価値・活かせる経験・進め方がすべてわかる">
+<meta name="twitter:description" content="12の質問に答えるだけ。今のあなたの転職の緊急度・活かせる経験・不足しがちな点・最も成功確率が高い進め方まで、無料で診断します。">
+<meta name="twitter:image" content="https://consultantshuu0907-afk.github.io/tenshoku-shindan/ogp.png">
+<style>
+  :root{--accent:#475569;--accent-dark:#334155;--accent-soft:#f1f5f9;--ink:#1e2430;--muted:#64748b;--line:#e5e9f0;--bg:#f8fafc;--card:#fff;--radius:18px;--shadow:0 10px 30px rgba(51,65,85,.13)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",Meiryo,sans-serif;color:var(--ink);background:var(--bg);line-height:1.85;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:0 18px}
+  .pr-bar{background:#eef1f5;color:#7a8496;font-size:12px;text-align:center;padding:6px 10px}
+  .hero{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;padding:40px 0 46px;text-align:center;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 82% -10%,rgba(255,255,255,.18),transparent 45%)}
+  .hero .wrap{position:relative;z-index:1}
+  .hero .emoji{font-size:48px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.15))}
+  .hero h1{font-size:24px;font-weight:800;margin:10px 0 8px}
+  .hero h1 .big{display:block;font-size:29px;margin-top:2px}
+  .hero p{font-size:14.5px;opacity:.95;max-width:520px;margin:0 auto}
+  .badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:12.5px;font-weight:700;padding:5px 14px;border-radius:999px;margin-bottom:14px;margin-top:14px}
+  main{padding:30px 0 50px}
+  .progress{display:flex;align-items:center;gap:8px;justify-content:center;margin-bottom:22px;flex-wrap:wrap}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--line);transition:.3s}
+  .dot.active{background:var(--accent);transform:scale(1.25)}.dot.done{background:var(--accent-dark)}
+  .q-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px 22px;animation:fade .35s}
+  @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .q-step{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.1em}
+  .q-text{font-size:20px;font-weight:800;margin:6px 0 20px;line-height:1.5}
+  .opts{display:grid;gap:12px}
+  .opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2px solid var(--line);border-radius:14px;padding:15px 18px;font-size:15px;font-weight:600;color:var(--ink);cursor:pointer;transition:.18s;font-family:inherit;line-height:1.5}
+  .opt:hover{border-color:var(--accent);background:var(--accent-soft);transform:translateY(-2px)}
+  .opt .ic{font-size:24px;flex-shrink:0}
+  .back{display:block;margin:18px auto 0;background:none;border:none;color:var(--muted);font-size:13.5px;cursor:pointer;text-decoration:underline;font-family:inherit}
+  .result{display:none;animation:fade .4s}.result.show{display:block}
+  .loading{text-align:center;padding:50px 0;display:none}.loading.show{display:block}
+  .spinner{width:46px;height:46px;border:5px solid var(--line);border-top-color:var(--accent);border-radius:50%;margin:0 auto 18px;animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .type-box{background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;border-radius:var(--radius);padding:26px 22px;text-align:center;box-shadow:var(--shadow)}
+  .type-box .lead{font-size:13px;font-weight:700;opacity:.9;letter-spacing:.08em}
+  .type-box .type-name{font-size:23px;font-weight:800;margin:8px 0 10px;line-height:1.4}
+  .type-box .type-desc{font-size:14.5px;opacity:.97;text-align:left}
+  .block-label{font-weight:800;font-size:16px;margin:28px 0 13px;display:flex;align-items:center;gap:8px}
+  .block-label .ln{flex:1;height:2px;background:var(--line);border-radius:2px}
+  .strength{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;padding:18px 20px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .strength p{font-size:14.5px}
+  .strength .tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-weight:800;font-size:13px;padding:3px 12px;border-radius:999px;margin-bottom:9px}
+  .advice{display:grid;gap:12px}
+  .advice-item{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:14px;box-shadow:0 3px 10px rgba(0,0,0,.03)}
+  .advice-item .ic{font-size:23px;flex-shrink:0;margin-top:2px}
+  .advice-item b{display:block;font-size:15px;margin-bottom:2px}
+  .advice-item span{font-size:13.5px;color:var(--muted)}
+  .funnel-lead{text-align:center;font-size:14.5px;font-weight:700;margin:30px 0 6px}
+  .funnel-sub{text-align:center;font-size:13px;color:var(--muted);margin-bottom:16px}
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;border:1px solid var(--line)}
+  .card-top{background:var(--accent-soft);padding:18px 20px;display:flex;align-items:center;gap:13px;border-bottom:1px solid var(--line)}
+  .card-logo{width:50px;height:50px;border-radius:13px;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:25px;flex-shrink:0;box-shadow:0 4px 10px rgba(51,65,85,.25)}
+  .card-tt b{font-size:17px;display:block}.card-tt span{font-size:12.5px;color:var(--muted)}
+  .card-body{padding:18px 20px}
+  .feat{list-style:none;display:grid;gap:10px;margin-bottom:16px}
+  .feat li{position:relative;padding-left:27px;font-size:14px}
+  .feat li::before{content:"✓";position:absolute;left:0;top:2px;color:#fff;background:var(--accent);width:18px;height:18px;border-radius:50%;font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .cta{display:block;text-align:center;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:#fff;font-weight:800;font-size:16px;padding:16px;border-radius:12px;text-decoration:none;box-shadow:0 8px 18px rgba(51,65,85,.28);transition:transform .15s}
+  .cta:active{transform:scale(.98)}
+  .note{text-align:center;font-size:12px;color:var(--muted);margin-top:11px}
+  .restart{display:block;margin:24px auto 0;background:none;border:1px solid var(--line);color:var(--muted);font-size:13.5px;padding:9px 20px;border-radius:999px;cursor:pointer;font-family:inherit}
+  footer{background:#1e2430;color:#c2cbd8;padding:28px 0;text-align:center;font-size:12.5px;line-height:1.9;margin-top:10px}
+  footer .disc{max-width:600px;margin:0 auto 12px;opacity:.8}
+  @media(max-width:480px){.hero h1{font-size:21px}.hero h1 .big{font-size:25px}.q-text{font-size:18px}}
+  /* biz-upgrade */
+  .hero{box-shadow:0 8px 24px rgba(16,24,40,.09)}
+  .hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:rgba(255,255,255,.25);z-index:1}
+  .hero .emoji{width:72px;height:72px;display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:36px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);border-radius:20px}
+  .q-card{box-shadow:0 1px 2px rgba(16,24,40,.04),0 14px 30px rgba(16,24,40,.06)}
+  .card{position:relative;box-shadow:0 1px 2px rgba(16,24,40,.04),0 14px 30px rgba(16,24,40,.07)}
+  .card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accent-dark));z-index:3}
+  .block-label{border-bottom:2px solid var(--accent-soft);padding-bottom:9px}
+  .block-label .ln{display:none}
+  .strength{box-shadow:0 1px 2px rgba(16,24,40,.04),0 10px 24px rgba(16,24,40,.05)}
+  .advice-item{transition:transform .16s,box-shadow .16s}
+  .advice-item:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(16,24,40,.08)}
+  .cta{transition:transform .16s,box-shadow .2s;letter-spacing:.02em}
+  .cta:hover{transform:translateY(-2px);box-shadow:0 14px 28px rgba(16,24,40,.20)}
+  .type-box{position:relative;overflow:hidden}
+  .type-box::after{content:"";position:absolute;right:-44px;top:-48px;width:150px;height:150px;border-radius:50%;background:rgba(255,255,255,.08)}
+  .funnel-lead{margin-top:34px;padding-top:26px;border-top:1px dashed var(--line)}
+  footer{background:linear-gradient(180deg,var(--ink),#0b1220)}
+
+  /* pro-polish */
+  body{font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;letter-spacing:.01em}
+  .hero h1{letter-spacing:.03em;font-weight:800}
+  .hero p{letter-spacing:.02em}
+  .badge{letter-spacing:.05em;font-weight:700}
+  .hero .emoji{box-shadow:0 8px 20px rgba(0,0,0,.14),inset 0 1px 0 rgba(255,255,255,.35)}
+  .q-step{letter-spacing:.16em}
+  .q-text{letter-spacing:.005em}
+  .q-card{border-radius:20px;box-shadow:0 1px 3px rgba(16,24,40,.05),0 18px 40px -12px rgba(16,24,40,.14)}
+  .opt{border-radius:14px}
+  .opt:hover{box-shadow:0 10px 20px -8px color-mix(in srgb,var(--accent) 32%,transparent)}
+  .card{border-radius:16px;border:1px solid rgba(16,24,40,.07);box-shadow:0 1px 3px rgba(16,24,40,.05),0 16px 30px -10px rgba(16,24,40,.13)}
+  .card-logo{box-shadow:0 8px 16px -4px color-mix(in srgb,var(--accent) 42%,transparent),inset 0 1px 0 rgba(255,255,255,.28)}
+  .card-tt b{letter-spacing:.01em}
+  .feat li{line-height:1.72}
+  .feat li::before{background:linear-gradient(180deg,var(--accent),var(--accent-dark));box-shadow:0 2px 6px -1px color-mix(in srgb,var(--accent) 50%,transparent)}
+  .cta{background:linear-gradient(180deg,var(--accent),var(--accent-dark));border-radius:14px;letter-spacing:.02em;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 12px 24px -8px color-mix(in srgb,var(--accent) 55%,transparent)}
+  .cta:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 18px 32px -8px color-mix(in srgb,var(--accent) 62%,transparent)}
+  .type-box{border-radius:22px;box-shadow:0 22px 48px -16px color-mix(in srgb,var(--accent) 50%,transparent)}
+  .type-box .type-name{letter-spacing:.01em}
+  .strength{border-radius:16px}
+  .strength .tag{letter-spacing:.04em}
+  .advice-item{border-radius:14px;border:1px solid rgba(16,24,40,.06)}
+  .block-label{letter-spacing:.02em}
+
+/* kyujin-cool */
+:root{
+  --nk:#0e1116;
+  --nk2:#161b25;
+  --acc-lift:color-mix(in srgb,var(--accent) 78%,#fff);
+  --hair:color-mix(in srgb,var(--accent) 34%,var(--line));
+  --glow:color-mix(in srgb,var(--accent) 55%,transparent);
+}
+.pr-bar{background:var(--nk);color:color-mix(in srgb,#fff 60%,transparent);letter-spacing:.04em;border-bottom:2px solid var(--accent)}
+.hero{background:linear-gradient(160deg,var(--nk),color-mix(in srgb,var(--acc-lift) 30%,var(--nk)));box-shadow:0 10px 30px rgba(8,10,16,.30)}
+.hero::after{opacity:.55}
+.hero::before{background:var(--accent);height:4px;opacity:.95}
+.hero .emoji{background:rgba(255,255,255,.06);border:1px solid color-mix(in srgb,var(--acc-lift) 60%,#fff);border-radius:14px}
+.hero h1{position:relative;display:inline-block;padding-bottom:13px}
+.hero h1::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:46px;height:3px;background:var(--accent);border-radius:2px}
+.hero .wrap::before{content:"CAREER DIAGNOSIS";display:block;font-size:10.5px;font-weight:700;letter-spacing:.26em;color:var(--acc-lift);margin-bottom:14px;text-align:center}
+.badge{background:transparent;border:1px solid color-mix(in srgb,var(--acc-lift) 62%,#fff);color:#fff;letter-spacing:.10em;border-radius:8px}
+.badge::before{content:"▪";color:var(--accent);margin-right:7px}
+.dot.done{background:color-mix(in srgb,var(--accent) 50%,var(--nk))}
+.q-step{color:var(--accent);letter-spacing:.14em;position:relative;padding-left:15px}
+.q-step::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:14px;background:var(--accent);border-radius:2px;box-shadow:0 0 8px -1px var(--glow)}
+.q-card{border-radius:12px;border:1px solid color-mix(in srgb,var(--ink) 10%,var(--line));box-shadow:0 1px 2px rgba(8,10,16,.06),0 16px 34px -14px rgba(8,10,16,.20)}
+.opt{border-radius:10px;border-width:1.5px;border-left:3px solid transparent;transition:border-color .16s,box-shadow .16s,transform .16s,background .16s}
+.opt:hover{border-left-color:var(--accent);transform:translateY(-1px);box-shadow:0 8px 18px -8px var(--glow)}
+.type-box{background:linear-gradient(155deg,var(--nk),color-mix(in srgb,var(--acc-lift) 32%,var(--nk)));border-radius:12px;border:1px solid rgba(255,255,255,.08);box-shadow:0 22px 46px -18px rgba(8,10,16,.55)}
+.type-box .lead{color:var(--acc-lift);letter-spacing:.20em;text-transform:uppercase;opacity:1}
+.type-box .type-name{color:#fff}
+.type-box .type-desc{color:rgba(255,255,255,.94)}
+.type-box::after{background:radial-gradient(circle,var(--glow),transparent 60%);opacity:.45}
+.block-label{position:relative;border-bottom:none;padding-left:13px;letter-spacing:.02em}
+.block-label::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:1em;background:var(--accent);border-radius:2px}
+.block-label .ln{display:block;flex:1;height:1px;background:var(--hair);border-radius:0}
+.strength{border-radius:12px;border-left-width:3px}
+.strength .tag{background:transparent;border:1px solid color-mix(in srgb,var(--accent) 48%,var(--line));color:var(--accent-dark);border-radius:6px;letter-spacing:.05em}
+.advice-item{border-radius:10px}
+.funnel-lead{border-top:1px solid var(--hair)}
+.card{border-radius:10px;border:1px solid color-mix(in srgb,var(--ink) 12%,var(--line))}
+.card-top{background:var(--nk);border-bottom:1px solid rgba(255,255,255,.08)}
+.card-tt b{color:#fff}
+.card-tt span{color:color-mix(in srgb,#fff 60%,transparent)}
+.card-logo{border-radius:10px;background:var(--accent);box-shadow:0 6px 16px -6px var(--glow),inset 0 1px 0 rgba(255,255,255,.25)}
+.feat li::before{border-radius:4px}
+.cta{border-radius:12px;letter-spacing:.03em;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 12px 22px -10px var(--glow)}
+.cta:hover{transform:translateY(-2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 18px 30px -10px var(--glow)}
+.cta-sub{border-radius:10px}
+.note{color:color-mix(in srgb,var(--muted) 90%,#000);letter-spacing:.02em}
+.restart{border-radius:8px;border-color:var(--line)}
+footer{background:var(--nk)}
+
+  /* cro-cvr */
+  .cta{min-height:56px;display:flex;align-items:center;justify-content:center}
+  .cta-lead{text-align:center;font-size:13px;font-weight:700;color:var(--accent-dark);margin:0 0 11px;line-height:1.65}
+  .assure{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:11px}
+  .assure span{font-size:11.5px;color:var(--muted);border:1px solid var(--hair);border-radius:999px;padding:3px 10px}
+  .hero-assure{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+  .hero-assure span{font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#fff;background:rgba(255,255,255,.06);border:1px solid color-mix(in srgb,var(--acc-lift) 45%,#fff);border-radius:999px;padding:5px 11px}
+  .jump-service{display:block;margin:14px auto 2px;background:none;border:none;color:var(--accent-dark);font-weight:800;font-size:14px;cursor:pointer;font-family:inherit;text-decoration:underline;text-underline-offset:3px}
+  .sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:900;display:flex;align-items:center;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--nk);border-top:1px solid var(--accent);box-shadow:0 -8px 24px rgba(8,10,16,.35);transform:translateY(125%);transition:transform .22s ease}
+  body.show-sticky .sticky-cta{transform:translateY(0)}
+  body.show-sticky main{padding-bottom:108px}
+  .sc-tag{flex:none;font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--acc-lift);border:1px solid color-mix(in srgb,var(--acc-lift) 55%,#fff);border-radius:6px;padding:5px 9px}
+  .sc-btn{flex:1;min-height:52px;display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:800;font-size:15px;color:#fff;text-decoration:none;background:linear-gradient(180deg,var(--accent),var(--accent-dark));border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 18px -8px var(--glow)}
+
+  /* sanjudai-theme: 紺×金の高級感（30代フラッグシップ診断専用） */
+  :root{
+    --accent:#c9a84c;
+    --accent-dark:#9c7d2e;
+    --accent-soft:#faf5e6;
+    --ink:#1a1d26;
+    --nk:#0a1330;
+    --nk2:#0f1c40;
+  }
+  body{background:#faf8f3}
+  .hero .wrap::before{content:"THE CAREER ROUTE"}
+  .type-box .type-name{color:var(--acc-lift)}
+  .q-step::before{box-shadow:0 0 10px -1px var(--glow)}
+</style>
+</head>
+<body>
+<div class="pr-bar">本ページはプロモーション（アフィリエイト広告）を含みます</div>
+<header class="hero"><div class="wrap">
+  <div class="emoji">🎯</div>
+  <span class="badge">全12問・3〜5分・無料診断</span>
+  <h1>30代の<span class="big">転職成功ルート診断</span></h1>
+  <p>「今、動くべきか」から「どう動くべきか」まで。あなたの緊急度・活かせる経験・不足しがちな点・最も成功確率が高い進め方を、12の質問で診断します。</p>
+</div></header>
+<main class="wrap">
+  <div class="progress" id="progress"></div>
+  <div id="quiz"></div>
+  <div class="loading" id="loading"><div class="spinner"></div><p style="font-weight:700">あなたの転職成功ルートを診断中…</p></div>
+  <div class="result" id="result"></div>
+</main>
+<footer><div class="wrap">
+  <p class="disc">※本ページはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。診断結果は入力内容に基づく一般的な傾向のご案内であり、年収や転職の成功を保証するものではありません。</p>
+  <p>© 30代の転職成功ルート診断</p>
+</div></footer>
+<script>
+const SERVICES={
+ ragent:{name:'リクルートエージェント',logo:'🤝',tag:'非公開求人が豊富な総合エージェント',
+   feat:['非公開25万件以上＋公開約75万件','専任アドバイザーが選考対策・条件交渉を代行','転職決定数の実績が豊富','はじめての転職でも安心のサポート'],
+   url:'https://t.afi-b.com/visit.php?a=968723-W528197J&p=3919027v',cta:'無料で経験を推薦してもらう →'},
+ rikunabi:{name:'リクナビNEXT',logo:'🗂️',tag:'求人数トップクラスの転職サイト',
+   feat:['求人数トップクラスで選択肢が広い','グッドポイント診断で自分の強みが分かる','企業からのスカウト機能もある','まず登録して市場を把握するのに最適'],
+   url:'https://t.afi-b.com/visit.php?a=r6873w-6276811K&p=3919027v',cta:'無料で求人相場を見てみる →'},
+ miidas:{name:'ミイダス',logo:'🔎',tag:'可能性診断で適職・市場価値がわかる',
+   feat:['コンピテンシー診断で「向いている仕事」が分かる','市場価値・適正年収を無料で診断できる','利用企業44万社以上','書類選考なしの面接確約オファーも届く'],
+   url:'https://px.a8.net/svt/ejp?a8mat=3T26WS+D5X2B6+3AW0+61RIA',cta:'無料で市場価値を診断する →'},
+ scout:{name:'リクルートダイレクトスカウト',logo:'📩',tag:'登録して待つスカウト型サービス',
+   feat:['登録すれば企業・ヘッドハンターからスカウトが届く','ハイクラス・好条件の求人が多い','今の仕事を続けながら市場価値を確認できる','匿名で使えるので気軽に始められる'],
+   url:'https://t.afi-b.com/visit.php?a=u9385W-K317675N&p=3919027v',cta:'無料でスカウトを待ってみる →'},
+ agentnavi:{name:'転職AGENT Navi',logo:'🧭',tag:'自分に合うエージェントを無料で紹介',
+   feat:['10万件以上の求人・300人超のアドバイザー','あなたに合う転職エージェントを無料で紹介','初めての転職でも相性の良い担当が見つかる','複数を比較して選べるので失敗しにくい'],
+   url:'https://t.afi-b.com/visit.php?a=X14973i-e488671W&p=3919027v',cta:'無料で合うエージェントを比較する →'}
+};
+const PAIR={ragent:'rikunabi',rikunabi:'miidas',miidas:'agentnavi',scout:'ragent',agentnavi:'miidas'};
+
+const QUESTIONS=[
+ {step:'Q1',text:'現在の職種は？',opts:[
+   {ic:'📈',label:'営業',v:'eigyo'},
+   {ic:'🗂️',label:'事務・管理',v:'jimu'},
+   {ic:'🛠️',label:'専門職（エンジニア・士業など）',v:'senmon'},
+   {ic:'🛍️',label:'販売・サービス',v:'hanbai'},
+   {ic:'🏭',label:'製造・技術',v:'gijutsu'},
+   {ic:'📋',label:'その他',v:'other'}]},
+ {step:'Q2',text:'マネジメント経験は？',opts:[
+   {ic:'👑',label:'チームを率いた経験がある',v:'lead'},
+   {ic:'🤝',label:'メンバーとして関わった程度',v:'member'},
+   {ic:'🌱',label:'経験はない',v:'none'}]},
+ {step:'Q3',text:'一番自信がある強みは？',opts:[
+   {ic:'🤝',label:'対人力・交渉力',v:'taijin'},
+   {ic:'💰',label:'数字・目標達成力',v:'suuji'},
+   {ic:'🎓',label:'専門知識・技術力',v:'senmonchi'},
+   {ic:'📐',label:'段取り・調整力',v:'dandori'}]},
+ {step:'Q4',text:'これまでの実績で誇れるのは？',opts:[
+   {ic:'📊',label:'数字で語れる成果（売上・件数など）',v:'suujiseika'},
+   {ic:'👥',label:'チームを率いて出した成果',v:'leadseika'},
+   {ic:'🎓',label:'専門性が評価された実績',v:'senmonhyouka'},
+   {ic:'🤔',label:'まだうまく言語化できていない',v:'mikagengo'}]},
+ {step:'Q5',text:'転職で最も重視したいのは？',opts:[
+   {ic:'💰',label:'年収アップ',v:'pay'},
+   {ic:'⏰',label:'働き方（残業・休日）',v:'wlb'},
+   {ic:'🚀',label:'裁量・キャリアの幅',v:'discretion'},
+   {ic:'🛡️',label:'安定・将来性',v:'stability'}]},
+ {step:'Q6',text:'希望する年収の方向性は？',opts:[
+   {ic:'📈',label:'今より上げたい',v:'up'},
+   {ic:'⚖️',label:'今と同水準でよい',v:'same'},
+   {ic:'❓',label:'まずは市場価値を知りたい',v:'unknown'}]},
+ {step:'Q7',text:'今の職場で一番のモヤモヤは？',opts:[
+   {ic:'💸',label:'評価・年収に不満',v:'hyouka'},
+   {ic:'😣',label:'人間関係',v:'ningen'},
+   {ic:'📉',label:'将来性・成長機会がない',v:'shourai'},
+   {ic:'✨',label:'不満はないが可能性を試したい',v:'tameshi'}]},
+ {step:'Q8',text:'今のスキル・経験に不安はある？',opts:[
+   {ic:'😰',label:'このままで通用するか不安',v:'tsuyou'},
+   {ic:'🌀',label:'新しい分野への挑戦に不安',v:'chousen'},
+   {ic:'💪',label:'特に不安はない',v:'nashi'}]},
+ {step:'Q9',text:'今の状況に一番近いのは？',opts:[
+   {ic:'🏃',label:'すでに転職活動を始めている',v:'acting'},
+   {ic:'🔍',label:'情報収集を始めたところ',v:'info'},
+   {ic:'💭',label:'考え始めたばかり',v:'kangae'},
+   {ic:'🤔',label:'まだ迷っている段階',v:'mayoi'}]},
+ {step:'Q10',text:'いつまでに転職したい？',opts:[
+   {ic:'⚡',label:'3ヶ月以内',v:'soon3'},
+   {ic:'📅',label:'半年〜1年以内',v:'halfyear'},
+   {ic:'✨',label:'良い話があれば',v:'goodoffer'},
+   {ic:'❓',label:'決めていない',v:'notdecided'}]},
+ {step:'Q11',text:'家族・住宅ローンなど、転職で慎重にならざるを得ない事情は？',opts:[
+   {ic:'🏠',label:'大きな責任がある（家族・ローンなど）',v:'heavy'},
+   {ic:'📌',label:'ある程度は考慮する',v:'some'},
+   {ic:'🕊️',label:'特にない',v:'none'}]},
+ {step:'Q12',text:'準備にかけられる期間は？',opts:[
+   {ic:'🏃',label:'すぐにでも動ける',v:'readynow'},
+   {ic:'📝',label:'1〜2ヶ月は準備したい',v:'prep'},
+   {ic:'🐢',label:'じっくり考えたい',v:'slow'}]}
+];
+
+const TYPE_LABEL={taijin:'対人力で信頼を築く「関係構築」タイプ',suuji:'数字で結果を出す「成果直結」タイプ',senmonchi:'専門性で選ばれる「プロフェッショナル」タイプ',dandori:'段取りと調整で支える「オペレーション」タイプ'};
+const TYPE_DESC={taijin:'人と向き合い、信頼関係を築きながら成果を出してきた対人力は、転職市場でも評価されやすい武器です。',suuji:'数字で成果を語れる実績は、業界を問わず評価されやすい強力な武器です。',senmonchi:'専門知識・技術力は、経験を積むほど市場価値が上がりやすい資産です。',dandori:'複数の物事を同時に、正確に進めてきた段取り力は、組織の規模が大きくなるほど価値を増す力です。'};
+
+const URGENCY_LABEL={now:'今すぐ転職活動を始める段階',info:'まず求人情報を集める段階',build:'現職で実績を作ってから動く段階',improve:'転職より、まず現職の状況を整理する段階'};
+
+const JOB_MAP={
+ eigyo:{now:'法人営業・SaaS営業',mikei:'カスタマーサクセス・人材コーディネーター',future:'営業企画・事業開発'},
+ jimu:{now:'経理・総務・人事などの管理部門',mikei:'カスタマーサポート・オペレーション',future:'管理部門のスペシャリスト・マネージャー'},
+ senmon:{now:'同分野の専門職（即戦力ポジション）',mikei:'隣接分野のコンサルタント・IT関連職',future:'プロジェクトマネージャー・技術顧問'},
+ hanbai:{now:'法人営業・店舗マネージャー',mikei:'カスタマーサクセス・人材業界',future:'エリアマネージャー・営業企画'},
+ gijutsu:{now:'品質管理・生産管理',mikei:'施工管理・設備管理',future:'技術管理職・工場長候補'},
+ other:{now:'これまでの経験を活かせる実務職',mikei:'カスタマーサポート・事務',future:'適性診断で見つかる新しい領域'}
+};
+function computeJobs(a){
+  const base=JOB_MAP[a[0]]||JOB_MAP.other;
+  const lead=a[1]==='lead';
+  return [base.now+(lead?'（マネージャー候補も）':''), base.mikei, base.future];
+}
+
+function computeGap(a){
+  if(a[3]==='mikagengo')return '実績を数字や成果で語る「言語化」がまだ不足しがちです。職務経歴を整理するだけで、評価は大きく変わります。';
+  if(a[7]==='tsuyou')return '今のスキルが他社でも通用するかどうか、客観的な評価がまだ不足しています。市場価値を一度診断してみる価値があります。';
+  if(a[7]==='chousen')return '新しい分野に挑戦するための情報や実績が、まだ十分ではありません。まずは可能性のある分野を知ることから始めましょう。';
+  return 'マネジメント経験やデータを扱う実務経験があると、さらに評価が上がりやすい傾向があります。';
+}
+
+function computeUrgency(a){
+  let s=0;
+  if(a[8]==='acting')s+=3; else if(a[8]==='info')s+=2; else if(a[8]==='kangae')s+=1;
+  if(a[9]==='soon3')s+=3; else if(a[9]==='halfyear')s+=2; else if(a[9]==='goodoffer')s+=1;
+  if(a[11]==='readynow')s+=2; else if(a[11]==='prep')s+=1;
+  if(a[10]==='heavy')s-=1;
+  if(s>=7)return 'now';
+  if(s>=4)return 'info';
+  if(s>=2)return 'build';
+  return 'improve';
+}
+
+function pickMethod(a){
+  const urgency=computeUrgency(a);
+  const highclass=(a[1]==='lead')&&(a[5]==='up'||a[4]==='discretion');
+  const undecided=(a[8]==='mayoi'||a[11]==='slow');
+  if(highclass&&urgency!=='improve')return 'scout';
+  if(undecided)return 'agentnavi';
+  if(urgency==='now')return 'ragent';
+  if(urgency==='info')return 'rikunabi';
+  return 'miidas';
+}
+const REASON={
+ ragent:'すでに動き出しているあなたには、非公開求人を持つプロに相談しながら進める方法が最短ルートです。自分で求人を探すより、職務経歴を整理したうえでエージェントに推薦してもらう方が、書類選考の通過率も上がりやすくなります。',
+ rikunabi:'今はまだ情報収集の段階。エージェントに相談する前に、まずは自分のペースで求人の相場や選択肢の幅を把握しておくと、いざという時に迷わず動けます。',
+ miidas:'方向性がまだ固まっていないあなたには、まず自分の市場価値と適性を客観的に診断することが最初の一歩です。可能性が分かれば、進むべき方向も見えてきます。',
+ scout:'マネジメント経験があり、年収や裁量のアップを望むあなたには、自分から探すより、企業やヘッドハンターからのスカウトを待つ方が、経験を正当に評価されるオファーに出会いやすくなります。',
+ agentnavi:'まだ迷っているあなたには、1社に決め打ちするより、自分に合うエージェントを比較してから選ぶ方法が向いています。'
+};
+
+let current=0;const answers=[];
+const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
+function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
+function renderQuestion(){renderProgress();const q=QUESTIONS[current];quiz.innerHTML='';const card=document.createElement('div');card.className='q-card';card.innerHTML='<div class="q-step">'+q.step+' / '+QUESTIONS.length+'問</div><div class="q-text">'+q.text+'</div>';const opts=document.createElement('div');opts.className='opts';q.opts.forEach(o=>{const b=document.createElement('button');b.className='opt';b.innerHTML='<span class="ic">'+o.ic+'</span><span>'+o.label+'</span>';b.onclick=()=>{answers[current]=o.v;current++;(current<QUESTIONS.length)?renderQuestion():finish();};opts.appendChild(b);});card.appendChild(opts);if(current>0){const back=document.createElement('button');back.className='back';back.textContent='← 前の質問に戻る';back.onclick=()=>{current--;renderQuestion();};card.appendChild(back);}quiz.appendChild(card);document.getElementById('progress').scrollIntoView({behavior:'smooth',block:'start'});}
+function finish(){renderProgress();quiz.innerHTML='';document.getElementById('loading').classList.add('show');setTimeout(showResult,1500);}
+function showResult(){
+  document.getElementById('loading').classList.remove('show');
+  const res=document.getElementById('result');
+  const a=answers;
+  const strengthKey=a[2];
+  const jobs=computeJobs(a);
+  const gap=computeGap(a);
+  const urgency=computeUrgency(a);
+  const methodKey=pickMethod(a);
+  const method=SERVICES[methodKey];
+  const cmp=SERVICES[PAIR[methodKey]];
+  res.innerHTML=
+    '<div class="type-box"><div class="lead">あなたの転職タイプは</div><div class="type-name">'+TYPE_LABEL[strengthKey]+'</div><div class="type-desc">'+TYPE_DESC[strengthKey]+'</div></div>'+
+    '<div class="block-label">🧭 今、あなたはこの段階にいます<span class="ln"></span></div>'+
+    '<div class="strength"><span class="tag">'+URGENCY_LABEL[urgency]+'</span><p>焦る必要はありませんが、「様子を見る」を続けるほど、非公開求人やハイクラス求人は他の人に決まっていきます。動いてみるだけなら、今の仕事にリスクはありません。</p></div>'+
+    '<div class="block-label">💼 現在の経験から狙える3つの方向<span class="ln"></span></div>'+
+    '<div class="advice">'+
+      '<div class="advice-item"><span class="ic">✅</span><div><b>今の経験を最も活かせる：'+jobs[0]+'</b><span>これまでの経験がそのまま評価されやすい、現実的な選択肢です。</span></div></div>'+
+      '<div class="advice-item"><span class="ic">🔀</span><div><b>未経験でも移りやすい：'+jobs[1]+'</b><span>経験の一部を活かしながら、新しい領域に挑戦しやすい選択肢です。</span></div></div>'+
+      '<div class="advice-item"><span class="ic">📈</span><div><b>将来的に年収を伸ばしやすい：'+jobs[2]+'</b><span>経験を積み重ねることで、キャリアの伸びしろが大きい選択肢です。</span></div></div>'+
+    '</div>'+
+    '<div class="block-label">⚠️ 今、不足しがちなこと<span class="ln"></span></div>'+
+    '<div class="strength"><span class="tag">評価される前に整えたいポイント</span><p>'+gap+'</p></div>'+
+    '<div class="funnel-lead">最も成功確率が高い進め方</div>'+
+    '<div class="funnel-sub">'+REASON[methodKey]+'</div>'+
+    '<div class="card"><div class="card-top"><div class="card-logo">'+method.logo+'</div><div class="card-tt"><b>'+method.name+'</b><span>'+method.tag+'</span></div></div>'+
+    '<div class="card-body"><ul class="feat">'+method.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul>'+
+    '<a href="'+method.url+'" class="cta">'+method.cta+'</a>'+
+    '<p class="note">登録・相談はすべて無料です</p></div></div>'+
+    '<div style="text-align:center;font-weight:700;font-size:13.5px;color:var(--muted);margin:24px 0 12px">▼ 比較したい方はこちら</div>'+
+    '<div class="card"><div class="card-top"><div class="card-logo">'+cmp.logo+'</div><div class="card-tt"><b>'+cmp.name+'</b><span>'+cmp.tag+'</span></div></div>'+
+    '<div class="card-body"><ul class="feat">'+cmp.feat.slice(0,2).map(f=>'<li>'+f+'</li>').join('')+'</ul>'+
+    '<a href="'+cmp.url+'" class="cta">'+cmp.cta+'</a>'+
+    '<p class="note">登録・相談はすべて無料です</p></div></div>'+
+    '<div style="text-align:center;font-weight:700;font-size:13.5px;color:var(--muted);margin:26px 0 12px">▼ あわせて使いたい｜応募前の企業リサーチに</div>'+
+    '<div class="card"><div class="card-top"><div class="card-logo">💼</div><div class="card-tt"><b>ワンキャリア転職</b><span>企業の年収・口コミ・選考対策がわかる転職サイト</span></div></div><div class="card-body"><ul class="feat"><li>気になる企業の「リアルな年収・社員クチコミ」を無料でチェックできる</li><li>実際の「選考体験談」で面接・選考の対策ができる</li><li>その企業への／からのキャリアパスがわかる</li><li>応募前の企業研究にぴったり。登録は無料</li></ul><a href="https://px.a8.net/svt/ejp?a8mat=4B650G+75SPPU+5O7E+BYT9F" class="cta">無料で企業のクチコミ・年収を見る →</a><p class="note">登録・利用はすべて無料です</p></div></div>'+
+    '<button class="restart" onclick="restart()">↺ もう一度診断する</button>';
+  res.classList.add('show');window.scrollTo({top:0,behavior:'smooth'});
+}
+function restart(){current=0;answers.length=0;document.getElementById('result').classList.remove('show');renderQuestion();}
+renderQuestion();
+</script>
+<script>
+/* cro-cvr */
+(function(){
+  var badge=document.querySelector('.badge');
+  if(badge&&badge.getAttribute('data-cro')!=='1'){badge.setAttribute('data-cro','1');badge.textContent=badge.textContent+'｜登録不要で診断できます';}
+  var hw=document.querySelector('.hero .wrap');
+  if(hw&&!hw.querySelector('.hero-assure')){hw.insertAdjacentHTML('beforeend','<div class="hero-assure"><span>🔒 個人情報の入力なし</span><span>💴 診断・相談は無料</span><span>🕒 在職中でもOK</span></div>');}
+  var result=document.getElementById('result');
+  if(!result)return;
+  var bar=document.createElement('div');bar.className='sticky-cta';bar.setAttribute('aria-hidden','true');
+  var tag=document.createElement('span');tag.className='sc-tag';tag.textContent='無料';
+  var btn=document.createElement('a');btn.className='sc-btn';btn.setAttribute('href','#');
+  bar.appendChild(tag);bar.appendChild(btn);document.body.appendChild(bar);
+  var primaryEl=null,lastSticky=null;
+  function sticky(on){if(lastSticky===on)return;lastSticky=on;document.body.classList[on?'add':'remove']('show-sticky');bar.setAttribute('aria-hidden',on?'false':'true');}
+  function updateSticky(){
+    if(!result.classList.contains('show')||!primaryEl){sticky(false);return;}
+    var rc=primaryEl.getBoundingClientRect();
+    var inView=(rc.top<window.innerHeight-40)&&(rc.bottom>64);
+    sticky(!inView);
+  }
+  window.addEventListener('scroll',updateSticky,{passive:true});
+  window.addEventListener('resize',updateSticky,{passive:true});
+  function firstCta(card){var b=card.querySelector('.card-body');if(!b)return null;var k=b.children;for(var i=0;i<k.length;i++){if(k[i].classList&&k[i].classList.contains('cta'))return k[i];}return null;}
+  function decorate(){
+    if(!result.classList.contains('show')){primaryEl=null;sticky(false);return;}
+    var cards=result.querySelectorAll('.card');
+    for(var i=0;i<cards.length;i++){
+      var body=cards[i].querySelector('.card-body');if(!body)continue;
+      var cta=firstCta(cards[i]);if(!cta)continue;
+      if(i===0&&!body.querySelector('.cta-lead')){cta.insertAdjacentHTML('beforebegin','<p class="cta-lead">好条件の求人ほど“表に出ないまま”決まっていきます。登録しておくほど、出会える数が増えます（無料）。</p>');}
+      if(!body.querySelector('.cta-sub')){var s=document.createElement('a');s.className='cta-sub';s.setAttribute('href',cta.getAttribute('href'));s.textContent='▶ まずは無料登録だけ済ませておく';cta.insertAdjacentElement('afterend',s);}
+      var note=body.querySelector('.note');
+      if(note&&!body.querySelector('.assure')){note.insertAdjacentHTML('beforebegin','<div class="assure"><span>無料</span><span>在職中でもOK</span><span>登録は約1分</span></div>');note.textContent='掲載内容は各サービスの公式情報をもとに記載しています';}
+    }
+    var primary=null,cs=result.querySelectorAll('.card');
+    for(var p=0;p<cs.length;p++){primary=firstCta(cs[p]);if(primary)break;}
+    if(primary){btn.setAttribute('href',primary.getAttribute('href'));btn.textContent=(primary.textContent||'無料で見てみる').replace(/\s+/g,' ').trim();primaryEl=primary;lastSticky=null;updateSticky();}
+    else{primaryEl=null;sticky(false);}
+  }
+  new MutationObserver(function(){decorate();}).observe(result,{attributes:true,attributeFilter:['class']});
+  if(result.classList.contains('show'))decorate();
+})();
+</script>
+</body>
+</html>
