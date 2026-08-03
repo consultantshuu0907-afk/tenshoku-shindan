@@ -205,7 +205,7 @@ footer{background:var(--nk)}
   <div class="emoji">🎯</div>
   <span class="badge">全12問・3〜5分・無料診断</span>
   <h1>30代の<span class="big">転職成功ルート診断</span></h1>
-  <p><b>対象：業種・職種は問いません。</b>30代で「今の仕事を続けるか、転職するか」を本気で考えたい方へ。「今、動くべきか」から「どう動くべきか」まで、あなたの緊急度・活かせる経験・不足しがちな点・最も成功確率が高い進め方を、12の質問で診断します。</p>
+  <p><b>対象：業種・職種は問いません。</b>30代で転職を本気で考えたい方へ。<br>緊急度・活かせる経験・進め方まで、12の質問でまとめて診断します。</p>
 </div></header>
 <main class="wrap">
   <div class="progress" id="progress"></div>
@@ -345,6 +345,12 @@ function pickMethod(a){
   if(urgency==='info')return 'rikunabi';
   return 'miidas';
 }
+const MOYAMOYA={
+ hyouka:'評価・年収への不満が原動力なら、まずは自分の市場価値を客観的に把握することが交渉力につながります。',
+ ningen:'人間関係の悩みが理由なら、内部事情に詳しいプロ経由で「入ってからのギャップ」を防ぐのが安心です。',
+ shourai:'将来性・成長機会への不安が理由なら、次に何を学べる環境かを軸に転職先を選ぶと後悔しにくくなります。',
+ tameshi:'特に不満がなくても、可能性を試したいという気持ちは十分な動機です。まずは市場価値を確認してみましょう。'
+};
 const REASON={
  ragent:'すでに動き出しているあなたには、非公開求人を持つプロに相談しながら進める方法が最短ルートです。自分で求人を探すより、職務経歴を整理したうえでエージェントに推薦してもらう方が、書類選考の通過率も上がりやすくなります。',
  rikunabi:'今はまだ情報収集の段階。エージェントに相談する前に、まずは自分のペースで求人の相場や選択肢の幅を把握しておくと、いざという時に迷わず動けます。',
@@ -372,7 +378,7 @@ function showResult(){
   res.innerHTML=
     '<div class="type-box"><div class="lead">あなたの転職タイプは</div><div class="type-name">'+TYPE_LABEL[strengthKey]+'</div><div class="type-desc">'+TYPE_DESC[strengthKey]+'</div></div>'+
     '<div class="block-label">🧭 今、あなたはこの段階にいます<span class="ln"></span></div>'+
-    '<div class="strength"><span class="tag">'+URGENCY_LABEL[urgency]+'</span><p>焦る必要はありませんが、「様子を見る」を続けるほど、非公開求人やハイクラス求人は他の人に決まっていきます。動いてみるだけなら、今の仕事にリスクはありません。</p></div>'+
+    '<div class="strength"><span class="tag">'+URGENCY_LABEL[urgency]+'</span><p>'+(MOYAMOYA[a[6]]||'')+' 焦る必要はありませんが、「様子を見る」を続けるほど、非公開求人やハイクラス求人は他の人に決まっていきます。動いてみるだけなら、今の仕事にリスクはありません。</p></div>'+
     '<div class="block-label">💼 現在の経験から狙える3つの方向<span class="ln"></span></div>'+
     '<div class="advice">'+
       '<div class="advice-item"><span class="ic">✅</span><div><b>今の経験を最も活かせる：'+jobs[0]+'</b><span>これまでの経験がそのまま評価されやすい、現実的な選択肢です。</span></div></div>'+

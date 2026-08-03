@@ -280,7 +280,7 @@ function finish(){renderProgress();quiz.innerHTML='';document.getElementById('lo
 function adviceHTML(a){const items=[ADV_FOCUS[a[1]],ADV_STATE[a[2]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
 function fullCard(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_self">'+s.cta+'</a><p class="note">登録・相談・利用はすべて無料です</p></div></div>';}
 function miniCard(key){const s=SERVICES[key];const st='display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;text-decoration:none;color:var(--ink);margin-bottom:10px';return '<a href="'+s.url+'" style="'+st+'"><span style="font-size:13.8px"><b>'+s.name+'</b><br><span style="color:var(--muted);font-size:12px">'+s.line+'</span></span><span style="color:var(--accent);font-weight:800;font-size:18px">→</span></a>';}
-function showResult(){document.getElementById('loading').classList.remove('show');const sel=answers[0];const s=SERVICES[sel]||SERVICES.ragent;const others=ORDER.filter(k=>k!==sel);const res=document.getElementById('result');
+function showResult(){document.getElementById('loading').classList.remove('show');const sel=answers[0];const s=SERVICES[sel]||SERVICES.miidas;const others=ORDER.filter(k=>k!==sel);const res=document.getElementById('result');
  res.innerHTML=
   '<div class="type-box"><div class="lead">あなたに合う進め方は</div><div class="type-name">'+s.type+'</div><div class="type-desc">数字に強く、信頼を扱ってきた金融の経験は、コンサル・事業会社・フィンテックなど幅広い領域で評価されます。進め方に合ったサービスから動きましょう。</div></div>'+
   '<div class="block-label">🧭 転職は「情報量」で決まる<span class="ln"></span></div>'+
@@ -290,7 +290,7 @@ function showResult(){document.getElementById('loading').classList.remove('show'
   '<div class="funnel-lead">まずは、あなたに合うこの1社から。</div>'+
   '<div class="funnel-sub">登録も相談もすべて無料。今の仕事を続けながら情報を集めるだけでも大丈夫です。</div>'+
   fullCard(sel)+
-  '<div style="font-weight:800;font-size:16px;margin:30px 0 5px">🗂️ 他の総合サービスも比較できます</div>'+
+  '<div style="font-weight:800;font-size:16px;margin:30px 0 5px">🗂️ あわせて検討したいサービス</div>'+
   '<div style="font-size:12.5px;color:var(--muted);margin-bottom:14px">複数に登録するほど、出会える求人と選択肢は増えます（すべて無料）。</div>'+
   others.map(miniCard).join('')+
   '<div style="text-align:center;font-weight:700;font-size:13.5px;color:var(--muted);margin:26px 0 12px">▼ あわせて使いたい｜応募前の企業リサーチ・選考対策に</div>'+

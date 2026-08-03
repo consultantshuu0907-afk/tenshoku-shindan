@@ -281,6 +281,12 @@ const ADV_STATE={
  soon:{ic:'⚡',t:'急ぐなら「プロと並走」で時短',s:'専任担当が日程調整や条件交渉を代行してくれるので、働きながらでもスムーズに進められます。'},
  undecided:{ic:'🗺️',t:'迷うなら「まず診断・相談」から',s:'方向性が固まっていなくても大丈夫。自分の市場価値を知る／プロに話す中で、進む道が見えてきます。'}
 };
+const DESC={
+ beetkeiri:{desc:'簿記・決算・財務の実務経験は、どの会社にも必要とされる安定した強みです。進め方に合ったサービスから、専門性を活かせる環境を探しましょう。',tag:'数字で会社を支える専門性',text:'日次の仕訳から決算・開示まで、正確に数字を扱ってきた経験は、事業会社の経理・財務や会計事務所で評価されます。まずは自分の市場価値と、専門性を活かせる求人を知ることから始めましょう。'},
+ zeirishi:{desc:'税理士資格は経理・財務の中でも特に評価される専門資格です。資格を正しく評価してくれる専門サービスから、待遇の良い環境を探しましょう。',tag:'資格で選ばれる専門性',text:'税理士資格を持つ経験は、会計事務所・税理士法人はもちろん事業会社でも高く評価されます。まずは資格を正しく評価してくれる求人を知ることから始めましょう。'},
+ kaikeishi:{desc:'公認会計士・USCPAは経理・財務系の中でも最上位クラスの専門資格です。資格と経験を正しく評価してくれる専門サービスから、次のキャリアを探しましょう。',tag:'上位資格で選ばれる専門性',text:'監査法人での経験や公認会計士・USCPA資格は、事業会社の経理財務・会計事務所どちらでも高く評価されます。まずは資格を評価してくれる求人と市場価値を知ることから始めましょう。'},
+ miidas:{desc:'経理・財務の経験がまだ浅くても大丈夫。まずは自分の市場価値と向いている仕事を診断で把握することが、次のキャリアへの第一歩です。',tag:'これから伸ばす可能性',text:'実務経験がまだ浅くても、経理・財務は学びながらキャリアを積みやすい職種です。まずは自分の適性・市場価値を診断で知ることから始めましょう。'}
+};
 let current=0;const answers=[];
 const progress=document.getElementById('progress'),quiz=document.getElementById('quiz');
 function renderProgress(){progress.innerHTML='';QUESTIONS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot'+(i<current?' done':i===current?' active':'');progress.appendChild(d);});}
@@ -289,17 +295,17 @@ function finish(){renderProgress();quiz.innerHTML='';document.getElementById('lo
 function adviceHTML(a){const items=[ADV_FOCUS[a[1]],ADV_STATE[a[2]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
 function fullCard(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_self">'+s.cta+'</a><p class="note">登録・相談・利用はすべて無料です</p></div></div>';}
 function miniCard(key){const s=SERVICES[key];const st='display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;text-decoration:none;color:var(--ink);margin-bottom:10px';return '<a href="'+s.url+'" style="'+st+'"><span style="font-size:13.8px"><b>'+s.name+'</b><br><span style="color:var(--muted);font-size:12px">'+s.line+'</span></span><span style="color:var(--accent);font-weight:800;font-size:18px">→</span></a>';}
-function showResult(){document.getElementById('loading').classList.remove('show');const sel=answers[0];const s=SERVICES[sel]||SERVICES.ragent;const others=ORDER.filter(k=>k!==sel);const res=document.getElementById('result');
+function showResult(){document.getElementById('loading').classList.remove('show');const sel=answers[0];const s=SERVICES[sel]||SERVICES.miidas;const d=DESC[sel]||DESC.miidas;const others=ORDER.filter(k=>k!==sel);const res=document.getElementById('result');
  res.innerHTML=
-  '<div class="type-box"><div class="lead">あなたに合う進め方は</div><div class="type-name">'+s.type+'</div><div class="type-desc">簿記・決算・財務の実務経験は、どの会社にも必要とされる安定した強みです。進め方に合ったサービスから、専門性を活かせる環境を探しましょう。</div></div>'+
+  '<div class="type-box"><div class="lead">あなたに合う進め方は</div><div class="type-name">'+s.type+'</div><div class="type-desc">'+d.desc+'</div></div>'+
   '<div class="block-label">🧭 転職は「情報量」で決まる<span class="ln"></span></div>'+
-  '<div class="strength"><span class="tag">数字で会社を支える専門性</span><p>日次の仕訳から決算・開示まで、正確に数字を扱ってきた経験は、事業会社の経理・財務や会計事務所で評価されます。まずは自分の市場価値と、専門性を活かせる求人を知ることから始めましょう。</p></div>'+
+  '<div class="strength"><span class="tag">'+d.tag+'</span><p>'+d.text+'</p></div>'+
   '<div class="block-label">🧭 あなたへのアドバイス<span class="ln"></span></div>'+
   '<div class="advice">'+adviceHTML(answers)+'</div>'+
   '<div class="funnel-lead">まずは、あなたに合うこの1社から。</div>'+
   '<div class="funnel-sub">登録も相談もすべて無料。今の仕事を続けながら情報を集めるだけでも大丈夫です。</div>'+
   fullCard(sel)+
-  '<div style="font-weight:800;font-size:16px;margin:30px 0 5px">🗂️ 他の総合サービスも比較できます</div>'+
+  '<div style="font-weight:800;font-size:16px;margin:30px 0 5px">🗂️ あわせて検討したいサービス</div>'+
   '<div style="font-size:12.5px;color:var(--muted);margin-bottom:14px">複数に登録するほど、出会える求人と選択肢は増えます（すべて無料）。</div>'+
   others.map(miniCard).join('')+
   '<div style="text-align:center;font-weight:700;font-size:13.5px;color:var(--muted);margin:26px 0 12px">▼ あわせて使いたい｜応募前の企業リサーチ・選考対策に</div>'+

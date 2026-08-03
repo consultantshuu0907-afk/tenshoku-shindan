@@ -264,7 +264,7 @@ const QUESTIONS=[
    {ic:'💰',label:'年収・待遇アップ',v:'pay'},
    {ic:'⏰',label:'働き方・休みの改善',v:'time'},
    {ic:'🚀',label:'スキルアップ・キャリア',v:'skill'},
-   {ic:'🌱',label:'未経験の分野に挑戦したい',v:'new'}]},
+   {ic:'🌍',label:'業界を変えてキャリアアップしたい',v:'shift'}]},
  {step:'Q3',text:'今の状況に近いのは？',opts:[
    {ic:'🔍',label:'在職中で、まずは情報収集',v:'info'},
    {ic:'🏃',label:'できるだけ早く転職したい',v:'soon'},
@@ -274,7 +274,7 @@ const ADV_FOCUS={
  pay:{ic:'💰',t:'年収アップは「複数比較」で決める',s:'1社の提示額で決めず、複数のサービスで求人・条件を見比べるほど、適正な待遇を引き出せます。'},
  time:{ic:'⏰',t:'働き方は「譲れない条件」を先に決める',s:'休日・残業・勤務地など、ゆずれない条件を最初にハッキリさせると、入ってから後悔しません。'},
  skill:{ic:'🚀',t:'成長は「身につくスキル」で職場を選ぶ',s:'目先の条件だけでなく、その環境で何が身につくかを軸にすると、長期的なキャリアで差がつきます。'},
- new:{ic:'🌱',t:'未経験は「ポテンシャル採用」を狙う',s:'若さや意欲を評価してくれる求人は確実にあります。まず自分の可能性を診断で把握しておきましょう。'}
+ shift:{ic:'🌍',t:'業界を変えるなら「持ち運べる強み」を整理',s:'マネジメント経験や専門スキルなど、業界が変わっても評価される強みを言語化しておくと、キャリアアップにつながる転職がしやすくなります。'}
 };
 const ADV_STATE={
  info:{ic:'📥',t:'在職中の「情報収集」がいちばん安全',s:'今すぐ動かなくても、登録して求人・市場価値を知っておくだけで、いざという時の選択肢が広がります。'},
@@ -289,7 +289,7 @@ function finish(){renderProgress();quiz.innerHTML='';document.getElementById('lo
 function adviceHTML(a){const items=[ADV_FOCUS[a[1]],ADV_STATE[a[2]]].filter(Boolean);return items.map(x=>'<div class="advice-item"><span class="ic">'+x.ic+'</span><div><b>'+x.t+'</b><span>'+x.s+'</span></div></div>').join('');}
 function fullCard(key){const s=SERVICES[key];return '<div class="card"><div class="card-top"><div class="card-logo">'+s.logo+'</div><div class="card-tt"><b>'+s.name+'</b><span>'+s.tag+'</span></div></div><div class="card-body"><ul class="feat">'+s.feat.map(f=>'<li>'+f+'</li>').join('')+'</ul><a href="'+s.url+'" class="cta" target="_self">'+s.cta+'</a><p class="note">登録・相談・利用はすべて無料です</p></div></div>';}
 function miniCard(key){const s=SERVICES[key];const st='display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 15px;text-decoration:none;color:var(--ink);margin-bottom:10px';return '<a href="'+s.url+'" style="'+st+'"><span style="font-size:13.8px"><b>'+s.name+'</b><br><span style="color:var(--muted);font-size:12px">'+s.line+'</span></span><span style="color:var(--accent);font-weight:800;font-size:18px">→</span></a>';}
-function showResult(){document.getElementById('loading').classList.remove('show');const sel=answers[0];const s=SERVICES[sel]||SERVICES.ragent;const others=ORDER.filter(k=>k!==sel);const res=document.getElementById('result');
+function showResult(){document.getElementById('loading').classList.remove('show');const sel=answers[0];const s=SERVICES[sel]||SERVICES.kotora;const others=ORDER.filter(k=>k!==sel);const res=document.getElementById('result');
  res.innerHTML=
   '<div class="type-box"><div class="lead">あなたに合う進め方は</div><div class="type-name">'+s.type+'</div><div class="type-desc">実績と専門性がある人ほど、動くほど条件が良くなります。スカウトで市場価値を測りつつ、進め方に合ったサービスを併用するのが賢い一手です。</div></div>'+
   '<div class="block-label">🧭 転職は「情報量」で決まる<span class="ln"></span></div>'+
