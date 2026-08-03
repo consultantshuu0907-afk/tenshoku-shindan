@@ -110,9 +110,18 @@ footer{background:#0e1116}
   .diag-intro{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;font-size:13px;line-height:1.7;color:var(--muted);margin:0 0 12px;padding:11px 15px;background:#fff;border:1px solid var(--line);border-radius:10px}
   .diag-tag{flex:none;font-size:11px;font-weight:800;letter-spacing:.06em;color:#475569;background:#eef2f6;border-radius:999px;padding:3px 10px}
   .diag-tag.gold{color:#8a6d28;background:#faf5e6;border:1px solid #e3d19a}
-  .diag-intro.flagship-intro{border-color:#e3d19a;background:#fffdf7}
-  .grid.solo{margin-bottom:26px}
+  .diag-intro.flagship-intro{border-color:#e3d19a;background:#fffdf7;margin-bottom:14px}
+  .grid.solo{margin-bottom:0}
   .section-gap{margin-top:2px}
+
+  /* diag-section: 診断ごとに囲いで範囲を明示 */
+  .diag-section{border:1px solid var(--line);border-radius:18px;padding:20px 16px 22px;margin-bottom:28px;background:#fff;box-shadow:0 1px 3px rgba(16,24,40,.05),0 12px 26px -12px rgba(16,24,40,.10)}
+  .diag-section-title{font-size:15px;font-weight:800;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+  .diag-section.gold{border-color:#e3d19a;background:linear-gradient(180deg,#fffdf7,#fff 60%)}
+  .diag-section.gold .diag-section-title{color:#8a6d28}
+  .diag-section .diag-intro{border:none;background:transparent;padding:0 0 2px;box-shadow:none}
+  .diag-section .site-hero{border-radius:14px;overflow:hidden;margin:0 0 16px}
+  .diag-section .hero-banner{margin-bottom:14px}
 
   /* flagship: 30代診断の特別タイル（紺×金） */
   .tile.flagship{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px;background:linear-gradient(135deg,#0a1330,#0f1c40);border:1px solid #3d3315;box-shadow:0 1px 3px rgba(0,0,0,.2),0 16px 34px -10px rgba(10,19,48,.55);position:relative;overflow:hidden}
@@ -127,20 +136,28 @@ footer{background:#0e1116}
 </head>
 <body>
 <div class="pr-bar">本ページはプロモーション（アフィリエイト広告）を含みます</div>
+<div class="wrap" style="padding-top:16px">
+  <a class="hero-banner" href="#start"><img src="eyecatch-top.png" alt="あなたの強みがわかる、転職成功ルートが見つかる。20代後半〜30代前半向け・漫画でわかる転職診断サイト"></a>
+</div>
 <main class="wrap">
   <div class="lead" id="start">あなたに合う転職診断を選んでください</div>
   <div class="lead-sub">状況に合わせて、2つの診断からお選びいただけます（どちらも無料）</div>
 
-  <div class="diag-intro flagship-intro"><span class="diag-tag gold">こんな方に</span>業種を問わず、30代で「今の仕事を続けるか、転職するか」を本気で考えたい方へ。全12問でじっくり診断（3〜5分）</div>
-  <div class="grid solo">
-    <a class="tile flagship" href="sanjudai.html"><span class="bar"></span><span class="ic">🎯</span><div><span class="kicker">30代フラッグシップ診断</span><b>30代の転職成功ルート診断</b><span style="display:block">緊急度・市場価値・活かせる経験・進め方まで全12問で診断</span></div></a>
+  <div class="diag-section gold">
+    <div class="diag-section-title">🎯 30代フラッグシップ診断</div>
+    <a class="hero-banner" href="sanjudai.html" style="display:block"><img src="eyecatch-sanjudai.png" alt="30代の転職成功ルート診断｜全12問・3〜5分。あなたに最適な成功ルートがわかる"></a>
+    <div class="diag-intro flagship-intro"><span class="diag-tag gold">こんな方に</span>業種を問わず、30代で「今の仕事を続けるか、転職するか」を本気で考えたい方へ。全12問でじっくり診断（3〜5分）</div>
+    <div class="grid solo">
+      <a class="tile flagship" href="sanjudai.html"><span class="bar"></span><span class="ic">🎯</span><div><span class="kicker">30代フラッグシップ診断</span><b>30代の転職成功ルート診断</b><span style="display:block">緊急度・市場価値・活かせる経験・進め方まで全12問で診断</span></div></a>
+    </div>
   </div>
 
-  <div class="site-hero"><div class="wrap">
-    <a class="hero-banner" href="#industryGrid"><img src="ogp.png" alt="業界別・転職タイプ診断｜あなたに合う転職サービスが見つかる。かんたん3問・1分・無料で、あなたの強みや価値観から最適な転職タイプとおすすめ業界がわかります。"></a>
-  </div></div>
-
-  <div class="diag-intro section-gap"><span class="diag-tag">こんな方に</span>まずは自分の業種・職種から、3〜4問でサクッと強みを知りたい方へ（所要1分）</div>
+  <div class="diag-section">
+    <div class="diag-section-title">🗂️ 業種・職種別タイプ診断</div>
+    <div class="site-hero"><div class="wrap">
+      <a class="hero-banner" href="#industryGrid"><img src="ogp.png" alt="業界別・転職タイプ診断｜あなたに合う転職サービスが見つかる。かんたん3問・1分・無料で、あなたの強みや価値観から最適な転職タイプとおすすめ業界がわかります。"></a>
+    </div></div>
+    <div class="diag-intro section-gap"><span class="diag-tag">こんな方に</span>まずは自分の業種・職種から、3〜4問でサクッと強みを知りたい方へ（所要1分）</div>
   <input id="tileSearch" class="tile-search" type="search" inputmode="search" autocomplete="off" placeholder="🔍 職種・業界で探す（例：看護師、営業、事務）">
   <div class="grid" id="industryGrid">
     <a class="tile" href="inshoku.html"><span class="bar c1"></span><span class="ic">🍴</span><b>飲食・外食</b><span>長時間労働・低賃金から抜け出す</span></a>
@@ -171,6 +188,7 @@ footer{background:#0e1116}
     <a class="tile" href="bengoshi.html"><span class="bar c32"></span><span class="ic">⚖️</span><b>弁護士</b><span>事務所移籍・企業内弁護士へ</span></a>    <a class="tile wide" href="general.html"><span class="bar c9"></span><span class="ic">🧭</span><div><b>その他・まだ決まっていない方</b><span style="display:block">上記以外の業種・職種／迷っている方はこちら（総合診断）</span></div></a>
   </div>
   <p class="no-hit" id="noHit">該当する職種が見つかりません。キーワードを変えるか、「その他・総合診断」からお進みください。</p>
+  </div>
 </main>
 <footer><div class="wrap">
   <p class="disc">※本サイトはアフィリエイトプログラムを利用しており、サービスへの登録・利用により当サイトが報酬を得る場合があります。掲載内容は各サービスの公式情報をもとに作成しています。最新・正確な情報は各公式サイトをご確認ください。</p>
