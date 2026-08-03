@@ -28,14 +28,9 @@
   .hero h1{font-size:27px;font-weight:800;margin:10px 0 10px}
   .hero p{font-size:14.5px;opacity:.95;max-width:520px;margin:0 auto}
   .site-hero{background:#fff;padding:18px 0 6px}
-  .hero-banner{display:block;width:100%;height:auto;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(15,118,110,.12)}
+  .hero-banner{display:block;width:100%;height:auto;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(15,118,110,.12);transition:transform .18s,box-shadow .18s}
   .hero-banner img{display:block;width:100%;height:auto}
-  .top-cta-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-  .top-cta{display:flex;align-items:center;justify-content:center;gap:8px;background:#fff;border:2px solid #1d4ed8;color:#1d4ed8;font-weight:800;font-size:14px;padding:14px 10px;border-radius:12px;text-decoration:none;text-align:center;line-height:1.4;transition:.18s;box-shadow:0 3px 10px rgba(0,0,0,.06)}
-  .top-cta:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(29,78,216,.18)}
-  .top-cta.primary{background:linear-gradient(135deg,#1d4ed8,#1e3a8a);color:#fff;border-color:transparent;box-shadow:0 8px 18px rgba(29,78,216,.32)}
-  .top-cta .ic{font-size:18px;flex-shrink:0}
-  @media(max-width:480px){.top-cta-row{grid-template-columns:1fr}}
+  .hero-banner:hover{transform:translateY(-2px);box-shadow:0 14px 32px rgba(15,118,110,.22)}
   main{padding:36px 0 50px}
   .lead{text-align:center;font-weight:800;font-size:18px;margin-bottom:6px}
   .lead-sub{text-align:center;color:var(--muted);font-size:13.5px;margin-bottom:26px}
@@ -138,16 +133,20 @@ footer{background:#0e1116}
   .tile.flagship span{color:color-mix(in srgb,#c9a84c 75%,#fff)}
   .tile.flagship .kicker{display:block;font-size:10px;font-weight:700;letter-spacing:.18em;color:#c9a84c;margin-bottom:3px}
   .tile.flagship:hover{box-shadow:0 1px 3px rgba(0,0,0,.25),0 24px 44px -10px rgba(10,19,48,.65);transform:translateY(-3px)}
+
+  /* tile-tap-hint: 各診断タイルが「押せるボタン」だと明確に分かる丸型バッジ */
+  .tile{padding-right:50px}
+  .tile::after{content:"→";position:absolute;right:12px;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(0,0,0,.22);transition:transform .18s,box-shadow .18s}
+  .tile:hover::after{transform:translateY(-50%) scale(1.1);box-shadow:0 6px 16px rgba(0,0,0,.3)}
+  .tile.wide::after{background:#fff;color:#0e1116}
+  .tile.flagship::after{background:linear-gradient(135deg,#e8c874,#c9a84c);color:#1a1400;box-shadow:0 4px 10px rgba(201,168,76,.45)}
+  @media(max-width:480px){.tile{padding-right:44px}.tile::after{width:30px;height:30px;font-size:14px;right:10px}}
 </style>
 </head>
 <body>
 <div class="pr-bar">本ページはプロモーション（アフィリエイト広告）を含みます</div>
 <div class="wrap" style="padding-top:16px">
   <a class="hero-banner" href="#start"><img src="eyecatch-top.png" alt="あなたの強みがわかる、転職成功ルートが見つかる。20代後半〜30代前半向け・漫画でわかる転職診断サイト"></a>
-  <div class="top-cta-row">
-    <a class="top-cta primary" href="sanjudai.html"><span class="ic">🚀</span>30代の転職成功ルート診断</a>
-    <a class="top-cta" href="#industryGrid"><span class="ic">⭐</span>強み発見診断（業種・職種別）</a>
-  </div>
 </div>
 <main class="wrap">
   <div class="lead" id="start">あなたに合う転職診断を選んでください</div>
